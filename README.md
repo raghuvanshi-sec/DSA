@@ -123,33 +123,45 @@ All solutions are organized under the `LeetCode_Problems/` directory:
 ## 🛠️ How to Compile & Run
 
 ### ☕ Java Files
+
 To compile and run any Java file from this repository:
 
 1. Open your terminal and navigate to the directory of the file:
+
     ```bash
     cd DSA/String
     ```
+
 2. Compile the `.java` file:
+
     ```bash
     javac IsPalindrome.java
     ```
+
 3. Execute the compiled bytecode:
+
     ```bash
     java IsPalindrome
     ```
 
 ### 💻 C++ Files
+
 To compile and run any C++ file:
 
 1. Open your terminal and navigate to the directory of the file:
+
     ```bash
     cd DSA/LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array
     ```
+
 2. Compile the `.cpp` file:
+
     ```bash
     g++ -O3 0153-find-minimum-in-rotated-sorted-array.cpp -o solution
     ```
+
 3. Execute the compiled binary:
+
     ```bash
     ./solution
     ```
