@@ -15,7 +15,7 @@ The code is organized by topic and LeetCode problem ID under the `DSA` directory
 | 📁 **[Arrays](./Arrays)** | Fundamental operations on 1D arrays, search, reverse, subarray sums, and optimization problems. | [ArraysCC.java](./Arrays/ArraysCC.java), [ArraysCC1.java](./Arrays/ArraysCC1.java), [ArrayCC3.java](./Arrays/ArrayCC3.java), [BinarySearch.java](./Arrays/BinarySearch.java), [LargestNumber.java](./Arrays/LargestNumber.java), [Reverse.java](./Arrays/Reverse.java), [Pairs.java](./Arrays/Pairs.java), [SubArrays.java](./Arrays/SubArrays.java), [MaxSubarraySum.java](./Arrays/MaxSubarraySum.java), [maxSubarraySum2.java](./Arrays/maxSubarraySum2.java), [maxSuubarraySum3.java](./Arrays/maxSuubarraySum3.java), [TrapRainwater.java](./Arrays/TrapRainwater.java), [Stocks.java](./Arrays/Stocks.java) |
 | 📁 **[2D.Arrays](./2D.Arrays)** | Operations on matrices, diagonal sums, spiral traversals, and search in sorted 2D matrices. | [Matrices.java](./2D.Arrays/Matrices.java), [SpiralMatrix.java](./2D.Arrays/SpiralMatrix.java), [DaigonalSum.java](./2D.Arrays/DaigonalSum.java), [SearchSortedMatrix.java](./2D.Arrays/SearchSortedMatrix.java) |
 | 📁 **[Sorting](./Sorting)** | Implementation of classic sorting algorithms. | [BasicSorting.java](./Sorting/BasicSorting.java), [SelectionSort.java](./Sorting/SelectionSort.java), [InsertionSort.java](./Sorting/InsertionSort.java), [countingSort.java](./Sorting/countingSort.java) |
-| 📁 **[String](./String)** | String manipulation, basic character iteration, concatenation, directions tracking, palindrome verification, and StringBuilder usage. | [StringBasics.java](./String/StringBasics.java), [IsPalindrome.java](./String/IsPalindrome.java), [Directions.java](./String/Directions.java), [Substring.java](./String/Substring.java), [largestString.java](./String/largestString.java), [StringBuilderDemo.java](./String/StringBuilderDemo.java) |
+| 📁 **[String](./String)** | String manipulation, basic character iteration, concatenation, directions tracking, palindrome verification, StringBuilder usage, casing conversions, and compression. | [StringBasics.java](./String/StringBasics.java), [IsPalindrome.java](./String/IsPalindrome.java), [Directions.java](./String/Directions.java), [Substring.java](./String/Substring.java), [largestString.java](./String/largestString.java), [StringBuilderDemo.java](./String/StringBuilderDemo.java), [StringUpperCase.java](./String/StringUpperCase.java), [Compress.java](./String/Compress.java) |
 
 ### Visual Layout
 
@@ -31,10 +31,10 @@ flowchart TD
     Core --> Arrays["📁 Arrays<br/>📄 ArraysCC.java & ArraysCC1.java<br/>📄 ArrayCC3.java & BinarySearch.java<br/>📄 LargestNumber.java & Reverse.java<br/>📄 Pairs.java & SubArrays.java<br/>📄 MaxSubarraySum.java (1, 2, 3)<br/>📄 Stocks.java & TrapRainwater.java"]
     Core --> 2DArrays["📁 2D.Arrays<br/>📄 Matrices.java<br/>📄 SpiralMatrix.java<br/>📄 DaigonalSum.java<br/>📄 SearchSortedMatrix.java"]
     Core --> Sorting["📁 Sorting<br/>📄 BasicSorting.java<br/>📄 SelectionSort.java<br/>📄 InsertionSort.java<br/>📄 countingSort.java"]
-    Core --> String["📁 String<br/>📄 StringBasics.java & IsPalindrome.java<br/>📄 Directions.java & Substring.java<br/>📄 largestString.java & StringBuilderDemo.java"]
+    Core --> String["📁 String<br/>📄 StringBasics.java & IsPalindrome.java<br/>📄 Directions.java & Substring.java<br/>📄 largestString.java & StringBuilderDemo.java<br/>📄 StringUpperCase.java & Compress.java"]
     
     %% LeetCode Breakdown
-    LC --> LCEasy["🟢 Easy Problems<br/>• 0009-palindrome-number<br/>• 0026-remove-duplicates<br/>• 0121-best-time-to-buy-stock<br/>• 0283-move-zeroes<br/>• 0344-reverse-string<br/>• 2769-max-achievable-number<br/>• 3936-min-swaps-zeros-to-end"]
+    LC --> LCEasy["🟢 Easy Problems<br/>• 0009-palindrome-number<br/>• 0026-remove-duplicates<br/>• 0121-best-time-to-buy-stock<br/>• 0283-move-zeroes<br/>• 0344-reverse-string<br/>• 1624-largest-substring-between-equal-chars<br/>• 2769-max-achievable-number<br/>• 3936-min-swaps-zeros-to-end"]
     LC --> LCMed["🟡 Medium Problems<br/>• 0153-find-min-rotated-array<br/>• 0735-asteroid-collision<br/>• 2812-safest-path-in-grid<br/>• 3228-max-operations-ones-to-end"]
     LC --> LCHard["🔴 Hard Problems<br/>• 0004-median-two-sorted-arrays<br/>• 0042-trapping-rain-water<br/>• 0154-find-min-rotated-array-ii"]
 
@@ -96,6 +96,8 @@ flowchart TD
 * **Substring extraction**: Custom character slicing and built-in substring handling in [Substring.java](./String/Substring.java).
 * **String comparison**: Lexicographical comparison to find the largest string in [largestString.java](./String/largestString.java).
 * **StringBuilder demonstration**: Shows efficient string concatenation and characters appending in [StringBuilderDemo.java](./String/StringBuilderDemo.java).
+* **First letter capitalization**: Converts the first letter of each word in a string to uppercase in [StringUpperCase.java](./String/StringUpperCase.java).
+* **String compression**: Compresses basic strings by counting consecutive duplicate characters in [Compress.java](./String/Compress.java).
 
 ---
 
@@ -115,6 +117,7 @@ All solutions are organized under the `LeetCode_Problems/` directory:
 | **0283** | [Move Zeroes](./LeetCode_Problems/0283-move-zeroes) | 🟢 Easy | [Java](./LeetCode_Problems/0283-move-zeroes/0283-move-zeroes.java) |
 | **0344** | [Reverse String](./LeetCode_Problems/0344-reverse-string) | 🟢 Easy | [Java](./LeetCode_Problems/0344-reverse-string/0344-reverse-string.java) |
 | **0735** | [Asteroid Collision](./LeetCode_Problems/0735-asteroid-collision) | 🟡 Medium | [Java](./LeetCode_Problems/0735-asteroid-collision/0735-asteroid-collision.java) |
+| **1624** | [Largest Substring Between Two Equal Characters](./LeetCode_Problems/1624-largest-substring-between-two-equal-characters) | 🟢 Easy | [Java](./LeetCode_Problems/1624-largest-substring-between-two-equal-characters/1624-largest-substring-between-two-equal-characters.java) |
 | **2769** | [Find the Maximum Achievable Number](./LeetCode_Problems/2769-find-the-maximum-achievable-number) | 🟢 Easy | [Java](./LeetCode_Problems/2769-find-the-maximum-achievable-number/2769-find-the-maximum-achievable-number.java) |
 | **2812** | [Find the Safest Path in a Grid](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid) | 🟡 Medium | [Java](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid/2812-find-the-safest-path-in-a-grid.java) |
 | **3228** | [Maximum Number of Operations to Move Ones to the End](./LeetCode_Problems/3228-maximum-number-of-operations-to-move-ones-to-the-end) | 🟡 Medium | [Python](./LeetCode_Problems/3228-maximum-number-of-operations-to-move-ones-to-the-end/3228-maximum-number-of-operations-to-move-ones-to-the-end.py) |
