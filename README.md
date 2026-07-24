@@ -20,59 +20,34 @@ The code is organized by topic and LeetCode problem ID under the `DSA` directory
 ### Visual Layout
 
 ```mermaid
-graph TD
-    DSA[DSA Directory]
+flowchart TD
+    DSA["📁 DSA (Root)"]
     
-    DSA --> Arrays[Arrays]
-    DSA --> 2DArrays[2D.Arrays]
-    DSA --> Sorting[Sorting]
-    DSA --> String[String]
-    DSA --> LC_Nested[LeetCode_Problems Directory]
+    %% Core Categories
+    DSA --> Core["📁 Core Topics"]
+    DSA --> LC["📁 LeetCode Problems"]
     
-    Arrays --> ArraysCC.java
-    Arrays --> ArraysCC1.java
-    Arrays --> ArrayCC3.java
-    Arrays --> BinarySearch.java
-    Arrays --> LargestNumber.java
-    Arrays --> Reverse.java
-    Arrays --> Pairs.java
-    Arrays --> SubArrays.java
-    Arrays --> MaxSubarraySum.java
-    Arrays --> maxSubarraySum2.java
-    Arrays --> maxSuubarraySum3.java
-    Arrays --> TrapRainwater.java
-    Arrays --> Stocks.java
+    %% Core Topics Breakdown
+    Core --> Arrays["📁 Arrays<br/>📄 ArraysCC.java & ArraysCC1.java<br/>📄 ArrayCC3.java & BinarySearch.java<br/>📄 LargestNumber.java & Reverse.java<br/>📄 Pairs.java & SubArrays.java<br/>📄 MaxSubarraySum.java (1, 2, 3)<br/>📄 Stocks.java & TrapRainwater.java"]
+    Core --> 2DArrays["📁 2D.Arrays<br/>📄 Matrices.java<br/>📄 SpiralMatrix.java<br/>📄 DaigonalSum.java<br/>📄 SearchSortedMatrix.java"]
+    Core --> Sorting["📁 Sorting<br/>📄 BasicSorting.java<br/>📄 SelectionSort.java<br/>📄 InsertionSort.java<br/>📄 countingSort.java"]
+    Core --> String["📁 String<br/>📄 StringBasics.java<br/>📄 IsPalindrome.java<br/>📄 Directions.java<br/>📄 Substring.java<br/>📄 largestString.java"]
     
-    2DArrays --> Matrices.java
-    2DArrays --> SpiralMatrix.java
-    2DArrays --> DaigonalSum.java
-    2DArrays --> SearchSortedMatrix.java
+    %% LeetCode Breakdown
+    LC --> LCEasy["🟢 Easy Problems<br/>• 0009-palindrome-number<br/>• 0026-remove-duplicates<br/>• 0121-best-time-to-buy-stock<br/>• 0283-move-zeroes<br/>• 0344-reverse-string<br/>• 2769-max-achievable-number<br/>• 3936-min-swaps-zeros-to-end"]
+    LC --> LCMed["🟡 Medium Problems<br/>• 0153-find-min-rotated-array<br/>• 0735-asteroid-collision<br/>• 2812-safest-path-in-grid<br/>• 3228-max-operations-ones-to-end"]
+    LC --> LCHard["🔴 Hard Problems<br/>• 0004-median-two-sorted-arrays<br/>• 0042-trapping-rain-water<br/>• 0154-find-min-rotated-array-ii"]
+
+    %% Styling
+    classDef folder fill:#eff6ff,stroke:#3b82f6,stroke-width:2px,color:#1e3a8a;
+    classDef easy fill:#f0fdf4,stroke:#22c55e,stroke-width:2px,color:#14532d;
+    classDef medium fill:#fffbeb,stroke:#f59e0b,stroke-width:2px,color:#78350f;
+    classDef hard fill:#fef2f2,stroke:#ef4444,stroke-width:2px,color:#7f1d1d;
     
-    Sorting --> BasicSorting.java
-    Sorting --> SelectionSort.java
-    Sorting --> InsertionSort.java
-    Sorting --> countingSort.java
-    
-    String --> StringBasics.java
-    String --> IsPalindrome.java
-    String --> Directions.java
-    String --> Substring.java
-    String --> largestString.java
-    
-    LC_Nested --> 0004[0004-median-of-two-sorted-arrays]
-    LC_Nested --> 0009[0009-palindrome-number]
-    LC_Nested --> 0026[0026-remove-duplicates-from-sorted-array]
-    LC_Nested --> 0042[0042-trapping-rain-water]
-    LC_Nested --> 0121[0121-best-time-to-buy-and-sell-stock]
-    LC_Nested --> 0153[0153-find-minimum-in-rotated-sorted-array]
-    LC_Nested --> 0154[0154-find-minimum-in-rotated-sorted-array-ii]
-    LC_Nested --> 0283[0283-move-zeroes]
-    LC_Nested --> 0344[0344-reverse-string]
-    LC_Nested --> 0735[0735-asteroid-collision]
-    LC_Nested --> 2769[2769-find-the-maximum-achievable-number]
-    LC_Nested --> 2812[2812-find-the-safest-path-in-a-grid]
-    LC_Nested --> 3228[3228-maximum-number-of-operations-to-move-ones-to-the-end]
-    LC_Nested --> 3936[3936-minimum-swaps-to-move-zeros-to-end]
+    class DSA,Core,LC,Arrays,2DArrays,Sorting,String folder;
+    class LCEasy easy;
+    class LCMed medium;
+    class LCHard hard;
 ```
 
 ---
