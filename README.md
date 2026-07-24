@@ -15,7 +15,7 @@ The code is organized by topic and LeetCode problem ID under the `DSA` directory
 | 📁 **[Arrays](./Arrays)** | Fundamental operations on 1D arrays, search, reverse, subarray sums, and optimization problems. | [ArraysCC.java](./Arrays/ArraysCC.java), [ArraysCC1.java](./Arrays/ArraysCC1.java), [ArrayCC3.java](./Arrays/ArrayCC3.java), [BinarySearch.java](./Arrays/BinarySearch.java), [LargestNumber.java](./Arrays/LargestNumber.java), [Reverse.java](./Arrays/Reverse.java), [Pairs.java](./Arrays/Pairs.java), [SubArrays.java](./Arrays/SubArrays.java), [MaxSubarraySum.java](./Arrays/MaxSubarraySum.java), [maxSubarraySum2.java](./Arrays/maxSubarraySum2.java), [maxSuubarraySum3.java](./Arrays/maxSuubarraySum3.java), [TrapRainwater.java](./Arrays/TrapRainwater.java), [Stocks.java](./Arrays/Stocks.java) |
 | 📁 **[2D.Arrays](./2D.Arrays)** | Operations on matrices, diagonal sums, spiral traversals, and search in sorted 2D matrices. | [Matrices.java](./2D.Arrays/Matrices.java), [SpiralMatrix.java](./2D.Arrays/SpiralMatrix.java), [DaigonalSum.java](./2D.Arrays/DaigonalSum.java), [SearchSortedMatrix.java](./2D.Arrays/SearchSortedMatrix.java) |
 | 📁 **[Sorting](./Sorting)** | Implementation of classic sorting algorithms. | [BasicSorting.java](./Sorting/BasicSorting.java), [SelectionSort.java](./Sorting/SelectionSort.java), [InsertionSort.java](./Sorting/InsertionSort.java), [countingSort.java](./Sorting/countingSort.java) |
-| 📁 **[String](./String)** | String manipulation, basic character iteration, concatenation, directions tracking, and palindrome verification. | [StringBasics.java](./String/StringBasics.java), [IsPalindrome.java](./String/IsPalindrome.java), [Directions.java](./String/Directions.java), [Substring.java](./String/Substring.java), [largestString.java](./String/largestString.java) |
+| 📁 **[String](./String)** | String manipulation, basic character iteration, concatenation, directions tracking, palindrome verification, and StringBuilder usage. | [StringBasics.java](./String/StringBasics.java), [IsPalindrome.java](./String/IsPalindrome.java), [Directions.java](./String/Directions.java), [Substring.java](./String/Substring.java), [largestString.java](./String/largestString.java), [StringBuilderDemo.java](./String/StringBuilderDemo.java) |
 
 ### Visual Layout
 
@@ -31,7 +31,7 @@ flowchart TD
     Core --> Arrays["📁 Arrays<br/>📄 ArraysCC.java & ArraysCC1.java<br/>📄 ArrayCC3.java & BinarySearch.java<br/>📄 LargestNumber.java & Reverse.java<br/>📄 Pairs.java & SubArrays.java<br/>📄 MaxSubarraySum.java (1, 2, 3)<br/>📄 Stocks.java & TrapRainwater.java"]
     Core --> 2DArrays["📁 2D.Arrays<br/>📄 Matrices.java<br/>📄 SpiralMatrix.java<br/>📄 DaigonalSum.java<br/>📄 SearchSortedMatrix.java"]
     Core --> Sorting["📁 Sorting<br/>📄 BasicSorting.java<br/>📄 SelectionSort.java<br/>📄 InsertionSort.java<br/>📄 countingSort.java"]
-    Core --> String["📁 String<br/>📄 StringBasics.java<br/>📄 IsPalindrome.java<br/>📄 Directions.java<br/>📄 Substring.java<br/>📄 largestString.java"]
+    Core --> String["📁 String<br/>📄 StringBasics.java & IsPalindrome.java<br/>📄 Directions.java & Substring.java<br/>📄 largestString.java & StringBuilderDemo.java"]
     
     %% LeetCode Breakdown
     LC --> LCEasy["🟢 Easy Problems<br/>• 0009-palindrome-number<br/>• 0026-remove-duplicates<br/>• 0121-best-time-to-buy-stock<br/>• 0283-move-zeroes<br/>• 0344-reverse-string<br/>• 2769-max-achievable-number<br/>• 3936-min-swaps-zeros-to-end"]
@@ -95,6 +95,7 @@ flowchart TD
 * **Directions tracking**: Finds the shortest displacement path from a series of directions (N, S, E, W) in [Directions.java](./String/Directions.java).
 * **Substring extraction**: Custom character slicing and built-in substring handling in [Substring.java](./String/Substring.java).
 * **String comparison**: Lexicographical comparison to find the largest string in [largestString.java](./String/largestString.java).
+* **StringBuilder demonstration**: Shows efficient string concatenation and characters appending in [StringBuilderDemo.java](./String/StringBuilderDemo.java).
 
 ---
 
