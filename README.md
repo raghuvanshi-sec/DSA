@@ -1,6 +1,6 @@
-# Data Structures & Algorithms (DSA) in Java & C++
+# Data Structures & Algorithms (DSA) in Java, C++ & Python
 
-Welcome to the DSA learning repository. This repository contains implementations of various data structures, sorting and searching algorithms, matrix operations, and solutions to LeetCode coding problems using Java and C++.
+Welcome to the DSA learning repository. This repository contains implementations of various data structures, sorting and searching algorithms, matrix operations, and solutions to LeetCode coding problems using Java, C++, and Python.
 
 ---
 
@@ -12,10 +12,10 @@ The code is organized by topic and LeetCode problem ID under the `DSA` directory
 
 | Folder / Topic | Description | Key Source Files |
 | :--- | :--- | :--- |
-| 📁 **[Arrays](./Arrays)** | Fundamental operations on 1D arrays, search, reverse, subarray sums, and optimization problems. | [ArraysCC.java](./Arrays/ArraysCC.java), [BinarySearch.java](./Arrays/BinarySearch.java), [Reverse.java](./Arrays/Reverse.java), [MaxSubarraySum.java](./Arrays/MaxSubarraySum.java), [TrapRainwater.java](./Arrays/TrapRainwater.java), [Stocks.java](./Arrays/Stocks.java) |
+| 📁 **[Arrays](./Arrays)** | Fundamental operations on 1D arrays, search, reverse, subarray sums, and optimization problems. | [ArraysCC.java](./Arrays/ArraysCC.java), [ArraysCC1.java](./Arrays/ArraysCC1.java), [ArrayCC3.java](./Arrays/ArrayCC3.java), [BinarySearch.java](./Arrays/BinarySearch.java), [LargestNumber.java](./Arrays/LargestNumber.java), [Reverse.java](./Arrays/Reverse.java), [Pairs.java](./Arrays/Pairs.java), [SubArrays.java](./Arrays/SubArrays.java), [MaxSubarraySum.java](./Arrays/MaxSubarraySum.java), [maxSubarraySum2.java](./Arrays/maxSubarraySum2.java), [maxSuubarraySum3.java](./Arrays/maxSuubarraySum3.java), [TrapRainwater.java](./Arrays/TrapRainwater.java), [Stocks.java](./Arrays/Stocks.java) |
 | 📁 **[2D.Arrays](./2D.Arrays)** | Operations on matrices, diagonal sums, spiral traversals, and search in sorted 2D matrices. | [Matrices.java](./2D.Arrays/Matrices.java), [SpiralMatrix.java](./2D.Arrays/SpiralMatrix.java), [DaigonalSum.java](./2D.Arrays/DaigonalSum.java), [SearchSortedMatrix.java](./2D.Arrays/SearchSortedMatrix.java) |
 | 📁 **[Sorting](./Sorting)** | Implementation of classic sorting algorithms. | [BasicSorting.java](./Sorting/BasicSorting.java), [SelectionSort.java](./Sorting/SelectionSort.java), [InsertionSort.java](./Sorting/InsertionSort.java), [countingSort.java](./Sorting/countingSort.java) |
-| 📁 **[String](./String)** | String manipulation, basic character iteration, concatenation, and palindrome verification. | [StringBasics.java](./String/StringBasics.java), [IsPalindrome.java](./String/IsPalindrome.java) |
+| 📁 **[String](./String)** | String manipulation, basic character iteration, concatenation, directions tracking, and palindrome verification. | [StringBasics.java](./String/StringBasics.java), [IsPalindrome.java](./String/IsPalindrome.java), [Directions.java](./String/Directions.java), [Substring.java](./String/Substring.java), [largestString.java](./String/largestString.java) |
 
 ### Visual Layout
 
@@ -30,9 +30,16 @@ graph TD
     DSA --> LC_Nested[LeetCode_Problems Directory]
     
     Arrays --> ArraysCC.java
+    Arrays --> ArraysCC1.java
+    Arrays --> ArrayCC3.java
     Arrays --> BinarySearch.java
+    Arrays --> LargestNumber.java
     Arrays --> Reverse.java
+    Arrays --> Pairs.java
+    Arrays --> SubArrays.java
     Arrays --> MaxSubarraySum.java
+    Arrays --> maxSubarraySum2.java
+    Arrays --> maxSuubarraySum3.java
     Arrays --> TrapRainwater.java
     Arrays --> Stocks.java
     
@@ -48,11 +55,15 @@ graph TD
     
     String --> StringBasics.java
     String --> IsPalindrome.java
+    String --> Directions.java
+    String --> Substring.java
+    String --> largestString.java
     
     LC_Nested --> 0004[0004-median-of-two-sorted-arrays]
     LC_Nested --> 0009[0009-palindrome-number]
     LC_Nested --> 0026[0026-remove-duplicates-from-sorted-array]
     LC_Nested --> 0042[0042-trapping-rain-water]
+    LC_Nested --> 0121[0121-best-time-to-buy-and-sell-stock]
     LC_Nested --> 0153[0153-find-minimum-in-rotated-sorted-array]
     LC_Nested --> 0154[0154-find-minimum-in-rotated-sorted-array-ii]
     LC_Nested --> 0283[0283-move-zeroes]
@@ -60,6 +71,7 @@ graph TD
     LC_Nested --> 0735[0735-asteroid-collision]
     LC_Nested --> 2769[2769-find-the-maximum-achievable-number]
     LC_Nested --> 2812[2812-find-the-safest-path-in-a-grid]
+    LC_Nested --> 3228[3228-maximum-number-of-operations-to-move-ones-to-the-end]
     LC_Nested --> 3936[3936-minimum-swaps-to-move-zeros-to-end]
 ```
 
@@ -69,11 +81,20 @@ graph TD
 
 ### 1. Arrays & Basics
 
-* **Searching**: Binary Search implementation in [BinarySearch.java](./Arrays/BinarySearch.java).
+* **Searching**:
+  * Linear Search implementation in [ArrayCC3.java](./Arrays/ArrayCC3.java).
+  * Binary Search implementation in [BinarySearch.java](./Arrays/BinarySearch.java).
+* **Basics & Manipulation**:
+  * Array creation, size, and update: [ArraysCC.java](./Arrays/ArraysCC.java).
+  * Array reference passing: [ArraysCC1.java](./Arrays/ArraysCC1.java).
+  * Finding the largest & smallest element: [LargestNumber.java](./Arrays/LargestNumber.java).
+  * Reverse an array: [Reverse.java](./Arrays/Reverse.java).
 * **Subarrays**:
   * Print all pairs: [Pairs.java](./Arrays/Pairs.java).
   * Find all subarrays: [SubArrays.java](./Arrays/SubArrays.java).
-  * Subarray Sum: Brute Force, Prefix Sum, and Kadane's Algorithm implementations in [MaxSubarraySum.java](./Arrays/MaxSubarraySum.java) and [maxSubarraySum2.java](./Arrays/maxSubarraySum2.java).
+  * Subarray Sum (Brute Force): [MaxSubarraySum.java](./Arrays/MaxSubarraySum.java).
+  * Subarray Sum (Prefix Sum approach): [maxSubarraySum2.java](./Arrays/maxSubarraySum2.java).
+  * Subarray Sum (Kadane's Algorithm - optimized, handles negative numbers): [maxSuubarraySum3.java](./Arrays/maxSuubarraySum3.java).
 * **Optimization**:
   * Buy and Sell Stocks: [Stocks.java](./Arrays/Stocks.java).
   * Trapping Rainwater: [TrapRainwater.java](./Arrays/TrapRainwater.java).
@@ -94,8 +115,11 @@ graph TD
 
 ### 4. Strings
 
-* **String Basics**: Standard operations including iteration and concatenation in [StringBasics.java](./String/StringBasics.java).
+* **String Basics**: Standard operations including iteration, length, and concatenation in [StringBasics.java](./String/StringBasics.java).
 * **Palindrome Check**: Checks whether a string reads the same forwards and backwards in [IsPalindrome.java](./String/IsPalindrome.java).
+* **Directions tracking**: Finds the shortest displacement path from a series of directions (N, S, E, W) in [Directions.java](./String/Directions.java).
+* **Substring extraction**: Custom character slicing and built-in substring handling in [Substring.java](./String/Substring.java).
+* **String comparison**: Lexicographical comparison to find the largest string in [largestString.java](./String/largestString.java).
 
 ---
 
@@ -109,6 +133,7 @@ All solutions are organized under the `LeetCode_Problems/` directory:
 | **0009** | [Palindrome Number](./LeetCode_Problems/0009-palindrome-number) | 🟢 Easy | [Java](./LeetCode_Problems/0009-palindrome-number/0009-palindrome-number.java) |
 | **0026** | [Remove Duplicates from Sorted Array](./LeetCode_Problems/0026-remove-duplicates-from-sorted-array) | 🟢 Easy | [Java](./LeetCode_Problems/0026-remove-duplicates-from-sorted-array/0026-remove-duplicates-from-sorted-array.java) |
 | **0042** | [Trapping Rain Water](./LeetCode_Problems/0042-trapping-rain-water) | 🔴 Hard | [Java](./LeetCode_Problems/0042-trapping-rain-water/0042-trapping-rain-water.java) |
+| **0121** | [Best Time to Buy and Sell Stock](./LeetCode_Problems/0121-best-time-to-buy-and-sell-stock) | 🟢 Easy | [Java](./LeetCode_Problems/0121-best-time-to-buy-and-sell-stock/0121-best-time-to-buy-and-sell-stock.java) |
 | **0153** | [Find Minimum in Rotated Sorted Array](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array) | 🟡 Medium | [Java](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.java), [C++](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.cpp) |
 | **0154** | [Find Minimum in Rotated Sorted Array II](./LeetCode_Problems/0154-find-minimum-in-rotated-sorted-array-ii) | 🔴 Hard | [C++](./LeetCode_Problems/0154-find-minimum-in-rotated-sorted-array-ii/0154-find-minimum-in-rotated-sorted-array-ii.cpp) |
 | **0283** | [Move Zeroes](./LeetCode_Problems/0283-move-zeroes) | 🟢 Easy | [Java](./LeetCode_Problems/0283-move-zeroes/0283-move-zeroes.java) |
@@ -116,6 +141,7 @@ All solutions are organized under the `LeetCode_Problems/` directory:
 | **0735** | [Asteroid Collision](./LeetCode_Problems/0735-asteroid-collision) | 🟡 Medium | [Java](./LeetCode_Problems/0735-asteroid-collision/0735-asteroid-collision.java) |
 | **2769** | [Find the Maximum Achievable Number](./LeetCode_Problems/2769-find-the-maximum-achievable-number) | 🟢 Easy | [Java](./LeetCode_Problems/2769-find-the-maximum-achievable-number/2769-find-the-maximum-achievable-number.java) |
 | **2812** | [Find the Safest Path in a Grid](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid) | 🟡 Medium | [Java](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid/2812-find-the-safest-path-in-a-grid.java) |
+| **3228** | [Maximum Number of Operations to Move Ones to the End](./LeetCode_Problems/3228-maximum-number-of-operations-to-move-ones-to-the-end) | 🟡 Medium | [Python](./LeetCode_Problems/3228-maximum-number-of-operations-to-move-ones-to-the-end/3228-maximum-number-of-operations-to-move-ones-to-the-end.py) |
 | **3936** | [Minimum Swaps to Move Zeros to End](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end) | 🟢 Easy | [Java](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end/3936-minimum-swaps-to-move-zeros-to-end.java) |
 
 ---
@@ -164,4 +190,20 @@ To compile and run any C++ file:
 
     ```bash
     ./solution
+    ```
+
+### 🐍 Python Files
+
+To run any Python file:
+
+1. Open your terminal and navigate to the directory of the file:
+
+    ```bash
+    cd DSA/LeetCode_Problems/3228-maximum-number-of-operations-to-move-ones-to-the-end
+    ```
+
+2. Run the script:
+
+    ```bash
+    python 3228-maximum-number-of-operations-to-move-ones-to-the-end.py
     ```
