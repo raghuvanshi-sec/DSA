@@ -119,6 +119,8 @@ Object-oriented design principles in Java demonstrating encapsulation, abstracti
 | [`Constructors.java`](./OOPs/Constructors.java) | Constructors | Parameterized and non-parameterized object initialization. |
 | [`CopyConstructor.java`](./OOPs/CopyConstructor.java) | Shallow vs. Deep Copy | Object cloning using copy constructors (shallow vs. deep copy). |
 | [`Inheritance.java`](./OOPs/Inheritance.java) | Class Inheritance | Parent-child class hierarchies (`extends` keyword) and reusability. |
+| [`HybridInheritance.java`](./OOPs/HybridInheritance.java) | Hybrid Inheritance | Combining hierarchical and multi-level inheritance hierarchies. |
+| [`Polymorphism.java`](./OOPs/Polymorphism.java) | Method Overloading | Compile-time (static) polymorphism using different parameter signatures. |
 | [`Modifiers.java`](./OOPs/Modifiers.java) | Access Control | Demonstrating `public`, `private`, `protected`, and default visibility. |
 
 ---
