@@ -3,16 +3,16 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-22%2B%20Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](../LICENSE)
+[![LeetCode](https://img.shields.io/badge/LeetCode-23%2B%20Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](#-license)
 
-Welcome to the **Data Structures & Algorithms (DSA) and Object-Oriented Programming (OOPs)** submodule repository. This collection contains clean, optimized, and well-structured implementations of foundational computer science concepts, core algorithm design patterns, bitwise operations, OOP paradigms, and 22+ curated problem solutions from LeetCode across **Java**, **C++**, and **Python**.
+Welcome to the **Data Structures & Algorithms (DSA) and Object-Oriented Programming (OOPs)** repository. This collection contains clean, optimized, and well-structured implementations of foundational computer science concepts, core algorithm design patterns, bitwise operations, OOP paradigms, and 23 curated problem solutions from LeetCode across **Java**, **C++**, and **Python**.
 
 ---
 
 ## 📑 Table of Contents
 
-- [� Data Structures \& Algorithms (DSA) \& OOPs in Java, C++ \& Python](#-data-structures--algorithms-dsa--oops-in-java-c--python)
+- [🚀 Data Structures \& Algorithms (DSA) \& OOPs in Java, C++ \& Python](#-data-structures--algorithms-dsa--oops-in-java-c--python)
   - [📑 Table of Contents](#-table-of-contents)
   - [📁 Directory Structure](#-directory-structure)
   - [🧩 Core Topics \& Modules](#-core-topics--modules)
@@ -43,7 +43,7 @@ DSA/
 ├── OOPs/                 # Classes, inheritance, constructors, copy constructors & encapsulation
 ├── Sorting/              # Classic sorting algorithms (Bubble, Selection, Insertion, Counting)
 ├── String/               # String manipulation, palindrome check, compression & StringBuilder
-└── LeetCode_Problems/    # 22 Curated LeetCode problem solutions (Java, C++, Python)
+└── LeetCode_Problems/    # 23 Curated LeetCode problem solutions (Java, C++, Python)
 ```
 
 ---
@@ -120,7 +120,7 @@ Object-oriented design principles in Java demonstrating encapsulation, abstracti
 | [`CopyConstructor.java`](./OOPs/CopyConstructor.java) | Shallow vs. Deep Copy | Object cloning using copy constructors (shallow vs. deep copy). |
 | [`Inheritance.java`](./OOPs/Inheritance.java) | Class Inheritance | Parent-child class hierarchies (`extends` keyword) and reusability. |
 | [`HybridInheritance.java`](./OOPs/HybridInheritance.java) | Hybrid Inheritance | Combining hierarchical and multi-level inheritance hierarchies. |
-| [`Polymorphism.java`](./OOPs/Polymorphism.java) | Method Overloading | Compile-time (static) polymorphism using different parameter signatures. |
+| [`Polymorphism.java`](./OOPs/Polymorphism.java) | Polymorphism & Overriding | Method overloading & dynamic method dispatch with `@Override`. |
 | [`Modifiers.java`](./OOPs/Modifiers.java) | Access Control | Demonstrating `public`, `private`, `protected`, and default visibility. |
 
 ---
@@ -159,23 +159,23 @@ String processing, immutable string handling, sequence verification, and memory-
 
 ```mermaid
 flowchart TD
-    DSA["📁 DSA (Root Repository)"]
+    DSA["📁 DSA Repository"]
     
     %% Categories
-    DSA --> Core["📁 Core Computer Science Topics"]
+    DSA --> DSA["📁 Data Structure & Algoritm"]
     DSA --> LC["📁 LeetCode Problem Solutions"]
     
-    %% Core Breakdown
-    Core --> Arrays["📁 Arrays<br/>📄 ArraysCC, ArraysCC1, ArrayCC3<br/>📄 BinarySearch, LargestNumber, Reverse<br/>📄 Pairs, SubArrays, MaxSubarraySum (1,2,3)<br/>📄 Stocks, TrapRainwater"]
-    Core --> 2DArrays["📁 2D.Arrays<br/>📄 Matrices, SpiralMatrix<br/>📄 DaigonalSum, SearchSortedMatrix"]
-    Core --> Bitwise["📁 BitManipulation<br/>📄 BinaryAND, OR, XOR, NOT, Left, Right<br/>📄 OddorEven, getIthbit, setIthBit, clearIthBit<br/>📄 updateIthBit, clearLastIthBit, clearRange, CheckPower"]
-    Core --> OOPs["📁 OOPs<br/>📄 ClassesAndObjects, GettersAndSetters<br/>📄 Constructors, CopyConstructor<br/>📄 Inheritance, Modifiers"]
-    Core --> Sorting["📁 Sorting<br/>📄 BasicSorting (Bubble)<br/>📄 SelectionSort, InsertionSort, countingSort"]
-    Core --> String["📁 String<br/>📄 StringBasics, IsPalindrome, Directions<br/>📄 Substring, largestString, StringBuilderDemo<br/>📄 StringUpperCase, Compress"]
+    %% DSA Breakdown
+    DSA --> Arrays["📁 Arrays<br/>📄 ArraysCC, ArraysCC1, ArrayCC3<br/>📄 BinarySearch, LargestNumber, Reverse<br/>📄 Pairs, SubArrays, MaxSubarraySum (1,2,3)<br/>📄 Stocks, TrapRainwater"]
+    DSA --> 2DArrays["📁 2D.Arrays<br/>📄 Matrices, SpiralMatrix<br/>📄 DaigonalSum, SearchSortedMatrix"]
+    DSA --> Bitwise["📁 BitManipulation<br/>📄 BinaryAND, OR, XOR, NOT, Left, Right<br/>📄 OddorEven, getIthbit, setIthBit, clearIthBit<br/>📄 updateIthBit, clearLastIthBit, clearRange, CheckPower"]
+    DSA --> OOPs["📁 OOPs<br/>📄 ClassesAndObjects, GettersAndSetters<br/>📄 Constructors, CopyConstructor<br/>📄 Inheritance, HybridInheritance, Polymorphism, Modifiers"]
+    DSA --> Sorting["📁 Sorting<br/>📄 BasicSorting (Bubble)<br/>📄 SelectionSort, InsertionSort, countingSort"]
+    DSA --> String["📁 String<br/>📄 StringBasics, IsPalindrome, Directions<br/>📄 Substring, largestString, StringBuilderDemo<br/>📄 StringUpperCase, Compress"]
     
     %% LeetCode Breakdown
     LC --> Easy["🟢 Easy Problems<br/>• 0009 - Palindrome Number<br/>• 0026 - Remove Duplicates<br/>• 0121 - Buy & Sell Stock<br/>• 0190 - Reverse Bits<br/>• 0283 - Move Zeroes<br/>• 0344 - Reverse String<br/>• 1464 - Max Product of Two Elements<br/>• 1624 - Largest Substring<br/>• 2769 - Max Achievable Number<br/>• 3014 - Min Key Pushes I<br/>• 3936 - Min Swaps Zeros to End"]
-    LC --> Medium["🟡 Medium Problems<br/>• 0153 - Min in Rotated Array<br/>• 0201 - Bitwise AND of Range<br/>• 0238 - Product Except Self<br/>• 0735 - Asteroid Collision<br/>• 2812 - Safest Path in Grid<br/>• 3228 - Max Operations Ones<br/>• 3517 - Smallest Palindromic I"]
+    LC --> Medium["🟡 Medium Problems<br/>• 0153 - Min in Rotated Array<br/>• 0201 - Bitwise AND of Range<br/>• 0238 - Product Except Self<br/>• 0735 - Asteroid Collision<br/>• 2812 - Safest Path in Grid<br/>• 3016 - Min Key Pushes II<br/>• 3228 - Max Operations Ones<br/>• 3517 - Smallest Palindromic I"]
     LC --> Hard["🔴 Hard Problems<br/>• 0004 - Median of 2 Sorted Arrays<br/>• 0042 - Trapping Rain Water<br/>• 0154 - Min in Rotated Array II<br/>• 3518 - Smallest Palindromic II"]
 
     %% Styling
@@ -196,7 +196,7 @@ flowchart TD
 
 ## 💡 LeetCode Solutions Tracker
 
-Comprehensive index of solved LeetCode challenges sorted by problem ID:
+Comprehensive index of 23 solved LeetCode challenges sorted by problem ID:
 
 | ID | Problem Title | Difficulty | Topic / Category | Solutions Available |
 | :---: | :--- | :---: | :--- | :--- |
@@ -218,6 +218,7 @@ Comprehensive index of solved LeetCode challenges sorted by problem ID:
 | **2769** | [Find Maximum Achievable Number](./LeetCode_Problems/2769-find-the-maximum-achievable-number) | 🟢 Easy | Math | [Java](./LeetCode_Problems/2769-find-the-maximum-achievable-number/2769-find-the-maximum-achievable-number.java) |
 | **2812** | [Find the Safest Path in a Grid](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid) | 🟡 Medium | BFS / Dijkstra / Matrix | [Java](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid/2812-find-the-safest-path-in-a-grid.java) |
 | **3014** | [Minimum Number of Pushes to Type Word I](./LeetCode_Problems/3014-minimum-number-of-pushes-to-type-word-i) | 🟢 Easy | Greedy / Math | [Java](./LeetCode_Problems/3014-minimum-number-of-pushes-to-type-word-i/3014-minimum-number-of-pushes-to-type-word-i.java) |
+| **3016** | [Minimum Number of Pushes to Type Word II](./LeetCode_Problems/3016-minimum-number-of-pushes-to-type-word-ii) | 🟡 Medium | Greedy / Sorting / Frequency | [Java](./LeetCode_Problems/3016-minimum-number-of-pushes-to-type-word-ii/3016-minimum-number-of-pushes-to-type-word-ii.java) |
 | **3228** | [Max Operations to Move Ones to End](./LeetCode_Problems/3228-maximum-number-of-operations-to-move-ones-to-the-end) | 🟡 Medium | Greedy / String | [Python](./LeetCode_Problems/3228-maximum-number-of-operations-to-move-ones-to-the-end/3228-maximum-number-of-operations-to-move-ones-to-the-end.py) |
 | **3517** | [Smallest Palindromic Rearrangement I](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i) | 🟡 Medium | Greedy / String / Palindrome | [Java](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i/3517-smallest-palindromic-rearrangement-i.java) |
 | **3518** | [Smallest Palindromic Rearrangement II](./LeetCode_Problems/3518-smallest-palindromic-rearrangement-ii) | 🔴 Hard | Dynamic Programming / Combinatorics | [Java](./LeetCode_Problems/3518-smallest-palindromic-rearrangement-ii/3518-smallest-palindromic-rearrangement-ii.java) |
