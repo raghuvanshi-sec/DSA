@@ -1,116 +1,87 @@
-import java.util.*;
-
 class Solution {
     public long maxSum(int[] nums, int k) {
+
         int n = nums.length;
+        int positiveCount = 0;
+        long maxSum = 0;
+        int max = Integer.MIN_VALUE;
 
-        long ans = -(long)1e18;
+        for(int x:nums){
+            if(x > 0){
+                positiveCount++;
+                maxSum += x;
+            }
+            max = Math.max(max, x);
+        }
+        
+        if(positiveCount < 2) return max;
+        
+        int count = 0;
+        for(int i = 0; i < positiveCount - 1; i++){
+            if(nums[i] > 0) count++;
+            
+            if(count + k >= positiveCount) return maxSum;
+        }
 
-        if (k == 0 || n == 1) {
-            long sm = 0;
+        for(int i = positiveCount - 1, j = 0; i < n; i++, j++){
+            if(nums[i] > 0)  count++;
+            
+            if(count + k >= positiveCount) return maxSum;
 
-            for (int x : nums) {
-                sm += x;
-                ans = Math.max(ans, sm);
+            if(nums[j] > 0) count--;
+        }  
 
-                if (sm < 0) sm = 0;
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
+        long[][] topkSum = new long[n][n + 1];
+
+        for(int i = 0; i < n; ++i){
+
+            pq.clear();
+            long sum = 0;
+
+            for(int j = 0; j < i; ++j){
+                int x = nums[j];
+                if(x > 0){
+                    sum += x;
+                    pq.offer(x);
+                }
+
+                if(pq.size() > k) sum -= pq.poll();      
             }
 
-            return ans;
-        }
-
-        int cnt = 0;
-        long curNonNegSum = 0;
-
-        long[] pref = new long[n + 1];
-
-        for (int i = 0; i < n; i++) {
-            if (nums[i] >= 0)
-                curNonNegSum += nums[i];
-            else
-                cnt++;
-
-            pref[i + 1] = pref[i] + nums[i];
-            ans = Math.max(ans, nums[i]);
-        }
-
-        boolean hasPositive = false;
-
-        for (int x : nums) {
-           if (x > 0) {
-            hasPositive = true;
-            break;
-           }
-        }
-
-        if (!hasPositive)
-        return ans;
-
-        long[][] dp = new long[n][n];
-
-        for (int i = 0; i < n; i++) {
-            PriorityQueue<Integer> pq =
-                    new PriorityQueue<>(Collections.reverseOrder());
-
-            long sm = 0;
-
-            for (int j = i; j < n; j++) {
-                if (nums[j] >= 0) {
-                    dp[i][j] = sm;
-                    continue;
+            topkSum[i][n] = sum;
+            for(int j = n -1; j >= i; --j){
+                int x = nums[j];
+                if(x > 0){
+                    sum += x;
+                    pq.offer(x);
                 }
 
-                if (pq.size() < k) {
-                    pq.offer(nums[j]);
-                    sm += nums[j];
-                } else if (pq.peek() > nums[j]) {
-                    sm -= pq.poll();
-                    pq.offer(nums[j]);
-                    sm += nums[j];
-                }
+                if(pq.size() > k) sum -= pq.poll(); 
+                
+                topkSum[i][j] = sum;
             }
         }
+        
+        long ans = max;
+        for(int i = 0; i < n; ++i){
 
-        for (int i = 0; i < n; i++) {
-            PriorityQueue<Integer> pqmax = new PriorityQueue<>();
-            long sm = 0;
+            pq.clear();
+            long sum = 0;
 
-            for (int j = 0; j < i; j++) {
-                if (nums[j] < 0) continue;
+            for(int j = i; j < n; ++j){
+                int x = nums[j];
+                if(x < 0)
+                    pq.offer(-x);
+                else
+                    sum += x;
 
-                if (pqmax.size() < k) {
-                    pqmax.offer(nums[j]);
-                    sm += nums[j];
-                } else if (pqmax.peek() < nums[j]) {
-                    sm -= pqmax.poll();
-                    pqmax.offer(nums[j]);
-                    sm += nums[j];
-                }
-            }
-
-            for (int j = n - 1; j > i; j--) {
-                long cur = pref[j + 1] - pref[i];
-                cur -= dp[i][j];
-                cur += sm;
-
-                ans = Math.max(ans, cur);
-
-                if (nums[j] < 0) continue;
-
-                if (pqmax.size() < k) {
-                    pqmax.offer(nums[j]);
-                    sm += nums[j];
-                } else if (pqmax.peek() < nums[j]) {
-                    sm -= pqmax.poll();
-                    pqmax.offer(nums[j]);
-                    sm += nums[j];
-                }
-
-                if (!pqmax.isEmpty())
-                    ans = Math.max(ans, sm);
+                if(pq.size() > k) sum -= pq.poll(); 
+                
+                ans = Math.max(ans, sum + topkSum[i][j + 1]);
             }
         }
 
-        return ans;
+        return ans;         
     }
 }
