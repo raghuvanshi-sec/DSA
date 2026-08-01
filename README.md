@@ -3,10 +3,10 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-23%2B%20Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](#-license)
+[![LeetCode](https://img.shields.io/badge/LeetCode-25%20Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)#-license)
 
-Welcome to the **Data Structures & Algorithms (DSA) and Object-Oriented Programming (OOPs)** repository. This collection contains clean, optimized, and well-structured implementations of foundational computer science concepts, core algorithm design patterns, bitwise operations, OOP paradigms, and 23 curated problem solutions from LeetCode across **Java**, **C++**, and **Python**.
+Welcome to the **Data Structures & Algorithms (DSA) and Object-Oriented Programming (OOPs)** repository. This collection contains clean, optimized, and well-structured implementations of foundational computer science concepts, core algorithm design patterns, bitwise operations, OOP paradigms, and 25 curated problem solutions from LeetCode across **Java**, **C++**, and **Python**.
 
 ---
 
@@ -40,10 +40,10 @@ DSA/
 ├── Arrays/               # 1D Array algorithms, searching, subarray sums & optimizations
 ├── 2D.Arrays/            # Matrix operations, diagonal sum, spiral traversal & matrix search
 ├── BitManipulation/      # Bitwise operators, bit masking, ith-bit operations & bit tricks
-├── OOPs/                 # Classes, inheritance, constructors, copy constructors & encapsulation
+├── OOPs/                 # Classes, inheritance, abstraction, constructors & encapsulation
 ├── Sorting/              # Classic sorting algorithms (Bubble, Selection, Insertion, Counting)
 ├── String/               # String manipulation, palindrome check, compression & StringBuilder
-└── LeetCode_Problems/    # 23 Curated LeetCode problem solutions (Java, C++, Python)
+└── LeetCode_Problems/    # 25 Curated LeetCode problem solutions (Java, C++, Python)
 ```
 
 ---
@@ -110,10 +110,11 @@ Low-level bitwise manipulation, mask generation, binary bit testing, and arithme
 
 ### 4. Object-Oriented Programming (OOPs)
 
-Object-oriented design principles in Java demonstrating encapsulation, abstraction, inheritance, constructors, and access modifiers.
+Object-oriented design principles in Java demonstrating encapsulation, abstraction, inheritance, constructors, access modifiers, and polymorphism.
 
 | File | Topic / Concept | Description |
 | :--- | :--- | :--- |
+| [`Abstraction.java`](./OOPs/Abstraction.java) | Abstraction & Abstract Classes | Abstract classes, abstract methods, dynamic method overriding, and constructor chaining. |
 | [`ClassesAndObjects.java`](./OOPs/ClassesAndObjects.java) | Classes & Instantiation | Defining object attributes, behaviors, and instantiation syntax. |
 | [`GettersAndSetters.java`](./OOPs/GettersAndSetters.java) | Encapsulation | Encapsulating private fields with controlled public accessors/mutators. |
 | [`Constructors.java`](./OOPs/Constructors.java) | Constructors | Parameterized and non-parameterized object initialization. |
@@ -169,14 +170,14 @@ flowchart TD
     Core --> Arrays["📁 Arrays<br/>📄 ArraysCC, ArraysCC1, ArrayCC3<br/>📄 BinarySearch, LargestNumber, Reverse<br/>📄 Pairs, SubArrays, MaxSubarraySum (1,2,3)<br/>📄 Stocks, TrapRainwater"]
     Core --> 2DArrays["📁 2D.Arrays<br/>📄 Matrices, SpiralMatrix<br/>📄 DaigonalSum, SearchSortedMatrix"]
     Core --> Bitwise["📁 BitManipulation<br/>📄 BinaryAND, OR, XOR, NOT, Left, Right<br/>📄 OddorEven, getIthbit, setIthBit, clearIthBit<br/>📄 updateIthBit, clearLastIthBit, clearRange, CheckPower"]
-    Core --> OOPs["📁 OOPs<br/>📄 ClassesAndObjects, GettersAndSetters<br/>📄 Constructors, CopyConstructor<br/>📄 Inheritance, HybridInheritance, Polymorphism, Modifiers"]
+    Core --> OOPs["📁 OOPs<br/>📄 Abstraction, ClassesAndObjects, GettersAndSetters<br/>📄 Constructors, CopyConstructor<br/>📄 Inheritance, HybridInheritance, Polymorphism, Modifiers"]
     Core --> Sorting["📁 Sorting<br/>📄 BasicSorting (Bubble)<br/>📄 SelectionSort, InsertionSort, countingSort"]
     Core --> String["📁 String<br/>📄 StringBasics, IsPalindrome, Directions<br/>📄 Substring, largestString, StringBuilderDemo<br/>📄 StringUpperCase, Compress"]
     
     %% LeetCode Breakdown
-    LC --> Easy["🟢 Easy Problems<br/>• 0009 - Palindrome Number<br/>• 0026 - Remove Duplicates<br/>• 0121 - Buy & Sell Stock<br/>• 0190 - Reverse Bits<br/>• 0283 - Move Zeroes<br/>• 0344 - Reverse String<br/>• 1464 - Max Product of Two Elements<br/>• 1624 - Largest Substring<br/>• 2769 - Max Achievable Number<br/>• 3014 - Min Key Pushes I<br/>• 3936 - Min Swaps Zeros to End"]
-    LC --> Medium["🟡 Medium Problems<br/>• 0153 - Min in Rotated Array<br/>• 0201 - Bitwise AND of Range<br/>• 0238 - Product Except Self<br/>• 0735 - Asteroid Collision<br/>• 2812 - Safest Path in Grid<br/>• 3016 - Min Key Pushes II<br/>• 3228 - Max Operations Ones<br/>• 3517 - Smallest Palindromic I"]
-    LC --> Hard["🔴 Hard Problems<br/>• 0004 - Median of 2 Sorted Arrays<br/>• 0042 - Trapping Rain Water<br/>• 0154 - Min in Rotated Array II<br/>• 3518 - Smallest Palindromic II"]
+    LC --> Easy["🟢 Easy Problems (11)<br/>• 0009 - Palindrome Number<br/>• 0026 - Remove Duplicates<br/>• 0121 - Buy & Sell Stock<br/>• 0190 - Reverse Bits<br/>• 0283 - Move Zeroes<br/>• 0344 - Reverse String<br/>• 1464 - Max Product of Two Elements<br/>• 1624 - Largest Substring<br/>• 2769 - Max Achievable Number<br/>• 3014 - Min Key Pushes I<br/>• 3936 - Min Swaps Zeros to End"]
+    LC --> Medium["🟡 Medium Problems (9)<br/>• 0153 - Min in Rotated Array<br/>• 0201 - Bitwise AND of Range<br/>• 0238 - Product Except Self<br/>• 0486 - Predict the Winner<br/>• 0735 - Asteroid Collision<br/>• 2812 - Safest Path in Grid<br/>• 3016 - Min Key Pushes II<br/>• 3228 - Max Operations Ones<br/>• 3517 - Smallest Palindromic I"]
+    LC --> Hard["🔴 Hard Problems (5)<br/>• 0004 - Median of 2 Sorted Arrays<br/>• 0042 - Trapping Rain Water<br/>• 0154 - Min in Rotated Array II<br/>• 3518 - Smallest Palindromic II<br/>• 3962 - Max Subarray Sum K Swaps"]
 
     %% Styling
     classDef main fill:#1e293b,stroke:#64748b,stroke-width:2px,color:#f8fafc;
@@ -196,7 +197,7 @@ flowchart TD
 
 ## 💡 LeetCode Solutions Tracker
 
-Comprehensive index of 23 solved LeetCode challenges sorted by problem ID:
+Comprehensive index of 25 solved LeetCode challenges sorted by problem ID:
 
 | ID | Problem Title | Difficulty | Topic / Category | Solutions Available |
 | :---: | :--- | :---: | :--- | :--- |
@@ -212,6 +213,7 @@ Comprehensive index of 23 solved LeetCode challenges sorted by problem ID:
 | **0238** | [Product of Array Except Self](./LeetCode_Problems/0238-product-of-array-except-self) | 🟡 Medium | Prefix / Suffix Products | [Java](./LeetCode_Problems/0238-product-of-array-except-self/0238-product-of-array-except-self.java) |
 | **0283** | [Move Zeroes](./LeetCode_Problems/0283-move-zeroes) | 🟢 Easy | Two Pointers | [Java](./LeetCode_Problems/0283-move-zeroes/0283-move-zeroes.java) |
 | **0344** | [Reverse String](./LeetCode_Problems/0344-reverse-string) | 🟢 Easy | Two Pointers / Strings | [Java](./LeetCode_Problems/0344-reverse-string/0344-reverse-string.java) |
+| **0486** | [Predict the Winner](./LeetCode_Problems/0486-predict-the-winner) | 🟡 Medium | Dynamic Programming / Recursion / Game Theory | [Java](./LeetCode_Problems/0486-predict-the-winner/0486-predict-the-winner.java) |
 | **0735** | [Asteroid Collision](./LeetCode_Problems/0735-asteroid-collision) | 🟡 Medium | Stack / Simulation | [Java](./LeetCode_Problems/0735-asteroid-collision/0735-asteroid-collision.java) |
 | **1464** | [Max Product of Two Elements in Array](./LeetCode_Problems/1464-maximum-product-of-two-elements-in-an-array) | 🟢 Easy | Arrays / Sorting | [Java](./LeetCode_Problems/1464-maximum-product-of-two-elements-in-an-array/1464-maximum-product-of-two-elements-in-an-array.java) |
 | **1624** | [Largest Substring Between Equal Chars](./LeetCode_Problems/1624-largest-substring-between-two-equal-characters) | 🟢 Easy | Hash Table / String | [Java](./LeetCode_Problems/1624-largest-substring-between-two-equal-characters/1624-largest-substring-between-two-equal-characters.java) |
@@ -223,6 +225,7 @@ Comprehensive index of 23 solved LeetCode challenges sorted by problem ID:
 | **3517** | [Smallest Palindromic Rearrangement I](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i) | 🟡 Medium | Greedy / String / Palindrome | [Java](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i/3517-smallest-palindromic-rearrangement-i.java) |
 | **3518** | [Smallest Palindromic Rearrangement II](./LeetCode_Problems/3518-smallest-palindromic-rearrangement-ii) | 🔴 Hard | Dynamic Programming / Combinatorics | [Java](./LeetCode_Problems/3518-smallest-palindromic-rearrangement-ii/3518-smallest-palindromic-rearrangement-ii.java) |
 | **3936** | [Minimum Swaps to Move Zeros to End](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end) | 🟢 Easy | Arrays / Greedy | [Java](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end/3936-minimum-swaps-to-move-zeros-to-end.java) |
+| **3962** | [Maximum Subarray Sum After at Most K Swaps](./LeetCode_Problems/3962-maximum-subarray-sum-after-at-most-k-swaps) | 🔴 Hard | Arrays / Dynamic Programming / Prefix Sum | [Java](./LeetCode_Problems/3962-maximum-subarray-sum-after-at-most-k-swaps/3962-maximum-subarray-sum-after-at-most-k-swaps.java) |
 
 ---
 
