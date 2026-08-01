@@ -12,8 +12,10 @@ public class Polymorphism {
         // System.out.println(calc.sum(1, 2, 3));
         // System.out.println(calc.sum(1.5f, 2.5f));
     }
-
 }
+// Types of Polymorphism
+// 1. Compile time polymorphism (Method overloading)
+// 2. Run time polymorphism (Method overriding)
 
 class Animal {
     void eat() {
