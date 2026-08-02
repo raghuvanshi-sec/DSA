@@ -4,9 +4,9 @@
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![LeetCode](https://img.shields.io/badge/LeetCode-25%20Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)#-license)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-Welcome to the **Data Structures & Algorithms (DSA) and Object-Oriented Programming (OOPs)** repository. This collection contains clean, optimized, and well-structured implementations of foundational computer science concepts, core algorithm design patterns, bitwise operations, OOP paradigms, and 25 curated problem solutions from LeetCode across **Java**, **C++**, and **Python**.
+Welcome to the **Data Structures & Algorithms (DSA) and Object-Oriented Programming (OOPs)** repository. This collection contains clean, optimized, and well-structured implementations of foundational computer science concepts, core algorithm design patterns, bitwise operations, OOP paradigms, recursion, and 25 curated problem solutions from LeetCode across **Java**, **C++**, and **Python**.
 
 ---
 
@@ -22,6 +22,7 @@ Welcome to the **Data Structures & Algorithms (DSA) and Object-Oriented Programm
     - [4. Object-Oriented Programming (OOPs)](#4-object-oriented-programming-oops)
     - [5. Sorting Algorithms](#5-sorting-algorithms)
     - [6. String Manipulation \& Utilities](#6-string-manipulation--utilities)
+    - [7. Recursion \& Call Stack Foundations](#7-recursion--call-stack-foundations)
   - [📊 Visual Architecture](#-visual-architecture)
   - [💡 LeetCode Solutions Tracker](#-leetcode-solutions-tracker)
   - [⏱️ Complexity Reference Table](#️-complexity-reference-table)
@@ -40,7 +41,8 @@ DSA/
 ├── Arrays/               # 1D Array algorithms, searching, subarray sums & optimizations
 ├── 2D.Arrays/            # Matrix operations, diagonal sum, spiral traversal & matrix search
 ├── BitManipulation/      # Bitwise operators, bit masking, ith-bit operations & bit tricks
-├── OOPs/                 # Classes, inheritance, abstraction, constructors & encapsulation
+├── OOPs/                 # Classes, inheritance, abstraction, constructors, static & super keywords
+├── Recursion/            # Recursive functions, base cases, factorial, Fibonacci & natural sums
 ├── Sorting/              # Classic sorting algorithms (Bubble, Selection, Insertion, Counting)
 ├── String/               # String manipulation, palindrome check, compression & StringBuilder
 └── LeetCode_Problems/    # 25 Curated LeetCode problem solutions (Java, C++, Python)
@@ -110,19 +112,22 @@ Low-level bitwise manipulation, mask generation, binary bit testing, and arithme
 
 ### 4. Object-Oriented Programming (OOPs)
 
-Object-oriented design principles in Java demonstrating encapsulation, abstraction, inheritance, constructors, access modifiers, and polymorphism.
+Object-oriented design principles in Java demonstrating encapsulation, abstraction, inheritance, constructors, access modifiers, polymorphism, static scope, and super constructor calls.
 
 | File | Topic / Concept | Description |
 | :--- | :--- | :--- |
-| [`Abstraction.java`](./OOPs/Abstraction.java) | Abstraction & Abstract Classes | Abstract classes, abstract methods, dynamic method overriding, and constructor chaining. |
-| [`ClassesAndObjects.java`](./OOPs/ClassesAndObjects.java) | Classes & Instantiation | Defining object attributes, behaviors, and instantiation syntax. |
-| [`GettersAndSetters.java`](./OOPs/GettersAndSetters.java) | Encapsulation | Encapsulating private fields with controlled public accessors/mutators. |
-| [`Constructors.java`](./OOPs/Constructors.java) | Constructors | Parameterized and non-parameterized object initialization. |
-| [`CopyConstructor.java`](./OOPs/CopyConstructor.java) | Shallow vs. Deep Copy | Object cloning using copy constructors (shallow vs. deep copy). |
-| [`Inheritance.java`](./OOPs/Inheritance.java) | Class Inheritance | Parent-child class hierarchies (`extends` keyword) and reusability. |
-| [`HybridInheritance.java`](./OOPs/HybridInheritance.java) | Hybrid Inheritance | Combining hierarchical and multi-level inheritance hierarchies. |
-| [`Polymorphism.java`](./OOPs/Polymorphism.java) | Polymorphism & Overriding | Method overloading & dynamic method dispatch with `@Override`. |
-| [`Modifiers.java`](./OOPs/Modifiers.java) | Access Control | Demonstrating `public`, `private`, `protected`, and default visibility. |
+| [`Abstraction.java`](./OOPs/OOPs/Abstraction.java) | Abstraction & Abstract Classes | Abstract classes, abstract methods, dynamic method overriding, and constructor chaining. |
+| [`ClassesAndObjects.java`](./OOPs/OOPs/ClassesAndObjects.java) | Classes & Instantiation | Defining object attributes, behaviors, and instantiation syntax. |
+| [`GettersAndSetters.java`](./OOPs/OOPs/GettersAndSetters.java) | Encapsulation | Encapsulating private fields with controlled public accessors/mutators. |
+| [`Constructors.java`](./OOPs/OOPs/Constructors.java) | Constructors | Parameterized and non-parameterized object initialization. |
+| [`CopyConstructor.java`](./OOPs/OOPs/CopyConstructor.java) | Shallow vs. Deep Copy | Object cloning using copy constructors (shallow vs. deep copy). |
+| [`Inheritance.java`](./OOPs/OOPs/Inheritance.java) | Class Inheritance | Parent-child class hierarchies (`extends` keyword) and reusability. |
+| [`HybridInheritance.java`](./OOPs/OOPs/HybridInheritance.java) | Hybrid Inheritance | Combining hierarchical and multi-level inheritance hierarchies. |
+| [`Interface.java`](./OOPs/OOPs/Interface.java) | Interfaces & Pure Abstraction | Contracts using `interface` & `implements` (Chess pieces: Queen, Rook, Pawn). |
+| [`Polymorphism.java`](./OOPs/OOPs/Polymorphism.java) | Polymorphism & Overriding | Method overloading & dynamic method dispatch with `@Override`. |
+| [`Modifiers.java`](./OOPs/OOPs/Modifiers.java) | Access Control | Demonstrating `public`, `private`, `protected`, and default visibility. |
+| [`Satic.java`](./OOPs/OOPs/Satic.java) | Static Keyword | Class-level static fields shared across instances and static nested classes. |
+| [`Super.java`](./OOPs/OOPs/Super.java) | Super Keyword | Invoking superclass constructors (`super()`) and superclass method inheritance. |
 
 ---
 
@@ -156,6 +161,20 @@ String processing, immutable string handling, sequence verification, and memory-
 
 ---
 
+### 7. Recursion & Call Stack Foundations
+
+Fundamental principles of recursion, defining base conditions, stack frame execution, subproblem division, and recurrence calculations.
+
+| File | Concept / Problem | Description | Time Complexity | Space Complexity |
+| :--- | :--- | :--- | :--- | :--- |
+| [`DecreasingOrder.java`](./Recursion/DecreasingOrder.java) | Decreasing Print | Prints numbers from $N$ down to 1 using tail-call recursion stack. | $O(N)$ | $O(N)$ |
+| [`IncreasingOrder.java`](./Recursion/IncreasingOrder.java) | Increasing Print | Prints numbers from 1 up to $N$ using post-call stack unwinding. | $O(N)$ | $O(N)$ |
+| [`Printfactorial.java`](./Recursion/Printfactorial.java) | Factorial ($N!$) | Computes factorial via subproblem recurrence $F(N) = N \times F(N-1)$. | $O(N)$ | $O(N)$ |
+| [`NaturalNoSum.java`](./Recursion/NaturalNoSum.java) | Sum of $N$ Natural Numbers | Computes sum of first $N$ integers via $S(N) = N + S(N-1)$. | $O(N)$ | $O(N)$ |
+| [`Fibbonacci.java`](./Recursion/Fibbonacci.java) | $N$-th Fibonacci Number | Computes $N$-th Fibonacci number via tree recursion $Fib(N) = Fib(N-1) + Fib(N-2)$. | $O(2^N)$ | $O(N)$ |
+
+---
+
 ## 📊 Visual Architecture
 
 ```mermaid
@@ -170,7 +189,8 @@ flowchart TD
     Core --> Arrays["📁 Arrays<br/>📄 ArraysCC, ArraysCC1, ArrayCC3<br/>📄 BinarySearch, LargestNumber, Reverse<br/>📄 Pairs, SubArrays, MaxSubarraySum (1,2,3)<br/>📄 Stocks, TrapRainwater"]
     Core --> 2DArrays["📁 2D.Arrays<br/>📄 Matrices, SpiralMatrix<br/>📄 DaigonalSum, SearchSortedMatrix"]
     Core --> Bitwise["📁 BitManipulation<br/>📄 BinaryAND, OR, XOR, NOT, Left, Right<br/>📄 OddorEven, getIthbit, setIthBit, clearIthBit<br/>📄 updateIthBit, clearLastIthBit, clearRange, CheckPower"]
-    Core --> OOPs["📁 OOPs<br/>📄 Abstraction, ClassesAndObjects, GettersAndSetters<br/>📄 Constructors, CopyConstructor<br/>📄 Inheritance, HybridInheritance, Polymorphism, Modifiers"]
+    Core --> OOPs["📁 OOPs<br/>📄 Abstraction, ClassesAndObjects, GettersAndSetters<br/>📄 Constructors, CopyConstructor, Interface<br/>📄 Inheritance, HybridInheritance, Polymorphism, Modifiers, Satic, Super"]
+    Core --> Recursion["📁 Recursion<br/>📄 DecreasingOrder, IncreasingOrder<br/>📄 Printfactorial, NaturalNoSum, Fibbonacci"]
     Core --> Sorting["📁 Sorting<br/>📄 BasicSorting (Bubble)<br/>📄 SelectionSort, InsertionSort, countingSort"]
     Core --> String["📁 String<br/>📄 StringBasics, IsPalindrome, Directions<br/>📄 Substring, largestString, StringBuilderDemo<br/>📄 StringUpperCase, Compress"]
     
@@ -187,7 +207,7 @@ flowchart TD
     classDef hard fill:#4c0519,stroke:#f87171,stroke-width:2px,color:#fef2f2;
     
     class DSA,Core,LC main;
-    class Arrays,2DArrays,Bitwise,OOPs,Sorting,String folder;
+    class Arrays,2DArrays,Bitwise,OOPs,Recursion,Sorting,String folder;
     class Easy easy;
     class Medium medium;
     class Hard hard;
@@ -242,6 +262,9 @@ Comprehensive index of 25 solved LeetCode challenges sorted by problem ID:
 | **Selection Sort** | $O(N^2)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Unstable sorting |
 | **Insertion Sort** | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Efficient for small/nearly sorted data |
 | **Counting Sort** | $O(N+K)$ | $O(N+K)$ | $O(N+K)$ | $O(K)$ | Non-comparison sort |
+| **Recursive Print** | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Linear call stack depth $N$ |
+| **Factorial Recursion** | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Subproblem recurrence $F(N) = N \times F(N-1)$ |
+| **Fibonacci Recursion** | $O(2^N)$ | $O(2^N)$ | $O(2^N)$ | $O(N)$ | Tree recursion branching factor 2 |
 
 ---
 
@@ -252,19 +275,19 @@ Comprehensive index of 25 solved LeetCode challenges sorted by problem ID:
 1. Navigate to the relevant module directory:
 
    ```bash
-   cd DSA/Arrays
+   cd DSA/Recursion
    ```
 
 2. Compile the target `.java` file:
 
    ```bash
-   javac BinarySearch.java
+   javac Fibbonacci.java
    ```
 
 3. Execute the bytecode:
 
    ```bash
-   java BinarySearch
+   java Recursion.Fibbonacci
    ```
 
 ### 💻 C++ Execution
