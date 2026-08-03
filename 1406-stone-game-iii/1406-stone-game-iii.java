@@ -1,24 +1,37 @@
 class Solution {
+
+    Integer[] dp;
+
     public String stoneGameIII(int[] stoneValue) {
-        int n = stoneValue.length;
 
-        int[] dp = new int[n + 3];
+        dp = new Integer[stoneValue.length];
 
-        for (int i = n - 1; i >= 0; i--) {
+        int diff = solve(0, stoneValue);
 
-            int take = 0;
-            dp[i] = Integer.MIN_VALUE;
+        if (diff > 0)
+            return "Alice";
+        if (diff < 0)
+            return "Bob";
 
-            for (int k = 0; k < 3 && i + k < n; k++) {
-                take += stoneValue[i + k];
-                dp[i] = Math.max(dp[i], take - dp[i + k + 1]);
-            }
+        return "Tie";
+    }
+
+    private int solve(int i, int[] a) {
+
+        if (i >= a.length)
+            return 0;
+
+        if (dp[i] != null)
+            return dp[i];
+
+        int take = 0;
+        int ans = Integer.MIN_VALUE;
+
+        for (int k = 0; k < 3 && i + k < a.length; k++) {
+            take += a[i + k];
+            ans = Math.max(ans, take - solve(i + k + 1, a));
         }
 
-        if (dp[0] > 0)
-            return "Alice";
-        if (dp[0] < 0)
-            return "Bob";
-        return "Tie";
+        return dp[i] = ans;
     }
 }
