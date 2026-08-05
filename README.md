@@ -3,10 +3,10 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-25%20Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-30%20Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-Welcome to the **Data Structures & Algorithms (DSA) and Object-Oriented Programming (OOPs)** repository. This collection contains clean, optimized, and well-structured implementations of foundational computer science concepts, core algorithm design patterns, bitwise operations, OOP paradigms, recursion, and 25 curated problem solutions from LeetCode across **Java**, **C++**, and **Python**.
+Welcome to the **Data Structures & Algorithms (DSA) and Object-Oriented Programming (OOPs)** repository. This collection contains clean, optimized, and well-structured implementations of foundational computer science concepts, core algorithm design patterns, bitwise operations, OOP paradigms, recursion, sorting, string manipulation, and 30 curated problem solutions from LeetCode across **Java**, **C++**, and **Python**.
 
 ---
 
@@ -42,10 +42,10 @@ DSA/
 ├── 2D.Arrays/            # Matrix operations, diagonal sum, spiral traversal & matrix search
 ├── BitManipulation/      # Bitwise operators, bit masking, ith-bit operations & bit tricks
 ├── OOPs/                 # Classes, inheritance, abstraction, constructors, static & super keywords
-├── Recursion/            # Recursive functions, base cases, factorial, Fibonacci & natural sums
+├── Recursion/            # Recursive functions, base cases, factorial, Fibonacci, array sorted check & natural sums
 ├── Sorting/              # Classic sorting algorithms (Bubble, Selection, Insertion, Counting)
 ├── String/               # String manipulation, palindrome check, compression & StringBuilder
-└── LeetCode_Problems/    # 25 Curated LeetCode problem solutions (Java, C++, Python)
+└── LeetCode_Problems/    # 30 Curated LeetCode problem solutions (Java, C++, Python)
 ```
 
 ---
@@ -172,6 +172,7 @@ Fundamental principles of recursion, defining base conditions, stack frame execu
 | [`Printfactorial.java`](./Recursion/Printfactorial.java) | Factorial ($N!$) | Computes factorial via subproblem recurrence $F(N) = N \times F(N-1)$. | $O(N)$ | $O(N)$ |
 | [`NaturalNoSum.java`](./Recursion/NaturalNoSum.java) | Sum of $N$ Natural Numbers | Computes sum of first $N$ integers via $S(N) = N + S(N-1)$. | $O(N)$ | $O(N)$ |
 | [`Fibbonacci.java`](./Recursion/Fibbonacci.java) | $N$-th Fibonacci Number | Computes $N$-th Fibonacci number via tree recursion $Fib(N) = Fib(N-1) + Fib(N-2)$. | $O(2^N)$ | $O(N)$ |
+| [`CheckSortedarray.java`](./Recursion/CheckSortedarray.java) | Array Sorted Check | Evaluates whether array elements are sorted in non-decreasing order using recursion. | $O(N)$ | $O(N)$ |
 
 ---
 
@@ -190,14 +191,14 @@ flowchart TD
     Core --> 2DArrays["📁 2D.Arrays<br/>📄 Matrices, SpiralMatrix<br/>📄 DaigonalSum, SearchSortedMatrix"]
     Core --> Bitwise["📁 BitManipulation<br/>📄 BinaryAND, OR, XOR, NOT, Left, Right<br/>📄 OddorEven, getIthbit, setIthBit, clearIthBit<br/>📄 updateIthBit, clearLastIthBit, clearRange, CheckPower"]
     Core --> OOPs["📁 OOPs<br/>📄 Abstraction, ClassesAndObjects, GettersAndSetters<br/>📄 Constructors, CopyConstructor, Interface<br/>📄 Inheritance, HybridInheritance, Polymorphism, Modifiers, Satic, Super"]
-    Core --> Recursion["📁 Recursion<br/>📄 DecreasingOrder, IncreasingOrder<br/>📄 Printfactorial, NaturalNoSum, Fibbonacci"]
+    Core --> Recursion["📁 Recursion<br/>📄 DecreasingOrder, IncreasingOrder<br/>📄 Printfactorial, NaturalNoSum, Fibbonacci<br/>📄 CheckSortedarray"]
     Core --> Sorting["📁 Sorting<br/>📄 BasicSorting (Bubble)<br/>📄 SelectionSort, InsertionSort, countingSort"]
     Core --> String["📁 String<br/>📄 StringBasics, IsPalindrome, Directions<br/>📄 Substring, largestString, StringBuilderDemo<br/>📄 StringUpperCase, Compress"]
     
     %% LeetCode Breakdown
-    LC --> Easy["🟢 Easy Problems (11)<br/>• 0009 - Palindrome Number<br/>• 0026 - Remove Duplicates<br/>• 0121 - Buy & Sell Stock<br/>• 0190 - Reverse Bits<br/>• 0283 - Move Zeroes<br/>• 0344 - Reverse String<br/>• 1464 - Max Product of Two Elements<br/>• 1624 - Largest Substring<br/>• 2769 - Max Achievable Number<br/>• 3014 - Min Key Pushes I<br/>• 3936 - Min Swaps Zeros to End"]
-    LC --> Medium["🟡 Medium Problems (9)<br/>• 0153 - Min in Rotated Array<br/>• 0201 - Bitwise AND of Range<br/>• 0238 - Product Except Self<br/>• 0486 - Predict the Winner<br/>• 0735 - Asteroid Collision<br/>• 2812 - Safest Path in Grid<br/>• 3016 - Min Key Pushes II<br/>• 3228 - Max Operations Ones<br/>• 3517 - Smallest Palindromic I"]
-    LC --> Hard["🔴 Hard Problems (5)<br/>• 0004 - Median of 2 Sorted Arrays<br/>• 0042 - Trapping Rain Water<br/>• 0154 - Min in Rotated Array II<br/>• 3518 - Smallest Palindromic II<br/>• 3962 - Max Subarray Sum K Swaps"]
+    LC --> Easy["🟢 Easy Problems (13)<br/>• 0009 - Palindrome Number<br/>• 0026 - Remove Duplicates<br/>• 0121 - Buy & Sell Stock<br/>• 0190 - Reverse Bits<br/>• 0283 - Move Zeroes<br/>• 0344 - Reverse String<br/>• 0509 - Fibonacci Number<br/>• 1464 - Max Product of Two Elements<br/>• 1624 - Largest Substring<br/>• 2769 - Max Achievable Number<br/>• 3014 - Min Key Pushes I<br/>• 3731 - Find Missing Elements<br/>• 3936 - Min Swaps Zeros to End"]
+    LC --> Medium["🟡 Medium Problems (11)<br/>• 0153 - Min in Rotated Array<br/>• 0201 - Bitwise AND of Range<br/>• 0238 - Product Except Self<br/>• 0371 - Sum of Two Integers<br/>• 0486 - Predict the Winner<br/>• 0735 - Asteroid Collision<br/>• 0877 - Stone Game<br/>• 2812 - Safest Path in Grid<br/>• 3016 - Min Key Pushes II<br/>• 3228 - Max Operations Ones<br/>• 3517 - Smallest Palindromic I"]
+    LC --> Hard["🔴 Hard Problems (6)<br/>• 0004 - Median of 2 Sorted Arrays<br/>• 0042 - Trapping Rain Water<br/>• 0154 - Min in Rotated Array II<br/>• 1406 - Stone Game III<br/>• 3518 - Smallest Palindromic II<br/>• 3962 - Max Subarray Sum K Swaps"]
 
     %% Styling
     classDef main fill:#1e293b,stroke:#64748b,stroke-width:2px,color:#f8fafc;
@@ -217,7 +218,7 @@ flowchart TD
 
 ## 💡 LeetCode Solutions Tracker
 
-Comprehensive index of 25 solved LeetCode challenges sorted by problem ID:
+Comprehensive index of 30 solved LeetCode challenges sorted by problem ID:
 
 | ID | Problem Title | Difficulty | Topic / Category | Solutions Available |
 | :---: | :--- | :---: | :--- | :--- |
@@ -233,8 +234,12 @@ Comprehensive index of 25 solved LeetCode challenges sorted by problem ID:
 | **0238** | [Product of Array Except Self](./LeetCode_Problems/0238-product-of-array-except-self) | 🟡 Medium | Prefix / Suffix Products | [Java](./LeetCode_Problems/0238-product-of-array-except-self/0238-product-of-array-except-self.java) |
 | **0283** | [Move Zeroes](./LeetCode_Problems/0283-move-zeroes) | 🟢 Easy | Two Pointers | [Java](./LeetCode_Problems/0283-move-zeroes/0283-move-zeroes.java) |
 | **0344** | [Reverse String](./LeetCode_Problems/0344-reverse-string) | 🟢 Easy | Two Pointers / Strings | [Java](./LeetCode_Problems/0344-reverse-string/0344-reverse-string.java) |
+| **0371** | [Sum of Two Integers](./LeetCode_Problems/0371-sum-of-two-integers) | 🟡 Medium | Bit Manipulation / Logic | [Java](./LeetCode_Problems/0371-sum-of-two-integers/0371-sum-of-two-integers.java) |
 | **0486** | [Predict the Winner](./LeetCode_Problems/0486-predict-the-winner) | 🟡 Medium | Dynamic Programming / Recursion / Game Theory | [Java](./LeetCode_Problems/0486-predict-the-winner/0486-predict-the-winner.java) |
+| **0509** | [Fibonacci Number](./LeetCode_Problems/0509-fibonacci-number) | 🟢 Easy | Math / Dynamic Programming / Recursion | [Java](./LeetCode_Problems/0509-fibonacci-number/0509-fibonacci-number.java) |
 | **0735** | [Asteroid Collision](./LeetCode_Problems/0735-asteroid-collision) | 🟡 Medium | Stack / Simulation | [Java](./LeetCode_Problems/0735-asteroid-collision/0735-asteroid-collision.java) |
+| **0877** | [Stone Game](./LeetCode_Problems/0877-stone-game) | 🟡 Medium | Math / Dynamic Programming / Game Theory | [Java](./LeetCode_Problems/0877-stone-game/0877-stone-game.java) |
+| **1406** | [Stone Game III](./LeetCode_Problems/1406-stone-game-iii) | 🔴 Hard | Dynamic Programming / Game Theory | [Java](./LeetCode_Problems/1406-stone-game-iii/1406-stone-game-iii.java) |
 | **1464** | [Max Product of Two Elements in Array](./LeetCode_Problems/1464-maximum-product-of-two-elements-in-an-array) | 🟢 Easy | Arrays / Sorting | [Java](./LeetCode_Problems/1464-maximum-product-of-two-elements-in-an-array/1464-maximum-product-of-two-elements-in-an-array.java) |
 | **1624** | [Largest Substring Between Equal Chars](./LeetCode_Problems/1624-largest-substring-between-two-equal-characters) | 🟢 Easy | Hash Table / String | [Java](./LeetCode_Problems/1624-largest-substring-between-two-equal-characters/1624-largest-substring-between-two-equal-characters.java) |
 | **2769** | [Find Maximum Achievable Number](./LeetCode_Problems/2769-find-the-maximum-achievable-number) | 🟢 Easy | Math | [Java](./LeetCode_Problems/2769-find-the-maximum-achievable-number/2769-find-the-maximum-achievable-number.java) |
@@ -244,6 +249,7 @@ Comprehensive index of 25 solved LeetCode challenges sorted by problem ID:
 | **3228** | [Max Operations to Move Ones to End](./LeetCode_Problems/3228-maximum-number-of-operations-to-move-ones-to-the-end) | 🟡 Medium | Greedy / String | [Python](./LeetCode_Problems/3228-maximum-number-of-operations-to-move-ones-to-the-end/3228-maximum-number-of-operations-to-move-ones-to-the-end.py) |
 | **3517** | [Smallest Palindromic Rearrangement I](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i) | 🟡 Medium | Greedy / String / Palindrome | [Java](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i/3517-smallest-palindromic-rearrangement-i.java) |
 | **3518** | [Smallest Palindromic Rearrangement II](./LeetCode_Problems/3518-smallest-palindromic-rearrangement-ii) | 🔴 Hard | Dynamic Programming / Combinatorics | [Java](./LeetCode_Problems/3518-smallest-palindromic-rearrangement-ii/3518-smallest-palindromic-rearrangement-ii.java) |
+| **3731** | [Find Missing Elements](./LeetCode_Problems/3731-find-missing-elements) | 🟢 Easy | Arrays / Hash Table / Math | [Java](./LeetCode_Problems/3731-find-missing-elements/3731-find-missing-elements.java) |
 | **3936** | [Minimum Swaps to Move Zeros to End](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end) | 🟢 Easy | Arrays / Greedy | [Java](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end/3936-minimum-swaps-to-move-zeros-to-end.java) |
 | **3962** | [Maximum Subarray Sum After at Most K Swaps](./LeetCode_Problems/3962-maximum-subarray-sum-after-at-most-k-swaps) | 🔴 Hard | Arrays / Dynamic Programming / Prefix Sum | [Java](./LeetCode_Problems/3962-maximum-subarray-sum-after-at-most-k-swaps/3962-maximum-subarray-sum-after-at-most-k-swaps.java) |
 
@@ -265,6 +271,7 @@ Comprehensive index of 25 solved LeetCode challenges sorted by problem ID:
 | **Recursive Print** | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Linear call stack depth $N$ |
 | **Factorial Recursion** | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Subproblem recurrence $F(N) = N \times F(N-1)$ |
 | **Fibonacci Recursion** | $O(2^N)$ | $O(2^N)$ | $O(2^N)$ | $O(N)$ | Tree recursion branching factor 2 |
+| **Array Sorted Check (Recursion)** | $O(1)$ | $O(N)$ | $O(N)$ | $O(N)$ | Linear call stack depth $N$ |
 
 ---
 
@@ -281,13 +288,13 @@ Comprehensive index of 25 solved LeetCode challenges sorted by problem ID:
 2. Compile the target `.java` file:
 
    ```bash
-   javac Fibbonacci.java
+   javac CheckSortedarray.java
    ```
 
 3. Execute the bytecode:
 
    ```bash
-   java Recursion.Fibbonacci
+   java Recursion.CheckSortedarray
    ```
 
 ### 💻 C++ Execution
