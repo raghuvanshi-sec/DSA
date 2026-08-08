@@ -3,10 +3,10 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-30%20Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-33%20Solutions-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-Welcome to the **Data Structures & Algorithms (DSA) and Object-Oriented Programming (OOPs)** repository. This collection contains clean, optimized, and well-structured implementations of foundational computer science concepts, core algorithm design patterns, bitwise operations, OOP paradigms, recursion, sorting, string manipulation, and 30 curated problem solutions from LeetCode across **Java**, **C++**, and **Python**.
+Welcome to the **Data Structures & Algorithms (DSA) and Object-Oriented Programming (OOPs)** repository. This collection contains clean, optimized, and well-structured implementations of foundational computer science concepts, core algorithm design patterns, bitwise operations, OOP paradigms, recursion, sorting, string manipulation, and **33 curated problem solutions** from LeetCode across **Java**, **C++**, and **Python**.
 
 ---
 
@@ -45,7 +45,7 @@ DSA/
 ├── Recursion/            # Recursive functions, base cases, factorial, Fibonacci, array sorted check & natural sums
 ├── Sorting/              # Classic sorting algorithms (Bubble, Selection, Insertion, Counting)
 ├── String/               # String manipulation, palindrome check, compression & StringBuilder
-└── LeetCode_Problems/    # 30 Curated LeetCode problem solutions (Java, C++, Python)
+└── LeetCode_Problems/    # 33 Curated LeetCode problem solutions (Java, C++, Python)
 ```
 
 ---
@@ -196,8 +196,8 @@ flowchart TD
     Core --> String["📁 String<br/>📄 StringBasics, IsPalindrome, Directions<br/>📄 Substring, largestString, StringBuilderDemo<br/>📄 StringUpperCase, Compress"]
     
     %% LeetCode Breakdown
-    LC --> Easy["🟢 Easy Problems (13)<br/>• 0009 - Palindrome Number<br/>• 0026 - Remove Duplicates<br/>• 0121 - Buy & Sell Stock<br/>• 0190 - Reverse Bits<br/>• 0283 - Move Zeroes<br/>• 0344 - Reverse String<br/>• 0509 - Fibonacci Number<br/>• 1464 - Max Product of Two Elements<br/>• 1624 - Largest Substring<br/>• 2769 - Max Achievable Number<br/>• 3014 - Min Key Pushes I<br/>• 3731 - Find Missing Elements<br/>• 3936 - Min Swaps Zeros to End"]
-    LC --> Medium["🟡 Medium Problems (11)<br/>• 0153 - Min in Rotated Array<br/>• 0201 - Bitwise AND of Range<br/>• 0238 - Product Except Self<br/>• 0371 - Sum of Two Integers<br/>• 0486 - Predict the Winner<br/>• 0735 - Asteroid Collision<br/>• 0877 - Stone Game<br/>• 2812 - Safest Path in Grid<br/>• 3016 - Min Key Pushes II<br/>• 3228 - Max Operations Ones<br/>• 3517 - Smallest Palindromic I"]
+    LC --> Easy["🟢 Easy Problems (14)<br/>• 0009 - Palindrome Number<br/>• 0026 - Remove Duplicates<br/>• 0121 - Buy & Sell Stock<br/>• 0190 - Reverse Bits<br/>• 0283 - Move Zeroes<br/>• 0344 - Reverse String<br/>• 0509 - Fibonacci Number<br/>• 1464 - Max Product of Two Elements<br/>• 1624 - Largest Substring<br/>• 2769 - Max Achievable Number<br/>• 3014 - Min Key Pushes I<br/>• 3345 - Smallest Divisible Digit Product I<br/>• 3731 - Find Missing Elements<br/>• 3936 - Min Swaps Zeros to End"]
+    LC --> Medium["🟡 Medium Problems (13)<br/>• 0153 - Min in Rotated Array<br/>• 0201 - Bitwise AND of Range<br/>• 0238 - Product Except Self<br/>• 0371 - Sum of Two Integers<br/>• 0486 - Predict the Winner<br/>• 0735 - Asteroid Collision<br/>• 0877 - Stone Game<br/>• 2812 - Safest Path in Grid<br/>• 3016 - Min Key Pushes II<br/>• 3228 - Max Operations Ones<br/>• 3302 - Smallest Valid Sequence<br/>• 3310 - Remove Methods From Project<br/>• 3517 - Smallest Palindromic I"]
     LC --> Hard["🔴 Hard Problems (6)<br/>• 0004 - Median of 2 Sorted Arrays<br/>• 0042 - Trapping Rain Water<br/>• 0154 - Min in Rotated Array II<br/>• 1406 - Stone Game III<br/>• 3518 - Smallest Palindromic II<br/>• 3962 - Max Subarray Sum K Swaps"]
 
     %% Styling
@@ -218,7 +218,7 @@ flowchart TD
 
 ## 💡 LeetCode Solutions Tracker
 
-Comprehensive index of 30 solved LeetCode challenges sorted by problem ID:
+Comprehensive index of 33 solved LeetCode challenges sorted by problem ID:
 
 | ID | Problem Title | Difficulty | Topic / Category | Solutions Available |
 | :---: | :--- | :---: | :--- | :--- |
@@ -247,6 +247,9 @@ Comprehensive index of 30 solved LeetCode challenges sorted by problem ID:
 | **3014** | [Minimum Number of Pushes to Type Word I](./LeetCode_Problems/3014-minimum-number-of-pushes-to-type-word-i) | 🟢 Easy | Greedy / Math | [Java](./LeetCode_Problems/3014-minimum-number-of-pushes-to-type-word-i/3014-minimum-number-of-pushes-to-type-word-i.java) |
 | **3016** | [Minimum Number of Pushes to Type Word II](./LeetCode_Problems/3016-minimum-number-of-pushes-to-type-word-ii) | 🟡 Medium | Greedy / Sorting / Frequency | [Java](./LeetCode_Problems/3016-minimum-number-of-pushes-to-type-word-ii/3016-minimum-number-of-pushes-to-type-word-ii.java) |
 | **3228** | [Max Operations to Move Ones to End](./LeetCode_Problems/3228-maximum-number-of-operations-to-move-ones-to-the-end) | 🟡 Medium | Greedy / String | [Python](./LeetCode_Problems/3228-maximum-number-of-operations-to-move-ones-to-the-end/3228-maximum-number-of-operations-to-move-ones-to-the-end.py) |
+| **3302** | [Find the Lexicographically Smallest Valid Sequence](./LeetCode_Problems/3302-find-the-lexicographically-smallest-valid-sequence) | 🟡 Medium | Two Pointers / Dynamic Programming | [Java](./LeetCode_Problems/3302-find-the-lexicographically-smallest-valid-sequence/3302-find-the-lexicographically-smallest-valid-sequence.java) |
+| **3310** | [Remove Methods From Project](./LeetCode_Problems/3310-remove-methods-from-project) | 🟡 Medium | Graph / BFS / DFS | [Java](./LeetCode_Problems/3310-remove-methods-from-project/3310-remove-methods-from-project.java) |
+| **3345** | [Smallest Divisible Digit Product I](./LeetCode_Problems/3345-smallest-divisible-digit-product-i) | 🟢 Easy | Math / Enumeration | [Java](./LeetCode_Problems/3345-smallest-divisible-digit-product-i/3345-smallest-divisible-digit-product-i.java) |
 | **3517** | [Smallest Palindromic Rearrangement I](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i) | 🟡 Medium | Greedy / String / Palindrome | [Java](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i/3517-smallest-palindromic-rearrangement-i.java) |
 | **3518** | [Smallest Palindromic Rearrangement II](./LeetCode_Problems/3518-smallest-palindromic-rearrangement-ii) | 🔴 Hard | Dynamic Programming / Combinatorics | [Java](./LeetCode_Problems/3518-smallest-palindromic-rearrangement-ii/3518-smallest-palindromic-rearrangement-ii.java) |
 | **3731** | [Find Missing Elements](./LeetCode_Problems/3731-find-missing-elements) | 🟢 Easy | Arrays / Hash Table / Math | [Java](./LeetCode_Problems/3731-find-missing-elements/3731-find-missing-elements.java) |
