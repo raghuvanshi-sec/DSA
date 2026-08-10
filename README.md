@@ -1,6 +1,7 @@
+# ⚡ Data Structures, Algorithms & OOPs
+
 <div align="center">
 
-# ⚡ Data Structures, Algorithms & OOPs
 ### *Comprehensive Master Repository in Java, C++ & Python*
 
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
@@ -23,10 +24,10 @@
 
 | 🚀 Metric | 📈 Details |
 | :--- | :--- |
-| **Languages Used** | Java ☕ \| C++ 💻 \| Python 🐍 |
-| **Core DSA Modules** | 7 Topic Categories (Arrays, Matrices, Bitwise, OOPs, Recursion, Sorting, Strings) |
-| **LeetCode Solved** | **33 Problems** (14 🟢 Easy \| 13 🟡 Medium \| 6 🔴 Hard) |
-| **Total Source Files** | **90+ Implementations** |
+| **Primary Languages** | `Java ☕` • `C++ 💻` • `Python 🐍` |
+| **Core DSA Categories** | 7 Modules *(Arrays, 2D Matrices, Bitwise, OOPs, Recursion, Sorting, Strings)* |
+| **LeetCode Solved** | **33 Problems** *(14 🟢 Easy \| 13 🟡 Medium \| 6 🔴 Hard)* |
+| **Total Implementations** | **90+ Production Code Files** |
 
 ---
 
@@ -56,7 +57,7 @@ DSA/
 ├── 📁 2D.Arrays/            # Spiral matrix traversal, diagonal sum & staircase matrix searching
 ├── 📁 BitManipulation/      # Bit masking, ith-bit operations, bit flips & power checks
 ├── 📁 OOPs/                 # Encapsulation, inheritance, abstraction, polymorphism & static keywords
-├── 📁 Recursion/            # Recursive call stacks, Fibonacci, factorials, first occurrence & sorted checks
+├── 📁 Recursion/            # Call stacks, Fibonacci, factorials, first/last occurrence, tiling & sorted checks
 ├── 📁 Sorting/              # Bubble, selection, insertion & counting sort routines
 ├── 📁 String/               # String immutability, StringBuilder, palindrome check & run-length compression
 └── 📁 LeetCode_Problems/    # 33 Solution modules with standalone code & Markdown explanations
@@ -67,8 +68,6 @@ DSA/
 ## 🧩 Topic Breakdown & Code Catalog
 
 ### 1. Arrays & Algorithmic Patterns
-
-Foundational array manipulations, two-pointer techniques, sliding windows, dynamic prefix sums, and space-optimized dynamic programming.
 
 | Source File | Concept | Algorithmic Highlight | Time | Space |
 | :--- | :--- | :--- | :---: | :---: |
@@ -90,8 +89,6 @@ Foundational array manipulations, two-pointer techniques, sliding windows, dynam
 
 ### 2. 2D Matrices & Multi-Axis Search
 
-Multi-dimensional array structures, directional matrix traversals, and staircase matrix searching.
-
 | Source File | Concept | Algorithmic Highlight | Time | Space |
 | :--- | :--- | :--- | :---: | :---: |
 | [`Matrices.java`](./2D.Arrays/Matrices.java) | Matrix Fundamentals | 2D array row-column iteration & grid extrema search | $O(N \times M)$ | $O(N \times M)$ |
@@ -102,8 +99,6 @@ Multi-dimensional array structures, directional matrix traversals, and staircase
 ---
 
 ### 3. Bitwise Manipulation & Binary Arithmetic
-
-Low-level bitwise operations, masking techniques, bit testing, bit clear ranges, and binary power checks.
 
 | Source File | Operation / Concept | Technical Formula |
 | :--- | :--- | :--- |
@@ -126,8 +121,6 @@ Low-level bitwise operations, masking techniques, bit testing, bit clear ranges,
 
 ### 4. Object-Oriented Programming (OOPs)
 
-Object-oriented design patterns in Java demonstrating encapsulation, polymorphism, inheritance, and abstraction.
-
 | Source File | Pillar / Keyword | Architectural Context |
 | :--- | :--- | :--- |
 | [`Abstraction.java`](./OOPs/OOPs/Abstraction.java) | Abstraction | Abstract classes, abstract methods, and constructor chaining |
@@ -147,8 +140,6 @@ Object-oriented design patterns in Java demonstrating encapsulation, polymorphis
 
 ### 5. Sorting Algorithms
 
-Implementations of standard comparison-based and frequency-based sorting routines.
-
 | Source File | Algorithm | Strategy | Best | Avg | Worst | Space | Stable |
 | :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
 | [`BasicSorting.java`](./Sorting/BasicSorting.java) | **Bubble Sort** | Swapping adjacent inversion pairs | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Yes |
@@ -159,8 +150,6 @@ Implementations of standard comparison-based and frequency-based sorting routine
 ---
 
 ### 6. String Manipulation & Processing
-
-String processing, immutability concepts, geometric displacement parsing, and memory-efficient `StringBuilder` usage.
 
 | Source File | Concept | Functional Goal | Time Complexity |
 | :--- | :--- | :--- | :---: |
@@ -177,8 +166,6 @@ String processing, immutability concepts, geometric displacement parsing, and me
 
 ### 7. Recursion & Call Stack Foundations
 
-Call stack frame allocation, base conditions, subproblem recurrence, and recursive search routines.
-
 | Source File | Problem | Mathematical Recurrence | Time | Space |
 | :--- | :--- | :--- | :---: | :---: |
 | [`DecreasingOrder.java`](./Recursion/DecreasingOrder.java) | Decreasing Print | $P(N) = N \rightarrow P(N-1)$ | $O(N)$ | $O(N)$ |
@@ -188,6 +175,8 @@ Call stack frame allocation, base conditions, subproblem recurrence, and recursi
 | [`Fibbonacci.java`](./Recursion/Fibbonacci.java) | $N$-th Fibonacci | $Fib(N) = Fib(N-1) + Fib(N-2)$ | $O(2^N)$ | $O(N)$ |
 | [`CheckSortedarray.java`](./Recursion/CheckSortedarray.java) | Array Sorted Check | $IsSorted(A, i) = (A[i] \le A[i+1]) \land IsSorted(A, i+1)$ | $O(N)$ | $O(N)$ |
 | [`FirstOccurence.java`](./Recursion/FirstOccurence.java) | First Occurrence | $FirstOccur(A, key, i) = (A[i] == key) \text{ ? } i : FirstOccur(A, key, i+1)$ | $O(N)$ | $O(N)$ |
+| [`LastOccurrence.java`](./Recursion/LastOccurrence.java) | Last Occurrence | $LastOccur(A, key, i) = \text{Forward recursion then backward match evaluation}$ | $O(N)$ | $O(N)$ |
+| [`Tilling.java`](./Recursion/Tilling.java) | 2xN Tiling Problem | $T(N) = T(N-1) + T(N-2)$ | $O(2^N)$ | $O(N)$ |
 
 ---
 
@@ -204,7 +193,7 @@ flowchart TD
     Core --> Matrices["📁 2D.Arrays<br/>📄 Matrices, SpiralMatrix<br/>📄 DaigonalSum, SearchSortedMatrix"]
     Core --> Bitwise["📁 BitManipulation<br/>📄 BinaryAND, OR, XOR, NOT, Left, Right<br/>📄 OddorEven, getIthbit, setIthBit, clearIthBit<br/>📄 updateIthBit, clearLastIthBit, clearRange, CheckPower"]
     Core --> OOPs["📁 OOPs<br/>📄 Abstraction, ClassesAndObjects, GettersAndSetters<br/>📄 Constructors, CopyConstructor, Interface<br/>📄 Inheritance, HybridInheritance, Polymorphism, Modifiers, Satic, Super"]
-    Core --> Recursion["📁 Recursion<br/>📄 DecreasingOrder, IncreasingOrder<br/>📄 Printfactorial, NaturalNoSum, Fibbonacci<br/>📄 CheckSortedarray, FirstOccurence"]
+    Core --> Recursion["📁 Recursion<br/>📄 DecreasingOrder, IncreasingOrder, Printfactorial<br/>📄 NaturalNoSum, Fibbonacci, CheckSortedarray<br/>📄 FirstOccurence, LastOccurrence, Tilling"]
     Core --> Sorting["📁 Sorting<br/>📄 BasicSorting (Bubble), SelectionSort<br/>📄 InsertionSort, countingSort"]
     Core --> Strings["📁 String<br/>📄 StringBasics, IsPalindrome, Directions<br/>📄 Substring, largestString, StringBuilderDemo<br/>📄 StringUpperCase, Compress"]
     
@@ -228,8 +217,6 @@ flowchart TD
 ---
 
 ## 💡 LeetCode Solutions Tracker
-
-Comprehensive index of 33 LeetCode problem solutions in Java, C++, and Python:
 
 | Problem ID | Title | Difficulty | Primary Categories | Code Solution |
 | :---: | :--- | :---: | :--- | :---: |
@@ -264,7 +251,7 @@ Comprehensive index of 33 LeetCode problem solutions in Java, C++, and Python:
 | **3517** | [Smallest Palindromic Rearrangement I](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i) | 🟡 Medium | Greedy / String Sorting | [Java Solution](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i/3517-smallest-palindromic-rearrangement-i.java) |
 | **3518** | [Smallest Palindromic Rearrangement II](./LeetCode_Problems/3518-smallest-palindromic-rearrangement-ii) | 🔴 Hard | DP / Permutation / Combinatorics | [Java Solution](./LeetCode_Problems/3518-smallest-palindromic-rearrangement-ii/3518-smallest-palindromic-rearrangement-ii.java) |
 | **3731** | [Find Missing Elements](./LeetCode_Problems/3731-find-missing-elements) | 🟢 Easy | Hash Set / Array Search | [Java Solution](./LeetCode_Problems/3731-find-missing-elements/3731-find-missing-elements.java) |
-| **3936** | [Minimum Swaps to Move Zeros to End](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end) | 🟢 Easy | Greedy / Array Swapping | [Java Solution](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end/3936-minimum-swaps-to-move-zeros-to-end.java) |
+| **3936** | [Minimum Swaps to Move Zeros to End](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end) | 🟢 Easy | Arrays / Greedy | [Java Solution](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end/3936-minimum-swaps-to-move-zeros-to-end.java) |
 | **3962** | [Max Subarray Sum After at Most K Swaps](./LeetCode_Problems/3962-maximum-subarray-sum-after-at-most-k-swaps) | 🔴 Hard | Dynamic Programming / Prefix Sums | [Java Solution](./LeetCode_Problems/3962-maximum-subarray-sum-after-at-most-k-swaps/3962-maximum-subarray-sum-after-at-most-k-swaps.java) |
 
 ---
@@ -283,25 +270,27 @@ Comprehensive index of 33 LeetCode problem solutions in Java, C++, and Python:
 | **Insertion Sort** | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Online sorting efficient for small arrays |
 | **Counting Sort** | $O(N+K)$ | $O(N+K)$ | $O(N+K)$ | $O(K)$ | Non-comparison frequency distribution |
 | **Recursion (Linear Search / Stack)** | $O(1)$ | $O(N)$ | $O(N)$ | $O(N)$ | Call stack depth proportional to $N$ |
-| **Recursion (Fibonacci Tree)** | $O(2^N)$ | $O(2^N)$ | $O(2^N)$ | $O(N)$ | Unoptimized exponential tree recursion |
+| **Recursion (Tiling / Fibonacci)** | $O(2^N)$ | $O(2^N)$ | $O(2^N)$ | $O(N)$ | Subproblem tree recursion branching factor 2 |
 
 ---
 
 ## 🛠️ How to Compile & Run
 
 ### ☕ Java Implementations
+
 ```bash
 # Navigate to desired module directory
 cd DSA/Recursion
 
 # Compile Java source code
-javac FirstOccurence.java
+javac LastOccurrence.java
 
 # Execute bytecode
-java Recursion.FirstOccurence
+java Recursion.LastOccurrence
 ```
 
 ### 💻 C++ Solutions
+
 ```bash
 # Navigate to problem folder
 cd DSA/LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array
@@ -314,6 +303,7 @@ g++ -O3 0153-find-minimum-in-rotated-sorted-array.cpp -o solution
 ```
 
 ### 🐍 Python Scripts
+
 ```bash
 # Navigate to problem folder
 cd DSA/LeetCode_Problems/3228-maximum-number-of-operations-to-move-ones-to-the-end
