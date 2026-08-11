@@ -1,4 +1,3 @@
-import java.util.*;
 //Linear Search
 public class ArrayCC3 {
     public static int LinearSearch(int numbers[],int key){
