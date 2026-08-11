@@ -7,11 +7,11 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-33_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-37_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 > A curated collection of **90+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · 33 LeetCode Solutions
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · 37 LeetCode Solutions
 
 </div>
 
@@ -23,13 +23,13 @@
   <tr>
     <td align="center"><strong>7</strong><br/>Core Modules</td>
     <td align="center"><strong>90+</strong><br/>Code Files</td>
-    <td align="center"><strong>33</strong><br/>LeetCode Problems</td>
+    <td align="center"><strong>37</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
   <tr>
-    <td align="center">🟢 14 Easy</td>
-    <td align="center">🟡 13 Medium</td>
-    <td align="center">🔴 6 Hard</td>
+    <td align="center">🟢 15 Easy</td>
+    <td align="center">🟡 14 Medium</td>
+    <td align="center">🔴 8 Hard</td>
     <td align="center">☕ 💻 🐍</td>
   </tr>
 </table>
@@ -43,7 +43,7 @@
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
 | [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All 7 modules with file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 33 problems sorted by ID |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 37 problems sorted by ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -51,22 +51,21 @@
 
 ## 📁 Directory Architecture
 
-```
 DSA/
 │
 ├── 📂 Arrays/                → Linear search, binary search, Kadane's, trapping rainwater
 ├── 📂 2D.Arrays/             → Spiral traversal, diagonal sum, staircase search
 ├── 📂 BitManipulation/       → AND, OR, XOR, shifts, ith-bit ops, power-of-2 checks
 ├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism
-├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling
+├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling,
+│                                binary strings, friends pairing, deduplication
 ├── 📂 Sorting/               → Bubble, selection, insertion, counting sort
 ├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion
 │
-└── 📂 LeetCode_Problems/     → 33 standalone solutions with markdown explanations
-    ├── 🟢 14 Easy
-    ├── 🟡 13 Medium
-    └── 🔴  6 Hard
-```
+└── 📂 LeetCode_Problems/     → 37 standalone solutions with markdown explanations
+    ├── 🟢 15 Easy
+    ├── 🟡 14 Medium
+    └── 🔴  8 Hard
 
 ---
 
@@ -85,9 +84,9 @@ graph TD
     R --> ST["📂 Strings"]
     R --> LC["📂 LeetCode"]
 
-    LC --> E["🟢 Easy × 14"]
-    LC --> MD["🟡 Medium × 13"]
-    LC --> H["🔴 Hard × 6"]
+    LC --> E["🟢 Easy × 15"]
+    LC --> MD["🟡 Medium × 14"]
+    LC --> H["🔴 Hard × 8"]
 
     style R fill:#6c3483,stroke:#a569bd,stroke-width:3px,color:#fff
     style A fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
@@ -218,7 +217,7 @@ graph TD
 
 ### 7 · Recursion & Call Stack Foundations
 
-> 9 files — From basic print recursion to 2×N tiling
+> 12 files — From basic print recursion to friends pairing & binary strings
 
 | File | Problem | Recurrence | Time | Space |
 | :--- | :--- | :--- | :---: | :---: |
@@ -231,17 +230,21 @@ graph TD
 | [`FirstOccurence.java`](./Recursion/FirstOccurence.java) | First Occurrence | Forward scan — return index on match | $O(N)$ | $O(N)$ |
 | [`LastOccurrence.java`](./Recursion/LastOccurrence.java) | Last Occurrence | Forward recursion, backward match eval | $O(N)$ | $O(N)$ |
 | [`Tilling.java`](./Recursion/Tilling.java) | 2×N Floor Tiling | $T(N) = T(N{-}1) + T(N{-}2)$ | $O(2^N)$ | $O(N)$ |
+| [`BinaryString.java`](./Recursion/BinaryString.java) | Binary Strings (no consecutive 1s) | Branch: place 0 always, place 1 only after 0 | $O(2^N)$ | $O(N)$ |
+| [`FriendsPairing.java`](./Recursion/FriendsPairing.java) | Friends Pairing | $F(N) = F(N{-}1) + (N{-}1) \cdot F(N{-}2)$ | $O(2^N)$ | $O(N)$ |
+| [`RemoveDuplicatesInString.java`](./Recursion/RemoveDuplicatesInString.java) | Remove Duplicate Chars | Boolean map + recursive char append | $O(N)$ | $O(N)$ |
 
 ---
 
 ## 💡 LeetCode Solutions Tracker
 
-### 🟢 Easy — 14 Problems
+### 🟢 Easy — 15 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
 | 0009 | [Palindrome Number](./LeetCode_Problems/0009-palindrome-number) | Math | [Java](./LeetCode_Problems/0009-palindrome-number/0009-palindrome-number.java) |
 | 0026 | [Remove Duplicates from Sorted Array](./LeetCode_Problems/0026-remove-duplicates-from-sorted-array) | Two Pointers | [Java](./LeetCode_Problems/0026-remove-duplicates-from-sorted-array/0026-remove-duplicates-from-sorted-array.java) |
+| 0028 | [Find Index of First Occurrence in String](./LeetCode_Problems/0028-find-the-index-of-the-first-occurrence-in-a-string) | String Matching | [Java](./LeetCode_Problems/0028-find-the-index-of-the-first-occurrence-in-a-string/0028-find-the-index-of-the-first-occurrence-in-a-string.java) |
 | 0121 | [Best Time to Buy and Sell Stock](./LeetCode_Problems/0121-best-time-to-buy-and-sell-stock) | DP / Single Pass | [Java](./LeetCode_Problems/0121-best-time-to-buy-and-sell-stock/0121-best-time-to-buy-and-sell-stock.java) |
 | 0190 | [Reverse Bits](./LeetCode_Problems/0190-reverse-bits) | Bit Manipulation | [Java](./LeetCode_Problems/0190-reverse-bits/0190-reverse-bits.java) |
 | 0283 | [Move Zeroes](./LeetCode_Problems/0283-move-zeroes) | Two Pointers | [Java](./LeetCode_Problems/0283-move-zeroes/0283-move-zeroes.java) |
@@ -255,7 +258,7 @@ graph TD
 | 3731 | [Find Missing Elements](./LeetCode_Problems/3731-find-missing-elements) | Hash Set | [Java](./LeetCode_Problems/3731-find-missing-elements/3731-find-missing-elements.java) |
 | 3936 | [Min Swaps to Move Zeros to End](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end) | Greedy | [Java](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end/3936-minimum-swaps-to-move-zeros-to-end.java) |
 
-### 🟡 Medium — 13 Problems
+### 🟡 Medium — 14 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
@@ -268,12 +271,13 @@ graph TD
 | 0877 | [Stone Game](./LeetCode_Problems/0877-stone-game) | Game Theory / DP | [Java](./LeetCode_Problems/0877-stone-game/0877-stone-game.java) |
 | 2812 | [Find Safest Path in a Grid](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid) | BFS / Binary Search | [Java](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid/2812-find-the-safest-path-in-a-grid.java) |
 | 3016 | [Min Pushes to Type Word II](./LeetCode_Problems/3016-minimum-number-of-pushes-to-type-word-ii) | Greedy / Sorting | [Java](./LeetCode_Problems/3016-minimum-number-of-pushes-to-type-word-ii/3016-minimum-number-of-pushes-to-type-word-ii.java) |
+| 3159 | [Find Occurrences of Element in Array](./LeetCode_Problems/3159-find-occurrences-of-an-element-in-an-array) | Array / Hash Map | [Java](./LeetCode_Problems/3159-find-occurrences-of-an-element-in-an-array/3159-find-occurrences-of-an-element-in-an-array.java) |
 | 3228 | [Max Ops to Move Ones to End](./LeetCode_Problems/3228-maximum-number-of-operations-to-move-ones-to-the-end) | Greedy / String | [Python](./LeetCode_Problems/3228-maximum-number-of-operations-to-move-ones-to-the-end/3228-maximum-number-of-operations-to-move-ones-to-the-end.py) |
 | 3302 | [Lexicographically Smallest Valid Seq](./LeetCode_Problems/3302-find-the-lexicographically-smallest-valid-sequence) | Two Pointers / DP | [Java](./LeetCode_Problems/3302-find-the-lexicographically-smallest-valid-sequence/3302-find-the-lexicographically-smallest-valid-sequence.java) |
 | 3310 | [Remove Methods From Project](./LeetCode_Problems/3310-remove-methods-from-project) | Graph (BFS/DFS) | [Java](./LeetCode_Problems/3310-remove-methods-from-project/3310-remove-methods-from-project.java) |
 | 3517 | [Smallest Palindromic Rearrangement I](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i) | Greedy / Sorting | [Java](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i/3517-smallest-palindromic-rearrangement-i.java) |
 
-### 🔴 Hard — 6 Problems
+### 🔴 Hard — 8 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
@@ -281,6 +285,8 @@ graph TD
 | 0042 | [Trapping Rain Water](./LeetCode_Problems/0042-trapping-rain-water) | Two Pointers / DP | [Java](./LeetCode_Problems/0042-trapping-rain-water/0042-trapping-rain-water.java) |
 | 0154 | [Find Min in Rotated Sorted Array II](./LeetCode_Problems/0154-find-minimum-in-rotated-sorted-array-ii) | Binary Search | [C++](./LeetCode_Problems/0154-find-minimum-in-rotated-sorted-array-ii/0154-find-minimum-in-rotated-sorted-array-ii.cpp) |
 | 1406 | [Stone Game III](./LeetCode_Problems/1406-stone-game-iii) | Minimax DP | [Java](./LeetCode_Problems/1406-stone-game-iii/1406-stone-game-iii.java) |
+| 1510 | [Stone Game IV](./LeetCode_Problems/1510-stone-game-iv) | DP / Game Theory | [Java](./LeetCode_Problems/1510-stone-game-iv/1510-stone-game-iv.java) |
+| 3348 | [Smallest Divisible Digit Product II](./LeetCode_Problems/3348-smallest-divisible-digit-product-ii) | Greedy / Math | [Java](./LeetCode_Problems/3348-smallest-divisible-digit-product-ii/3348-smallest-divisible-digit-product-ii.java) |
 | 3518 | [Smallest Palindromic Rearrangement II](./LeetCode_Problems/3518-smallest-palindromic-rearrangement-ii) | DP / Combinatorics | [Java](./LeetCode_Problems/3518-smallest-palindromic-rearrangement-ii/3518-smallest-palindromic-rearrangement-ii.java) |
 | 3962 | [Max Subarray Sum After K Swaps](./LeetCode_Problems/3962-maximum-subarray-sum-after-at-most-k-swaps) | DP / Prefix Sums | [Java](./LeetCode_Problems/3962-maximum-subarray-sum-after-at-most-k-swaps/3962-maximum-subarray-sum-after-at-most-k-swaps.java) |
 
@@ -300,7 +306,7 @@ graph TD
 | Insertion Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Online, stable |
 | Counting Sort | $O(N{+}K)$ | $O(N{+}K)$ | $O(N{+}K)$ | $O(K)$ | Non-comparison |
 | Linear Recursion | $O(1)$ | $O(N)$ | $O(N)$ | $O(N)$ | Stack depth = $N$ |
-| Tree Recursion | $O(2^N)$ | $O(2^N)$ | $O(2^N)$ | $O(N)$ | Fibonacci / Tiling |
+| Tree Recursion | $O(2^N)$ | $O(2^N)$ | $O(2^N)$ | $O(N)$ | Fibonacci / Tiling / Pairing |
 
 ---
 
@@ -310,8 +316,8 @@ graph TD
 
 ```bash
 cd DSA/Recursion
-javac LastOccurrence.java
-java Recursion.LastOccurrence
+javac BinaryString.java
+java Recursion.BinaryString
 ```
 
 ### 💻 C++
