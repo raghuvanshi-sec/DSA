@@ -51,6 +51,7 @@
 
 ## 📁 Directory Architecture
 
+```text
 DSA/
 │
 ├── 📂 Arrays/                → Linear search, binary search, Kadane's, trapping rainwater
@@ -62,12 +63,13 @@ DSA/
 │                                binary strings, friends pairing, deduplication
 ├── 📂 Sorting/               → Bubble, selection, insertion, counting sort
 ├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion
-├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms (e.g., modified bubble sort)
+├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms (e.g., modified bubble sort, recursive power)
 │
 └── 📂 LeetCode_Problems/     → 38 standalone solutions with markdown explanations
     ├── 🟢 16 Easy
     ├── 🟡 14 Medium
     └── 🔴  8 Hard
+```
 
 ---
 
@@ -256,11 +258,14 @@ graph TD
 
 ### 9 · Time & Space Complexity Analysis
 
-> 1 file — Understanding complexity optimization and early-exit strategies
+> 4 files — Complexity optimization, early-exit strategies, and recursive exponentiation analysis
 
 | File | Concept | Time | Space |
 | :--- | :--- | :---: | :---: |
 | [`modifiedBubbleSort.java`](./TimeNSpace_Complexity/modifiedBubbleSort.java) | Modified Bubble Sort — optimized with early exit when sorted | $O(N)$ best / $O(N^2)$ worst | $O(1)$ |
+| [`PowerFun.java`](./TimeNSpace_Complexity/PowerFun.java) | Linear Power — simple recursive exponentiation $a^n = a \cdot a^{n-1}$ | $O(n)$ | $O(n)$ |
+| [`Power2.java`](./TimeNSpace_Complexity/Power2.java) | Naive Divide-and-Conquer Power — unoptimized recursion (no caching) | $O(n)$ | $O(\log n)$ |
+| [`PowerFun3.java`](./TimeNSpace_Complexity/PowerFun3.java) | Optimized Divide-and-Conquer Power — logarithmic exponentiation with caching | $O(\log n)$ | $O(\log n)$ |
 
 ---
 
@@ -339,6 +344,8 @@ graph TD
 | Counting Sort | $O(N{+}K)$ | $O(N{+}K)$ | $O(N{+}K)$ | $O(K)$ | Non-comparison |
 | Linear Recursion | $O(1)$ | $O(N)$ | $O(N)$ | $O(N)$ | Stack depth = $N$ |
 | Tree Recursion | $O(2^N)$ | $O(2^N)$ | $O(2^N)$ | $O(N)$ | Fibonacci / Tiling / Pairing |
+| Linear Exponentiation ($a^n$) | $O(n)$ | $O(n)$ | $O(n)$ | $O(n)$ | Simple linear recursion stack |
+| Logarithmic Exponentiation ($a^n$) | $O(\log n)$ | $O(\log n)$ | $O(\log n)$ | $O(\log n)$ | Optimized divide-and-conquer with caching |
 
 ---
 
