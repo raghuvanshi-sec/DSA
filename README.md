@@ -7,11 +7,11 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-37_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-38_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> A curated collection of **90+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · 37 LeetCode Solutions
+> A curated collection of **110+ production-grade implementations** spanning  
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · 38 LeetCode Solutions
 
 </div>
 
@@ -21,13 +21,13 @@
 
 <table>
   <tr>
-    <td align="center"><strong>7</strong><br/>Core Modules</td>
-    <td align="center"><strong>90+</strong><br/>Code Files</td>
-    <td align="center"><strong>37</strong><br/>LeetCode Problems</td>
+    <td align="center"><strong>9</strong><br/>Core Modules</td>
+    <td align="center"><strong>110+</strong><br/>Code Files</td>
+    <td align="center"><strong>38</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
   <tr>
-    <td align="center">🟢 15 Easy</td>
+    <td align="center">🟢 16 Easy</td>
     <td align="center">🟡 14 Medium</td>
     <td align="center">🔴 8 Hard</td>
     <td align="center">☕ 💻 🐍</td>
@@ -42,8 +42,8 @@
 | :--- | :--- |
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
-| [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All 7 modules with file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 37 problems sorted by ID |
+| [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All 9 modules with file catalogs |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 38 problems sorted by ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -56,14 +56,16 @@ DSA/
 ├── 📂 Arrays/                → Linear search, binary search, Kadane's, trapping rainwater
 ├── 📂 2D.Arrays/             → Spiral traversal, diagonal sum, staircase search
 ├── 📂 BitManipulation/       → AND, OR, XOR, shifts, ith-bit ops, power-of-2 checks
+├── 📂 DivideNConquer/        → Merge sort, quick sort, search in rotated sorted array
 ├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism
 ├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling,
 │                                binary strings, friends pairing, deduplication
 ├── 📂 Sorting/               → Bubble, selection, insertion, counting sort
 ├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion
+├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms (e.g., modified bubble sort)
 │
-└── 📂 LeetCode_Problems/     → 37 standalone solutions with markdown explanations
-    ├── 🟢 15 Easy
+└── 📂 LeetCode_Problems/     → 38 standalone solutions with markdown explanations
+    ├── 🟢 16 Easy
     ├── 🟡 14 Medium
     └── 🔴  8 Hard
 
@@ -78,13 +80,15 @@ graph TD
     R --> A["📂 Arrays"]
     R --> M["📂 2D Matrices"]
     R --> B["📂 Bit Manipulation"]
+    R --> DC["📂 Divide & Conquer"]
     R --> O["📂 OOPs"]
     R --> REC["📂 Recursion"]
     R --> S["📂 Sorting"]
     R --> ST["📂 Strings"]
+    R --> TS["📂 Time & Space"]
     R --> LC["📂 LeetCode"]
 
-    LC --> E["🟢 Easy × 15"]
+    LC --> E["🟢 Easy × 16"]
     LC --> MD["🟡 Medium × 14"]
     LC --> H["🔴 Hard × 8"]
 
@@ -92,10 +96,12 @@ graph TD
     style A fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style M fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style B fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
+    style DC fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style O fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style REC fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style S fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style ST fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
+    style TS fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style LC fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style E fill:#196f3d,stroke:#27ae60,color:#d5f5e3
     style MD fill:#7d6608,stroke:#f1c40f,color:#fef9e7
@@ -236,15 +242,38 @@ graph TD
 
 ---
 
+### 8 · Divide & Conquer Algorithms
+
+> 3 files — Recursive divide-and-conquer sorting and search techniques
+
+| File | Concept | Time | Space |
+| :--- | :--- | :---: | :---: |
+| [`MergeSort.java`](./DivideNConquer/MergeSort.java) | Merge Sort — divide, conquer, and merge recursion | $O(N \log N)$ | $O(N)$ |
+| [`QuickSort.java`](./DivideNConquer/QuickSort.java) | Quick Sort — pivot-based partitioning (in-place) | $O(N \log N)$ avg / $O(N^2)$ worst | $O(\log N)$ |
+| [`RotatedSortedArray.java`](./DivideNConquer/RotatedSortedArray.java) | Search in Rotated Sorted Array — pivot binary search | $O(\log N)$ | $O(\log N)$ |
+
+---
+
+### 9 · Time & Space Complexity Analysis
+
+> 1 file — Understanding complexity optimization and early-exit strategies
+
+| File | Concept | Time | Space |
+| :--- | :--- | :---: | :---: |
+| [`modifiedBubbleSort.java`](./TimeNSpace_Complexity/modifiedBubbleSort.java) | Modified Bubble Sort — optimized with early exit when sorted | $O(N)$ best / $O(N^2)$ worst | $O(1)$ |
+
+---
+
 ## 💡 LeetCode Solutions Tracker
 
-### 🟢 Easy — 15 Problems
+### 🟢 Easy — 16 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
 | 0009 | [Palindrome Number](./LeetCode_Problems/0009-palindrome-number) | Math | [Java](./LeetCode_Problems/0009-palindrome-number/0009-palindrome-number.java) |
 | 0026 | [Remove Duplicates from Sorted Array](./LeetCode_Problems/0026-remove-duplicates-from-sorted-array) | Two Pointers | [Java](./LeetCode_Problems/0026-remove-duplicates-from-sorted-array/0026-remove-duplicates-from-sorted-array.java) |
 | 0028 | [Find Index of First Occurrence in String](./LeetCode_Problems/0028-find-the-index-of-the-first-occurrence-in-a-string) | String Matching | [Java](./LeetCode_Problems/0028-find-the-index-of-the-first-occurrence-in-a-string/0028-find-the-index-of-the-first-occurrence-in-a-string.java) |
+| 0088 | [Merge Sorted Array](./LeetCode_Problems/0088-merge-sorted-array) | Two Pointers | [Java](./LeetCode_Problems/0088-merge-sorted-array/0088-merge-sorted-array.java) |
 | 0121 | [Best Time to Buy and Sell Stock](./LeetCode_Problems/0121-best-time-to-buy-and-sell-stock) | DP / Single Pass | [Java](./LeetCode_Problems/0121-best-time-to-buy-and-sell-stock/0121-best-time-to-buy-and-sell-stock.java) |
 | 0190 | [Reverse Bits](./LeetCode_Problems/0190-reverse-bits) | Bit Manipulation | [Java](./LeetCode_Problems/0190-reverse-bits/0190-reverse-bits.java) |
 | 0283 | [Move Zeroes](./LeetCode_Problems/0283-move-zeroes) | Two Pointers | [Java](./LeetCode_Problems/0283-move-zeroes/0283-move-zeroes.java) |
@@ -298,12 +327,15 @@ graph TD
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | Linear Search | $O(1)$ | $O(N)$ | $O(N)$ | $O(1)$ | Unsorted data |
 | Binary Search | $O(1)$ | $O(\log N)$ | $O(\log N)$ | $O(1)$ | Requires sorted input |
+| Search in Rotated Array | $O(1)$ | $O(\log N)$ | $O(\log N)$ | $O(\log N)$ | Modified binary search |
 | Staircase Search | $O(1)$ | $O(N{+}M)$ | $O(N{+}M)$ | $O(1)$ | Row + column sorted matrix |
 | Kadane's Algorithm | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Max subarray (DP) |
 | Prefix Sum | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(N)$ | $O(1)$ range queries |
 | Bubble Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Stable |
 | Selection Sort | $O(N^2)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Unstable |
 | Insertion Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Online, stable |
+| Merge Sort | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(N)$ | Stable, divide-and-conquer |
+| Quick Sort | $O(N \log N)$ | $O(N \log N)$ | $O(N^2)$ | $O(\log N)$ | Unstable, in-place partitioning |
 | Counting Sort | $O(N{+}K)$ | $O(N{+}K)$ | $O(N{+}K)$ | $O(K)$ | Non-comparison |
 | Linear Recursion | $O(1)$ | $O(N)$ | $O(N)$ | $O(N)$ | Stack depth = $N$ |
 | Tree Recursion | $O(2^N)$ | $O(2^N)$ | $O(2^N)$ | $O(N)$ | Fibonacci / Tiling / Pairing |
