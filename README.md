@@ -7,11 +7,11 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-38_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-41_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> A curated collection of **110+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · 38 LeetCode Solutions
+> A curated collection of **115+ production-grade implementations** spanning  
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · 41 LeetCode Solutions
 
 </div>
 
@@ -21,14 +21,14 @@
 
 <table>
   <tr>
-    <td align="center"><strong>9</strong><br/>Core Modules</td>
-    <td align="center"><strong>110+</strong><br/>Code Files</td>
-    <td align="center"><strong>38</strong><br/>LeetCode Problems</td>
+    <td align="center"><strong>10</strong><br/>Core Modules</td>
+    <td align="center"><strong>115+</strong><br/>Code Files</td>
+    <td align="center"><strong>41</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
   <tr>
     <td align="center">🟢 16 Easy</td>
-    <td align="center">🟡 14 Medium</td>
+    <td align="center">🟡 17 Medium</td>
     <td align="center">🔴 8 Hard</td>
     <td align="center">☕ 💻 🐍</td>
   </tr>
@@ -42,8 +42,8 @@
 | :--- | :--- |
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
-| [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All 9 modules with file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 38 problems sorted by ID |
+| [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All 10 modules with file catalogs |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 41 problems sorted by ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -56,6 +56,7 @@ DSA/
 │
 ├── 📂 Arrays/                → Linear search, binary search, Kadane's, trapping rainwater
 ├── 📂 2D.Arrays/             → Spiral traversal, diagonal sum, staircase search
+├── 📂 Backracking/           → Array backtracking, subsets, permutations, N-Queens
 ├── 📂 BitManipulation/       → AND, OR, XOR, shifts, ith-bit ops, power-of-2 checks
 ├── 📂 DivideNConquer/        → Merge sort, quick sort, search in rotated sorted array
 ├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism
@@ -65,9 +66,9 @@ DSA/
 ├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion
 ├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms (e.g., modified bubble sort, recursive power)
 │
-└── 📂 LeetCode_Problems/     → 38 standalone solutions with markdown explanations
+└── 📂 LeetCode_Problems/     → 41 standalone solutions with markdown explanations
     ├── 🟢 16 Easy
-    ├── 🟡 14 Medium
+    ├── 🟡 17 Medium
     └── 🔴  8 Hard
 ```
 
@@ -83,6 +84,7 @@ graph TD
     R --> M["📂 2D Matrices"]
     R --> B["📂 Bit Manipulation"]
     R --> DC["📂 Divide & Conquer"]
+    R --> BK["📂 Backtracking"]
     R --> O["📂 OOPs"]
     R --> REC["📂 Recursion"]
     R --> S["📂 Sorting"]
@@ -91,7 +93,7 @@ graph TD
     R --> LC["📂 LeetCode"]
 
     LC --> E["🟢 Easy × 16"]
-    LC --> MD["🟡 Medium × 14"]
+    LC --> MD["🟡 Medium × 17"]
     LC --> H["🔴 Hard × 8"]
 
     style R fill:#6c3483,stroke:#a569bd,stroke-width:3px,color:#fff
@@ -99,6 +101,7 @@ graph TD
     style M fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style B fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style DC fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
+    style BK fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style O fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style REC fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style S fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
@@ -269,6 +272,19 @@ graph TD
 
 ---
 
+### 10 · Backtracking Algorithms
+
+> 4 files — State restoration, recursive permutations, subset generation, and chessboard constraints
+
+| File | Concept | Time | Space |
+| :--- | :--- | :---: | :---: |
+| [`chnangeArr.java`](./Backracking/chnangeArr.java) | Array Backtracking — updating elements and reverting on recursion return | $O(N)$ | $O(N)$ |
+| [`FindSubset.java`](./Backracking/FindSubset.java) | Subsets Generator — recursive choice tree of element inclusion/exclusion | $O(2^N)$ | $O(N)$ |
+| [`FindPermtn.java`](./Backracking/FindPermtn.java) | Permutation Generator — full string arrangement via iterative backtracking | $O(N \cdot N!)$ | $O(N)$ |
+| [`NQueens.java`](./Backracking/NQueens.java) | N-Queens Solver — safe chessboard queen placements with backtracking | $O(N!)$ | $O(N)$ |
+
+---
+
 ## 💡 LeetCode Solutions Tracker
 
 ### 🟢 Easy — 16 Problems
@@ -292,15 +308,18 @@ graph TD
 | 3731 | [Find Missing Elements](./LeetCode_Problems/3731-find-missing-elements) | Hash Set | [Java](./LeetCode_Problems/3731-find-missing-elements/3731-find-missing-elements.java) |
 | 3936 | [Min Swaps to Move Zeros to End](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end) | Greedy | [Java](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end/3936-minimum-swaps-to-move-zeros-to-end.java) |
 
-### 🟡 Medium — 14 Problems
+### 🟡 Medium — 17 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
+| 0078 | [Subsets](./LeetCode_Problems/0078-subsets) | Backtracking | [Java](./LeetCode_Problems/0078-subsets/0078-subsets.java) |
+| 0090 | [Subsets II](./LeetCode_Problems/0090-subsets-ii) | Backtracking | [Java](./LeetCode_Problems/0090-subsets-ii/0090-subsets-ii.java) |
 | 0153 | [Find Min in Rotated Sorted Array](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array) | Binary Search | [Java](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.java) · [C++](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.cpp) |
 | 0201 | [Bitwise AND of Numbers Range](./LeetCode_Problems/0201-bitwise-and-of-numbers-range) | Bit Manipulation | [Java](./LeetCode_Problems/0201-bitwise-and-of-numbers-range/0201-bitwise-and-of-numbers-range.java) |
 | 0238 | [Product of Array Except Self](./LeetCode_Problems/0238-product-of-array-except-self) | Prefix / Suffix | [Java](./LeetCode_Problems/0238-product-of-array-except-self/0238-product-of-array-except-self.java) |
 | 0371 | [Sum of Two Integers](./LeetCode_Problems/0371-sum-of-two-integers) | Bit Manipulation | [Java](./LeetCode_Problems/0371-sum-of-two-integers/0371-sum-of-two-integers.java) |
 | 0486 | [Predict the Winner](./LeetCode_Problems/0486-predict-the-winner) | DP / Minimax | [Java](./LeetCode_Problems/0486-predict-the-winner/0486-predict-the-winner.java) |
+| 0567 | [Permutation in String](./LeetCode_Problems/0567-permutation-in-string) | Sliding Window | [Java](./LeetCode_Problems/0567-permutation-in-string/0567-permutation-in-string.java) |
 | 0735 | [Asteroid Collision](./LeetCode_Problems/0735-asteroid-collision) | Stack | [Java](./LeetCode_Problems/0735-asteroid-collision/0735-asteroid-collision.java) |
 | 0877 | [Stone Game](./LeetCode_Problems/0877-stone-game) | Game Theory / DP | [Java](./LeetCode_Problems/0877-stone-game/0877-stone-game.java) |
 | 2812 | [Find Safest Path in a Grid](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid) | BFS / Binary Search | [Java](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid/2812-find-the-safest-path-in-a-grid.java) |
@@ -346,6 +365,9 @@ graph TD
 | Tree Recursion | $O(2^N)$ | $O(2^N)$ | $O(2^N)$ | $O(N)$ | Fibonacci / Tiling / Pairing |
 | Linear Exponentiation ($a^n$) | $O(n)$ | $O(n)$ | $O(n)$ | $O(n)$ | Simple linear recursion stack |
 | Logarithmic Exponentiation ($a^n$) | $O(\log n)$ | $O(\log n)$ | $O(\log n)$ | $O(\log n)$ | Optimized divide-and-conquer with caching |
+| Subsets Generation | $O(2^N)$ | $O(2^N)$ | $O(2^N)$ | $O(N)$ | Backtracking decision tree (include/exclude) |
+| Permutations Generation | $O(N!)$ | $O(N \cdot N!)$ | $O(N \cdot N!)$ | $O(N)$ | Backtracking character placement |
+| N-Queens Solver | $O(N!)$ | $O(N!)$ | $O(N!)$ | $O(N)$ | Chess board backtracking placement |
 
 ---
 
