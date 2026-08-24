@@ -11,7 +11,7 @@
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 > A curated collection of **115+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · 41 LeetCode Solutions
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · 44 LeetCode Solutions
 
 </div>
 
@@ -23,13 +23,13 @@
   <tr>
     <td align="center"><strong>10</strong><br/>Core Modules</td>
     <td align="center"><strong>115+</strong><br/>Code Files</td>
-    <td align="center"><strong>41</strong><br/>LeetCode Problems</td>
+    <td align="center"><strong>44</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
   <tr>
     <td align="center">🟢 16 Easy</td>
-    <td align="center">🟡 17 Medium</td>
-    <td align="center">🔴 8 Hard</td>
+    <td align="center">🟡 18 Medium</td>
+    <td align="center">🔴 10 Hard</td>
     <td align="center">☕ 💻 🐍</td>
   </tr>
 </table>
@@ -43,7 +43,7 @@
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
 | [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All 10 modules with file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 41 problems sorted by ID |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 44 problems sorted by ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -66,10 +66,10 @@ DSA/
 ├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion
 ├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms (e.g., modified bubble sort, recursive power)
 │
-└── 📂 LeetCode_Problems/     → 41 standalone solutions with markdown explanations
+└── 📂 LeetCode_Problems/     → 44 standalone solutions with markdown explanations
     ├── 🟢 16 Easy
-    ├── 🟡 17 Medium
-    └── 🔴  8 Hard
+    ├── 🟡 18 Medium
+    └── 🔴 10 Hard
 ```
 
 ---
@@ -93,8 +93,8 @@ graph TD
     R --> LC["📂 LeetCode"]
 
     LC --> E["🟢 Easy × 16"]
-    LC --> MD["🟡 Medium × 17"]
-    LC --> H["🔴 Hard × 8"]
+    LC --> MD["🟡 Medium × 18"]
+    LC --> H["🔴 Hard × 10"]
 
     style R fill:#6c3483,stroke:#a569bd,stroke-width:3px,color:#fff
     style A fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
@@ -274,7 +274,7 @@ graph TD
 
 ### 10 · Backtracking Algorithms
 
-> 4 files — State restoration, recursive permutations, subset generation, and chessboard constraints
+> 7 files — State restoration, recursive permutations, subset generation, and chessboard constraints
 
 | File | Concept | Time | Space |
 | :--- | :--- | :---: | :---: |
@@ -282,6 +282,9 @@ graph TD
 | [`FindSubset.java`](./Backracking/FindSubset.java) | Subsets Generator — recursive choice tree of element inclusion/exclusion | $O(2^N)$ | $O(N)$ |
 | [`FindPermtn.java`](./Backracking/FindPermtn.java) | Permutation Generator — full string arrangement via iterative backtracking | $O(N \cdot N!)$ | $O(N)$ |
 | [`NQueens.java`](./Backracking/NQueens.java) | N-Queens Solver — safe chessboard queen placements with backtracking | $O(N!)$ | $O(N)$ |
+| [`NQueens1soln.java`](./Backracking/NQueens1soln.java) | N-Queens Single Solution — existence check and single board state | $O(N!)$ | $O(N)$ |
+| [`nQueens2.java`](./Backracking/nQueens2.java) | N-Queens All Solutions — explores and prints all valid board configurations | $O(N!)$ | $O(N)$ |
+| [`waysToSolveN_queens.java`](./Backracking/waysToSolveN_queens.java) | N-Queens Ways Count — combinatorial backtracking to count total solutions | $O(N!)$ | $O(N)$ |
 
 ---
 
@@ -308,7 +311,7 @@ graph TD
 | 3731 | [Find Missing Elements](./LeetCode_Problems/3731-find-missing-elements) | Hash Set | [Java](./LeetCode_Problems/3731-find-missing-elements/3731-find-missing-elements.java) |
 | 3936 | [Min Swaps to Move Zeros to End](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end) | Greedy | [Java](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end/3936-minimum-swaps-to-move-zeros-to-end.java) |
 
-### 🟡 Medium — 17 Problems
+### 🟡 Medium — 18 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
@@ -322,6 +325,7 @@ graph TD
 | 0567 | [Permutation in String](./LeetCode_Problems/0567-permutation-in-string) | Sliding Window | [Java](./LeetCode_Problems/0567-permutation-in-string/0567-permutation-in-string.java) |
 | 0735 | [Asteroid Collision](./LeetCode_Problems/0735-asteroid-collision) | Stack | [Java](./LeetCode_Problems/0735-asteroid-collision/0735-asteroid-collision.java) |
 | 0877 | [Stone Game](./LeetCode_Problems/0877-stone-game) | Game Theory / DP | [Java](./LeetCode_Problems/0877-stone-game/0877-stone-game.java) |
+| 1222 | [Queens That Can Attack the King](./LeetCode_Problems/1222-queens-that-can-attack-the-king) | Matrix / Simulation | [Java](./LeetCode_Problems/1222-queens-that-can-attack-the-king/1222-queens-that-can-attack-the-king.java) |
 | 2812 | [Find Safest Path in a Grid](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid) | BFS / Binary Search | [Java](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid/2812-find-the-safest-path-in-a-grid.java) |
 | 3016 | [Min Pushes to Type Word II](./LeetCode_Problems/3016-minimum-number-of-pushes-to-type-word-ii) | Greedy / Sorting | [Java](./LeetCode_Problems/3016-minimum-number-of-pushes-to-type-word-ii/3016-minimum-number-of-pushes-to-type-word-ii.java) |
 | 3159 | [Find Occurrences of Element in Array](./LeetCode_Problems/3159-find-occurrences-of-an-element-in-an-array) | Array / Hash Map | [Java](./LeetCode_Problems/3159-find-occurrences-of-an-element-in-an-array/3159-find-occurrences-of-an-element-in-an-array.java) |
@@ -330,12 +334,14 @@ graph TD
 | 3310 | [Remove Methods From Project](./LeetCode_Problems/3310-remove-methods-from-project) | Graph (BFS/DFS) | [Java](./LeetCode_Problems/3310-remove-methods-from-project/3310-remove-methods-from-project.java) |
 | 3517 | [Smallest Palindromic Rearrangement I](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i) | Greedy / Sorting | [Java](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i/3517-smallest-palindromic-rearrangement-i.java) |
 
-### 🔴 Hard — 8 Problems
+### 🔴 Hard — 10 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
 | 0004 | [Median of Two Sorted Arrays](./LeetCode_Problems/0004-median-of-two-sorted-arrays) | Binary Search / D&C | [Java](./LeetCode_Problems/0004-median-of-two-sorted-arrays/0004-median-of-two-sorted-arrays.java) |
 | 0042 | [Trapping Rain Water](./LeetCode_Problems/0042-trapping-rain-water) | Two Pointers / DP | [Java](./LeetCode_Problems/0042-trapping-rain-water/0042-trapping-rain-water.java) |
+| 0051 | [N-Queens](./LeetCode_Problems/0051-n-queens) | Backtracking | [Java](./LeetCode_Problems/0051-n-queens/0051-n-queens.java) |
+| 0052 | [N-Queens II](./LeetCode_Problems/0052-n-queens-ii) | Backtracking | [Java](./LeetCode_Problems/0052-n-queens-ii/0052-n-queens-ii.java) |
 | 0154 | [Find Min in Rotated Sorted Array II](./LeetCode_Problems/0154-find-minimum-in-rotated-sorted-array-ii) | Binary Search | [C++](./LeetCode_Problems/0154-find-minimum-in-rotated-sorted-array-ii/0154-find-minimum-in-rotated-sorted-array-ii.cpp) |
 | 1406 | [Stone Game III](./LeetCode_Problems/1406-stone-game-iii) | Minimax DP | [Java](./LeetCode_Problems/1406-stone-game-iii/1406-stone-game-iii.java) |
 | 1510 | [Stone Game IV](./LeetCode_Problems/1510-stone-game-iv) | DP / Game Theory | [Java](./LeetCode_Problems/1510-stone-game-iv/1510-stone-game-iv.java) |
