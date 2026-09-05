@@ -7,11 +7,11 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-41_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-45_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> A curated collection of **115+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · 44 LeetCode Solutions
+> A curated collection of **117+ production-grade implementations** spanning  
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · 45 LeetCode Solutions
 
 </div>
 
@@ -22,14 +22,14 @@
 <table>
   <tr>
     <td align="center"><strong>10</strong><br/>Core Modules</td>
-    <td align="center"><strong>115+</strong><br/>Code Files</td>
-    <td align="center"><strong>44</strong><br/>LeetCode Problems</td>
+    <td align="center"><strong>117+</strong><br/>Code Files</td>
+    <td align="center"><strong>45</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
   <tr>
     <td align="center">🟢 16 Easy</td>
     <td align="center">🟡 18 Medium</td>
-    <td align="center">🔴 10 Hard</td>
+    <td align="center">🔴 11 Hard</td>
     <td align="center">☕ 💻 🐍</td>
   </tr>
 </table>
@@ -274,16 +274,18 @@ graph TD
 
 ### 10 · Backtracking Algorithms
 
-> 7 files — State restoration, recursive permutations, subset generation, and chessboard constraints
+> 9 files — State restoration, recursive permutations, subset generation, grid paths, sudoku solving, and chessboard constraints
 
 | File | Concept | Time | Space |
 | :--- | :--- | :---: | :---: |
 | [`chnangeArr.java`](./Backracking/chnangeArr.java) | Array Backtracking — updating elements and reverting on recursion return | $O(N)$ | $O(N)$ |
 | [`FindSubset.java`](./Backracking/FindSubset.java) | Subsets Generator — recursive choice tree of element inclusion/exclusion | $O(2^N)$ | $O(N)$ |
 | [`FindPermtn.java`](./Backracking/FindPermtn.java) | Permutation Generator — full string arrangement via iterative backtracking | $O(N \cdot N!)$ | $O(N)$ |
+| [`GridWays.java`](./Backracking/GridWays.java) | Grid Ways — backtracking to count paths in a 2D matrix | $O(2^{N+M})$ | $O(N+M)$ |
 | [`NQueens.java`](./Backracking/NQueens.java) | N-Queens Solver — safe chessboard queen placements with backtracking | $O(N!)$ | $O(N)$ |
 | [`NQueens1soln.java`](./Backracking/NQueens1soln.java) | N-Queens Single Solution — existence check and single board state | $O(N!)$ | $O(N)$ |
 | [`nQueens2.java`](./Backracking/nQueens2.java) | N-Queens All Solutions — explores and prints all valid board configurations | $O(N!)$ | $O(N)$ |
+| [`Soduku.java`](./Backracking/Soduku.java) | Sudoku Solver — cell placement validation with backtracking | $O(9^{N \times N})$ | $O(N^2)$ |
 | [`waysToSolveN_queens.java`](./Backracking/waysToSolveN_queens.java) | N-Queens Ways Count — combinatorial backtracking to count total solutions | $O(N!)$ | $O(N)$ |
 
 ---
@@ -334,11 +336,12 @@ graph TD
 | 3310 | [Remove Methods From Project](./LeetCode_Problems/3310-remove-methods-from-project) | Graph (BFS/DFS) | [Java](./LeetCode_Problems/3310-remove-methods-from-project/3310-remove-methods-from-project.java) |
 | 3517 | [Smallest Palindromic Rearrangement I](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i) | Greedy / Sorting | [Java](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i/3517-smallest-palindromic-rearrangement-i.java) |
 
-### 🔴 Hard — 10 Problems
+### 🔴 Hard — 11 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
 | 0004 | [Median of Two Sorted Arrays](./LeetCode_Problems/0004-median-of-two-sorted-arrays) | Binary Search / D&C | [Java](./LeetCode_Problems/0004-median-of-two-sorted-arrays/0004-median-of-two-sorted-arrays.java) |
+| 0037 | [Sudoku Solver](./LeetCode_Problems/0037-sudoku-solver) | Backtracking | [Java](./LeetCode_Problems/0037-sudoku-solver/0037-sudoku-solver.java) |
 | 0042 | [Trapping Rain Water](./LeetCode_Problems/0042-trapping-rain-water) | Two Pointers / DP | [Java](./LeetCode_Problems/0042-trapping-rain-water/0042-trapping-rain-water.java) |
 | 0051 | [N-Queens](./LeetCode_Problems/0051-n-queens) | Backtracking | [Java](./LeetCode_Problems/0051-n-queens/0051-n-queens.java) |
 | 0052 | [N-Queens II](./LeetCode_Problems/0052-n-queens-ii) | Backtracking | [Java](./LeetCode_Problems/0052-n-queens-ii/0052-n-queens-ii.java) |

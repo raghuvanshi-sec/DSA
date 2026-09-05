@@ -2,7 +2,7 @@ package Sorting;
 
 public class countingSort {
     
-    public static void countingSort(int arr[]){
+    public static void sort(int arr[]){
         int largest = Integer.MIN_VALUE;
         for(int i=0;i<arr.length;i++){
             largest = Math.max(largest, arr[i]);
@@ -35,7 +35,7 @@ public class countingSort {
 
     public static void main(String args[]){
         int arr[] = {1,4,1,2,7,5,2};
-        countingSort(arr);
+        sort(arr);
         printArr(arr);
     }
 }
