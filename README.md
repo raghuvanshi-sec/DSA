@@ -80,6 +80,7 @@ DSA/
 ## 🗺️ Visual Repository Map
 
 ```mermaid
+    flowchart TD
     R(("⚡ DSA & OOPs"))
 
     R --> A["📂 Arrays"]
