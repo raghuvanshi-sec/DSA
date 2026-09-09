@@ -79,7 +79,7 @@ DSA/
 
 ## 🗺️ Visual Repository Map
 
-```mermaid
+```D2 Diagram
 graph TD
     R(("⚡ DSA & OOPs"))
 
