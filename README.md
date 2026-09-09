@@ -51,7 +51,7 @@
 
 ## 📁 Directory Architecture
 
-```Network_Graph
+```PlantUML
 DSA/
 │
 ├── 📂 Arrays/                → Linear search, binary search, Kadane's, trapping rainwater
