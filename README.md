@@ -10,7 +10,7 @@
 [![LeetCode](https://img.shields.io/badge/LeetCode-45_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> A curated collection of **117+ production-grade implementations** spanning  
+> A curated collection of **124+ production-grade implementations** spanning  
 > Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · 45 LeetCode Solutions
 
 </div>
@@ -21,8 +21,8 @@
 
 <table>
   <tr>
-    <td align="center"><strong>10</strong><br/>Core Modules</td>
-    <td align="center"><strong>117+</strong><br/>Code Files</td>
+    <td align="center"><strong>11</strong><br/>Core Modules</td>
+    <td align="center"><strong>124+</strong><br/>Code Files</td>
     <td align="center"><strong>45</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
@@ -42,8 +42,8 @@
 | :--- | :--- |
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
-| [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All 10 modules with file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 44 problems sorted by ID |
+| [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All 11 modules with file catalogs |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 45 problems sorted by ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -59,6 +59,9 @@ DSA/
 ├── 📂 Backracking/           → Array backtracking, subsets, permutations, N-Queens
 ├── 📂 BitManipulation/       → AND, OR, XOR, shifts, ith-bit ops, power-of-2 checks
 ├── 📂 DivideNConquer/        → Merge sort, quick sort, search in rotated sorted array
+├── 📂 Linear_Structure/      → ArrayList operations, multi-dimensional lists, sorting
+│   ├── 📂 ArrayList/         →   7 files: basics, max, reverse, swap, sort, 2D lists
+│   └── 📂 LInkedList/        →   (coming soon)
 ├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism
 ├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling,
 │                                binary strings, friends pairing, deduplication
@@ -66,10 +69,10 @@ DSA/
 ├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion
 ├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms (e.g., modified bubble sort, recursive power)
 │
-└── 📂 LeetCode_Problems/     → 44 standalone solutions with markdown explanations
+└── 📂 LeetCode_Problems/     → 45 standalone solutions with markdown explanations
     ├── 🟢 16 Easy
     ├── 🟡 18 Medium
-    └── 🔴 10 Hard
+    └── 🔴 11 Hard
 ```
 
 ---
@@ -85,6 +88,7 @@ graph TD
     R --> B["📂 Bit Manipulation"]
     R --> DC["📂 Divide & Conquer"]
     R --> BK["📂 Backtracking"]
+    R --> LS["📂 Linear Structure"]
     R --> O["📂 OOPs"]
     R --> REC["📂 Recursion"]
     R --> S["📂 Sorting"]
@@ -94,7 +98,10 @@ graph TD
 
     LC --> E["🟢 Easy × 16"]
     LC --> MD["🟡 Medium × 18"]
-    LC --> H["🔴 Hard × 10"]
+    LS --> AL["📂 ArrayList"]
+    LS --> LL["📂 LinkedList"]
+
+    LC --> H["🔴 Hard × 11"]
 
     style R fill:#6c3483,stroke:#a569bd,stroke-width:3px,color:#fff
     style A fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
@@ -102,6 +109,9 @@ graph TD
     style B fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style DC fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style BK fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
+    style LS fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
+    style AL fill:#154360,stroke:#1a5276,color:#d6eaf8
+    style LL fill:#154360,stroke:#1a5276,color:#d6eaf8
     style O fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style REC fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style S fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
@@ -290,6 +300,22 @@ graph TD
 
 ---
 
+### 11 · Linear Data Structures — ArrayList
+
+> 7 files — Java `ArrayList` fundamentals: generics, CRUD, sorting, multidimensional lists, and utility operations
+
+| File | Concept | Time | Space |
+| :--- | :--- | :---: | :---: |
+| [`example.java`](./Linear_Structure/ArrayList/example.java) | ArrayList Basics — typed generics, `add`, `remove`, index-based insert | $O(1)$ amortized | $O(N)$ |
+| [`Maximum.java`](./Linear_Structure/ArrayList/Maximum.java) | Maximum Element — single-pass scan with `Math.max` | $O(N)$ | $O(N)$ |
+| [`PrintReverseList.java`](./Linear_Structure/ArrayList/PrintReverseList.java) | Reverse Traversal — backward index iteration | $O(N)$ | $O(N)$ |
+| [`SwapTwoNumbers.java`](./Linear_Structure/ArrayList/SwapTwoNumbers.java) | Index Swap — `get`/`set` based in-place swap | $O(1)$ | $O(N)$ |
+| [`Sorting.java`](./Linear_Structure/ArrayList/Sorting.java) | Sorting — `Collections.sort` (ascending) & `reverseOrder` (descending) | $O(N \log N)$ | $O(\log N)$ |
+| [`MultiDimsnAL.java`](./Linear_Structure/ArrayList/MultiDimsnAL.java) | 2D ArrayList — `ArrayList<ArrayList<Integer>>` row-column traversal | $O(N \times M)$ | $O(N \times M)$ |
+| [`MultiDimsnAL2.java`](./Linear_Structure/ArrayList/MultiDimsnAL2.java) | Multidimensional Lists — programmatic multi-row construction via loops | $O(N \times M)$ | $O(N \times M)$ |
+
+---
+
 ## 💡 LeetCode Solutions Tracker
 
 ### 🟢 Easy — 16 Problems
@@ -370,6 +396,9 @@ graph TD
 | Merge Sort | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(N)$ | Stable, divide-and-conquer |
 | Quick Sort | $O(N \log N)$ | $O(N \log N)$ | $O(N^2)$ | $O(\log N)$ | Unstable, in-place partitioning |
 | Counting Sort | $O(N{+}K)$ | $O(N{+}K)$ | $O(N{+}K)$ | $O(K)$ | Non-comparison |
+| ArrayList Add / Get | $O(1)$ | $O(1)$ | $O(N)$ | $O(N)$ | Amortized; resizes on capacity breach |
+| ArrayList Remove | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Shifts subsequent elements |
+| Collections.sort (ArrayList) | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(\log N)$ | Timsort — stable |
 | Linear Recursion | $O(1)$ | $O(N)$ | $O(N)$ | $O(N)$ | Stack depth = $N$ |
 | Tree Recursion | $O(2^N)$ | $O(2^N)$ | $O(2^N)$ | $O(N)$ | Fibonacci / Tiling / Pairing |
 | Linear Exponentiation ($a^n$) | $O(n)$ | $O(n)$ | $O(n)$ | $O(n)$ | Simple linear recursion stack |
