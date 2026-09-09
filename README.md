@@ -79,7 +79,7 @@ DSA/
 
 ## 🗺️ Visual Repository Map
 
-```Network Graph
+```mermaid
     R(("⚡ DSA & OOPs"))
 
     R --> A["📂 Arrays"]
