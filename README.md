@@ -79,7 +79,7 @@ DSA/
 
 ## 🗺️ Visual Repository Map
 
-```D2 Diagram
+```Graphviz (DOT)
 graph TD
     R(("⚡ DSA & OOPs"))
 
