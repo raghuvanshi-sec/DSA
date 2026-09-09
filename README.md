@@ -80,7 +80,6 @@ DSA/
 ## 🗺️ Visual Repository Map
 
 ```Network Graph
-graph TD
     R(("⚡ DSA & OOPs"))
 
     R --> A["📂 Arrays"]
