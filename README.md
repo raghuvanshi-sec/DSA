@@ -51,7 +51,7 @@
 
 ## 📁 Directory Architecture
 
-```mermaid
+```Network Graph
 DSA/
 │
 ├── 📂 Arrays/                → Linear search, binary search, Kadane's, trapping rainwater
