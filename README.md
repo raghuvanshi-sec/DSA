@@ -83,25 +83,25 @@ DSA/
 graph RL
     R(("⚡ DSA & OOPs"))
 
-    A["📂 Arrays"] --> R
-    M["📂 2D Matrices"] --> R
-    B["📂 Bit Manipulation"] --> R
-    DC["📂 Divide & Conquer"] --> R
-    BK["📂 Backtracking"] --> R
-    LS["📂 Linear Structure"] --> R
-    O["📂 OOPs"] --> R
-    REC["📂 Recursion"] --> R
-    S["📂 Sorting"] --> R
-    ST["📂 Strings"] --> R
-    TS["📂 Time & Space"] --> R
-    LC["📂 LeetCode"] --> R
+    R --> A["📂 Arrays"]
+    R --> M["📂 2D Matrices"]
+    R --> B["📂 Bit Manipulation"]
+    R --> DC["📂 Divide & Conquer"]
+    R --> BK["📂 Backtracking"]
+    R --> LS["📂 Linear Structure"]
+    R --> O["📂 OOPs"]
+    R --> REC["📂 Recursion"]
+    R --> S["📂 Sorting"]
+    R --> ST["📂 Strings"]
+    R --> TS["📂 Time & Space"]
+    R --> LC["📂 LeetCode"]
 
-    AL["📂 ArrayList"] --> LS
-    LL["📂 LinkedList"] --> LS
+    LS --> AL["📂 ArrayList"]
+    LS --> LL["📂 LinkedList"]
 
-    E["🟢 Easy × 16"] --> LC
-    MD["🟡 Medium × 18"] --> LC
-    H["🔴 Hard × 11"] --> LC
+    LC --> E["🟢 Easy × 16"]
+    LC --> MD["🟡 Medium × 18"]
+    LC --> H["🔴 Hard × 11"]
 
     style R fill:#6c3483,stroke:#a569bd,stroke-width:3px,color:#fff
     style A fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
