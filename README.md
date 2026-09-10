@@ -51,7 +51,7 @@
 
 ## 📁 Directory Architecture
 
-```text
+```D2 Diagram
 DSA/
 │
 ├── 📂 Arrays/                → Linear search, binary search, Kadane's, trapping rainwater
@@ -80,7 +80,7 @@ DSA/
 ## 🗺️ Visual Repository Map
 
 ```mermaid
-graph RL
+graph TD
     R(("⚡ DSA & OOPs"))
 
     A["📂 Arrays"] --> R
