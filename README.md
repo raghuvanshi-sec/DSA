@@ -80,28 +80,28 @@ DSA/
 ## 🗺️ Visual Repository Map
 
 ```mermaid
-graph TD
+graph RL
     R(("⚡ DSA & OOPs"))
 
-    R --> A["📂 Arrays"]
-    R --> M["📂 2D Matrices"]
-    R --> B["📂 Bit Manipulation"]
-    R --> DC["📂 Divide & Conquer"]
-    R --> BK["📂 Backtracking"]
-    R --> LS["📂 Linear Structure"]
-    R --> O["📂 OOPs"]
-    R --> REC["📂 Recursion"]
-    R --> S["📂 Sorting"]
-    R --> ST["📂 Strings"]
-    R --> TS["📂 Time & Space"]
-    R --> LC["📂 LeetCode"]
+    A["📂 Arrays"] --> R
+    M["📂 2D Matrices"] --> R
+    B["📂 Bit Manipulation"] --> R
+    DC["📂 Divide & Conquer"] --> R
+    BK["📂 Backtracking"] --> R
+    LS["📂 Linear Structure"] --> R
+    O["📂 OOPs"] --> R
+    REC["📂 Recursion"] --> R
+    S["📂 Sorting"] --> R
+    ST["📂 Strings"] --> R
+    TS["📂 Time & Space"] --> R
+    LC["📂 LeetCode"] --> R
 
-    LC --> E["🟢 Easy × 16"]
-    LC --> MD["🟡 Medium × 18"]
-    LS --> AL["📂 ArrayList"]
-    LS --> LL["📂 LinkedList"]
+    AL["📂 ArrayList"] --> LS
+    LL["📂 LinkedList"] --> LS
 
-    LC --> H["🔴 Hard × 11"]
+    E["🟢 Easy × 16"] --> LC
+    MD["🟡 Medium × 18"] --> LC
+    H["🔴 Hard × 11"] --> LC
 
     style R fill:#6c3483,stroke:#a569bd,stroke-width:3px,color:#fff
     style A fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
@@ -343,7 +343,7 @@ graph TD
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
-| 0078 | [Subsets](./LeetCode_Problems/0078-subsets) | Backtracking | [Java](./LeetCode_Problems/0078-subsets/0078-subsets.java) |
+change | 0078 | [Subsets](./LeetCode_Problems/0078-subsets) | Backtracking | [Java](./LeetCode_Problems/0078-subsets/0078-subsets.java) |
 | 0090 | [Subsets II](./LeetCode_Problems/0090-subsets-ii) | Backtracking | [Java](./LeetCode_Problems/0090-subsets-ii/0090-subsets-ii.java) |
 | 0153 | [Find Min in Rotated Sorted Array](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array) | Binary Search | [Java](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.java) · [C++](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.cpp) |
 | 0201 | [Bitwise AND of Numbers Range](./LeetCode_Problems/0201-bitwise-and-of-numbers-range) | Bit Manipulation | [Java](./LeetCode_Problems/0201-bitwise-and-of-numbers-range/0201-bitwise-and-of-numbers-range.java) |
