@@ -7,11 +7,11 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-45_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-49_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> A curated collection of **124+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · 45 LeetCode Solutions
+> A curated collection of **145+ production-grade implementations** spanning  
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear Structures · 49 LeetCode Solutions
 
 </div>
 
@@ -22,14 +22,14 @@
 <table>
   <tr>
     <td align="center"><strong>11</strong><br/>Core Modules</td>
-    <td align="center"><strong>124+</strong><br/>Code Files</td>
-    <td align="center"><strong>45</strong><br/>LeetCode Problems</td>
+    <td align="center"><strong>145+</strong><br/>Code Files</td>
+    <td align="center"><strong>49</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
   <tr>
     <td align="center">🟢 16 Easy</td>
-    <td align="center">🟡 18 Medium</td>
-    <td align="center">🔴 11 Hard</td>
+    <td align="center">🟡 21 Medium</td>
+    <td align="center">🔴 12 Hard</td>
     <td align="center">☕ 💻 🐍</td>
   </tr>
 </table>
@@ -43,7 +43,7 @@
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
 | [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All 11 modules with file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 45 problems sorted by ID |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 49 problems sorted by ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -56,23 +56,22 @@ DSA/
 │
 ├── 📂 Arrays/                → Linear search, binary search, Kadane's, trapping rainwater
 ├── 📂 2D.Arrays/             → Spiral traversal, diagonal sum, staircase search
-├── 📂 Backracking/           → Array backtracking, subsets, permutations, N-Queens
+├── 📂 Backracking/           → Array backtracking, subsets, permutations, N-Queens, Sudoku
 ├── 📂 BitManipulation/       → AND, OR, XOR, shifts, ith-bit ops, power-of-2 checks
 ├── 📂 DivideNConquer/        → Merge sort, quick sort, search in rotated sorted array
-├── 📂 Linear_Structure/      → ArrayList operations, multi-dimensional lists, sorting
-│   ├── 📂 ArrayList/         →   7 files: basics, max, reverse, swap, sort, 2D lists
-│   └── 📂 LInkedList/        →   (coming soon)
+├── 📂 Linear_Structure/      → ArrayList & LinkedList implementations
+│   ├── 📂 ArrayList/         → 12 files: CRUD, sorting, 2D lists, Container With Most Water, Pair Sum 1 & 2
+│   └── 📂 LInkedList/        → Node structure, head/tail pointers, addFirst, addLast, print
 ├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism
-├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling,
-│                                binary strings, friends pairing, deduplication
+├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling, binary strings
 ├── 📂 Sorting/               → Bubble, selection, insertion, counting sort
 ├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion
-├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms (e.g., modified bubble sort, recursive power)
+├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms, exponentiation
 │
-└── 📂 LeetCode_Problems/     → 45 standalone solutions with markdown explanations
+└── 📂 LeetCode_Problems/     → 49 standalone solutions with markdown explanations
     ├── 🟢 16 Easy
-    ├── 🟡 18 Medium
-    └── 🔴 11 Hard
+    ├── 🟡 21 Medium
+    └── 🔴 12 Hard
 ```
 
 ---
@@ -96,12 +95,12 @@ DSA/
     R --> TS["📂 Time & Space"]
     R --> LC["📂 LeetCode"]
 
-    LS --> AL["📂 ArrayList"]
-    LS --> LL["📂 LinkedList"]
+    LS --> AL["📂 ArrayList × 12"]
+    LS --> LL["📂 LinkedList × 1"]
 
     LC --> E["🟢 Easy × 16"]
-    LC --> MD["🟡 Medium × 18"]
-    LC --> H["🔴 Hard × 11"]
+    LC --> MD["🟡 Medium × 21"]
+    LC --> H["🔴 Hard × 12"]
 
     style R fill:#6c3483,stroke:#a569bd,stroke-width:3px,color:#fff
     style A fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
@@ -271,14 +270,13 @@ DSA/
 
 ### 9 · Time & Space Complexity Analysis
 
-> 4 files — Complexity optimization, early-exit strategies, and recursive exponentiation analysis
+> 3 files — Complexity optimization, early-exit strategies, and recursive exponentiation analysis
 
 | File | Concept | Time | Space |
 | :--- | :--- | :---: | :---: |
 | [`modifiedBubbleSort.java`](./TimeNSpace_Complexity/modifiedBubbleSort.java) | Modified Bubble Sort — optimized with early exit when sorted | $O(N)$ best / $O(N^2)$ worst | $O(1)$ |
 | [`PowerFun.java`](./TimeNSpace_Complexity/PowerFun.java) | Linear Power — simple recursive exponentiation $a^n = a \cdot a^{n-1}$ | $O(n)$ | $O(n)$ |
-| [`Power2.java`](./TimeNSpace_Complexity/Power2.java) | Naive Divide-and-Conquer Power — unoptimized recursion (no caching) | $O(n)$ | $O(\log n)$ |
-| [`PowerFun3.java`](./TimeNSpace_Complexity/PowerFun3.java) | Optimized Divide-and-Conquer Power — logarithmic exponentiation with caching | $O(\log n)$ | $O(\log n)$ |
+| [`Power2.java`](./TimeNSpace_Complexity/Power2.java) | Logarithmic Exponentiation — divide-and-conquer power algorithm | $O(\log n)$ | $O(\log n)$ |
 
 ---
 
@@ -300,9 +298,11 @@ DSA/
 
 ---
 
-### 11 · Linear Data Structures — ArrayList
+### 11 · Linear Data Structures — ArrayList & LinkedList
 
-> 7 files — Java `ArrayList` fundamentals: generics, CRUD, sorting, multidimensional lists, and utility operations
+> 13 files — Dynamic arrays, two-pointer search algorithms, and custom singly linked list implementation
+
+#### 11.1 · Dynamic Arrays (`ArrayList`)
 
 | File | Concept | Time | Space |
 | :--- | :--- | :---: | :---: |
@@ -313,6 +313,17 @@ DSA/
 | [`Sorting.java`](./Linear_Structure/ArrayList/Sorting.java) | Sorting — `Collections.sort` (ascending) & `reverseOrder` (descending) | $O(N \log N)$ | $O(\log N)$ |
 | [`MultiDimsnAL.java`](./Linear_Structure/ArrayList/MultiDimsnAL.java) | 2D ArrayList — `ArrayList<ArrayList<Integer>>` row-column traversal | $O(N \times M)$ | $O(N \times M)$ |
 | [`MultiDimsnAL2.java`](./Linear_Structure/ArrayList/MultiDimsnAL2.java) | Multidimensional Lists — programmatic multi-row construction via loops | $O(N \times M)$ | $O(N \times M)$ |
+| [`ContainerWMW.java`](./Linear_Structure/ArrayList/ContainerWMW.java) | Container With Most Water (Brute Force) — nested loop area evaluation | $O(N^2)$ | $O(1)$ |
+| [`TwoPointerCwMw.java`](./Linear_Structure/ArrayList/TwoPointerCwMw.java) | Container With Most Water (Two Pointer) — optimal linear container search | $O(N)$ | $O(1)$ |
+| [`PairSum1.java`](./Linear_Structure/ArrayList/PairSum1.java) | Pair Sum 1 (Brute Force) — all-pair target sum search in sorted list | $O(N^2)$ | $O(1)$ |
+| [`PairSum1TwoP.java`](./Linear_Structure/ArrayList/PairSum1TwoP.java) | Pair Sum 1 (Two Pointer) — dual-pointer target search on sorted list | $O(N)$ | $O(1)$ |
+| [`PairSum2.java`](./Linear_Structure/ArrayList/PairSum2.java) | Pair Sum 2 (Rotated Array) — modular arithmetic 2-pointer on rotated list | $O(N)$ | $O(1)$ |
+
+#### 11.2 · Custom Linked List (`LinkedList`)
+
+| File | Concept | Time | Space |
+| :--- | :--- | :---: | :---: |
+| [`LinkedList.java`](./Linear_Structure/LInkedList/LinkedList.java) | Singly Linked List — `Node` class, `head`/`tail`, `addFirst`, `addLast`, `print` | $O(1)$ add / $O(N)$ print | $O(N)$ |
 
 ---
 
@@ -339,11 +350,16 @@ DSA/
 | 3731 | [Find Missing Elements](./LeetCode_Problems/3731-find-missing-elements) | Hash Set | [Java](./LeetCode_Problems/3731-find-missing-elements/3731-find-missing-elements.java) |
 | 3936 | [Min Swaps to Move Zeros to End](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end) | Greedy | [Java](./LeetCode_Problems/3936-minimum-swaps-to-move-zeros-to-end/3936-minimum-swaps-to-move-zeros-to-end.java) |
 
-### 🟡 Medium — 18 Problems
+---
+
+### 🟡 Medium — 21 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
-change | 0078 | [Subsets](./LeetCode_Problems/0078-subsets) | Backtracking | [Java](./LeetCode_Problems/0078-subsets/0078-subsets.java) |
+| 0002 | [Add Two Numbers](./LeetCode_Problems/0002-add-two-numbers) | Linked List / Math | [Java](./LeetCode_Problems/0002-add-two-numbers/0002-add-two-numbers.java) |
+| 0007 | [Reverse Integer](./LeetCode_Problems/0007-reverse-integer) | Math | [Java](./LeetCode_Problems/0007-reverse-integer/0007-reverse-integer.java) |
+| 0011 | [Container With Most Water](./LeetCode_Problems/0011-container-with-most-water) | Two Pointers / Array | [Java](./LeetCode_Problems/0011-container-with-most-water/0011-container-with-most-water.java) |
+| 0078 | [Subsets](./LeetCode_Problems/0078-subsets) | Backtracking | [Java](./LeetCode_Problems/0078-subsets/0078-subsets.java) |
 | 0090 | [Subsets II](./LeetCode_Problems/0090-subsets-ii) | Backtracking | [Java](./LeetCode_Problems/0090-subsets-ii/0090-subsets-ii.java) |
 | 0153 | [Find Min in Rotated Sorted Array](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array) | Binary Search | [Java](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.java) · [C++](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.cpp) |
 | 0201 | [Bitwise AND of Numbers Range](./LeetCode_Problems/0201-bitwise-and-of-numbers-range) | Bit Manipulation | [Java](./LeetCode_Problems/0201-bitwise-and-of-numbers-range/0201-bitwise-and-of-numbers-range.java) |
@@ -362,7 +378,9 @@ change | 0078 | [Subsets](./LeetCode_Problems/0078-subsets) | Backtracking | [Ja
 | 3310 | [Remove Methods From Project](./LeetCode_Problems/3310-remove-methods-from-project) | Graph (BFS/DFS) | [Java](./LeetCode_Problems/3310-remove-methods-from-project/3310-remove-methods-from-project.java) |
 | 3517 | [Smallest Palindromic Rearrangement I](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i) | Greedy / Sorting | [Java](./LeetCode_Problems/3517-smallest-palindromic-rearrangement-i/3517-smallest-palindromic-rearrangement-i.java) |
 
-### 🔴 Hard — 11 Problems
+---
+
+### 🔴 Hard — 12 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
@@ -371,6 +389,7 @@ change | 0078 | [Subsets](./LeetCode_Problems/0078-subsets) | Backtracking | [Ja
 | 0042 | [Trapping Rain Water](./LeetCode_Problems/0042-trapping-rain-water) | Two Pointers / DP | [Java](./LeetCode_Problems/0042-trapping-rain-water/0042-trapping-rain-water.java) |
 | 0051 | [N-Queens](./LeetCode_Problems/0051-n-queens) | Backtracking | [Java](./LeetCode_Problems/0051-n-queens/0051-n-queens.java) |
 | 0052 | [N-Queens II](./LeetCode_Problems/0052-n-queens-ii) | Backtracking | [Java](./LeetCode_Problems/0052-n-queens-ii/0052-n-queens-ii.java) |
+| 0115 | [Distinct Subsequences](./LeetCode_Problems/0115-distinct-subsequences) | Dynamic Programming / String | [Java](./LeetCode_Problems/0115-distinct-subsequences/0115-distinct-subsequences.java) |
 | 0154 | [Find Min in Rotated Sorted Array II](./LeetCode_Problems/0154-find-minimum-in-rotated-sorted-array-ii) | Binary Search | [C++](./LeetCode_Problems/0154-find-minimum-in-rotated-sorted-array-ii/0154-find-minimum-in-rotated-sorted-array-ii.cpp) |
 | 1406 | [Stone Game III](./LeetCode_Problems/1406-stone-game-iii) | Minimax DP | [Java](./LeetCode_Problems/1406-stone-game-iii/1406-stone-game-iii.java) |
 | 1510 | [Stone Game IV](./LeetCode_Problems/1510-stone-game-iv) | DP / Game Theory | [Java](./LeetCode_Problems/1510-stone-game-iv/1510-stone-game-iv.java) |
@@ -390,6 +409,12 @@ change | 0078 | [Subsets](./LeetCode_Problems/0078-subsets) | Backtracking | [Ja
 | Staircase Search | $O(1)$ | $O(N{+}M)$ | $O(N{+}M)$ | $O(1)$ | Row + column sorted matrix |
 | Kadane's Algorithm | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Max subarray (DP) |
 | Prefix Sum | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(N)$ | $O(1)$ range queries |
+| Container With Most Water (Brute Force) | $O(N^2)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | All height pair combinations |
+| Container With Most Water (Two Pointer) | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Inward pointer contraction |
+| Pair Sum 1 (Two Pointer) | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Dual pointer search on sorted array |
+| Pair Sum 2 (Rotated Array) | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Modular arithmetic pointer wrap-around |
+| Singly LinkedList Add (First / Last) | $O(1)$ | $O(1)$ | $O(1)$ | $O(1)$ | Head/tail pointer update |
+| Singly LinkedList Print / Search | $O(1)$ | $O(N)$ | $O(N)$ | $O(1)$ | Sequential node traversal |
 | Bubble Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Stable |
 | Selection Sort | $O(N^2)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Unstable |
 | Insertion Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Online, stable |
@@ -402,7 +427,7 @@ change | 0078 | [Subsets](./LeetCode_Problems/0078-subsets) | Backtracking | [Ja
 | Linear Recursion | $O(1)$ | $O(N)$ | $O(N)$ | $O(N)$ | Stack depth = $N$ |
 | Tree Recursion | $O(2^N)$ | $O(2^N)$ | $O(2^N)$ | $O(N)$ | Fibonacci / Tiling / Pairing |
 | Linear Exponentiation ($a^n$) | $O(n)$ | $O(n)$ | $O(n)$ | $O(n)$ | Simple linear recursion stack |
-| Logarithmic Exponentiation ($a^n$) | $O(\log n)$ | $O(\log n)$ | $O(\log n)$ | $O(\log n)$ | Optimized divide-and-conquer with caching |
+| Logarithmic Exponentiation ($a^n$) | $O(\log n)$ | $O(\log n)$ | $O(\log n)$ | $O(\log n)$ | Divide-and-conquer exponentiation |
 | Subsets Generation | $O(2^N)$ | $O(2^N)$ | $O(2^N)$ | $O(N)$ | Backtracking decision tree (include/exclude) |
 | Permutations Generation | $O(N!)$ | $O(N \cdot N!)$ | $O(N \cdot N!)$ | $O(N)$ | Backtracking character placement |
 | N-Queens Solver | $O(N!)$ | $O(N!)$ | $O(N!)$ | $O(N)$ | Chess board backtracking placement |
@@ -414,6 +439,12 @@ change | 0078 | [Subsets](./LeetCode_Problems/0078-subsets) | Backtracking | [Ja
 ### ☕ Java
 
 ```bash
+# Custom LinkedList Implementation
+cd DSA/Linear_Structure/LInkedList
+javac LinkedList.java
+java Linear_Structure.LInkedList.LinkedList
+
+# Recursion Example
 cd DSA/Recursion
 javac BinaryString.java
 java Recursion.BinaryString
