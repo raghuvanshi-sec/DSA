@@ -9,7 +9,6 @@
  * }
  */
 class Solution {
-
     public boolean isPalindrome(ListNode head) {
 
         // Find middle
@@ -22,13 +21,21 @@ class Solution {
         }
 
         // Reverse second half
-        ListNode right = reverseNode(slow);
+        ListNode prev = null;
+        ListNode curr = slow;
 
-        // Compare
+        while (curr != null) {
+            ListNode next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        // Compare both halves
         ListNode left = head;
+        ListNode right = prev;
 
         while (right != null) {
-
             if (left.val != right.val) {
                 return false;
             }
@@ -38,21 +45,5 @@ class Solution {
         }
 
         return true;
-    }
-
-    public ListNode reverseNode(ListNode head) {
-
-        ListNode prev = null;
-        ListNode curr = head;
-
-        while (curr != null) {
-
-            ListNode next = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = next;
-        }
-
-        return prev;
     }
 }
