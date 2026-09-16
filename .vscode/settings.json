@@ -1,14 +1,15 @@
 {
-  "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms256m -Xlog:disable",
-  "java.configuration.runtimes": [
-    {
-      "name": "JavaSE-25",
-      "path": "C:\\Program Files\\Java\\latest\\jdk-25",
-      "default": true
-    },
-    {
-      "name": "JavaSE-1.8",
-      "path": "C:\\Program Files\\Java\\jre1.8.0_503"
-    }
-  ]
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1024m -Xms256m -Xlog:disable",
+
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-25",
+            "path": "C:\\Program Files\\Java\\latest\\jdk-25",
+            "default": true
+        },
+        {
+            "name": "JavaSE-1.8",
+            "path": "C:\\Program Files\\Java\\jre1.8.0_503"
+        }
+    ]
 }

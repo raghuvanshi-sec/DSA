@@ -7,11 +7,11 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-49_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-52_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> A curated collection of **145+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear Structures · 49 LeetCode Solutions
+> A curated collection of **150+ production-grade implementations** spanning  
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear Structures · 52 LeetCode Solutions
 
 </div>
 
@@ -22,13 +22,13 @@
 <table>
   <tr>
     <td align="center"><strong>11</strong><br/>Core Modules</td>
-    <td align="center"><strong>145+</strong><br/>Code Files</td>
-    <td align="center"><strong>49</strong><br/>LeetCode Problems</td>
+    <td align="center"><strong>150+</strong><br/>Code Files</td>
+    <td align="center"><strong>52</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
   <tr>
-    <td align="center">🟢 16 Easy</td>
-    <td align="center">🟡 21 Medium</td>
+    <td align="center">🟢 18 Easy</td>
+    <td align="center">🟡 22 Medium</td>
     <td align="center">🔴 12 Hard</td>
     <td align="center">☕ 💻 🐍</td>
   </tr>
@@ -43,7 +43,7 @@
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
 | [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All 11 modules with file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 49 problems sorted by ID |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 52 problems sorted by ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -61,16 +61,16 @@ DSA/
 ├── 📂 DivideNConquer/        → Merge sort, quick sort, search in rotated sorted array
 ├── 📂 Linear_Structure/      → ArrayList & LinkedList implementations
 │   ├── 📂 ArrayList/         → 12 files: CRUD, sorting, 2D lists, Container With Most Water, Pair Sum 1 & 2
-│   └── 📂 LInkedList/        → Node structure, head/tail pointers, addFirst, addLast, print
+│   └── 📂 LInkedList/        → 4 files: Node structure, iterative reversal, remove N-th node from end, palindrome check
 ├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism
 ├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling, binary strings
 ├── 📂 Sorting/               → Bubble, selection, insertion, counting sort
 ├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion
 ├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms, exponentiation
 │
-└── 📂 LeetCode_Problems/     → 49 standalone solutions with markdown explanations
-    ├── 🟢 16 Easy
-    ├── 🟡 21 Medium
+└── 📂 LeetCode_Problems/     → 52 standalone solutions with markdown explanations
+    ├── 🟢 18 Easy
+    ├── 🟡 22 Medium
     └── 🔴 12 Hard
 ```
 
@@ -96,10 +96,10 @@ DSA/
     R --> LC["📂 LeetCode"]
 
     LS --> AL["📂 ArrayList × 12"]
-    LS --> LL["📂 LinkedList × 1"]
+    LS --> LL["📂 LinkedList × 4"]
 
-    LC --> E["🟢 Easy × 16"]
-    LC --> MD["🟡 Medium × 21"]
+    LC --> E["🟢 Easy × 18"]
+    LC --> MD["🟡 Medium × 22"]
     LC --> H["🔴 Hard × 12"]
 
     style R fill:#6c3483,stroke:#a569bd,stroke-width:3px,color:#fff
@@ -300,7 +300,7 @@ DSA/
 
 ### 11 · Linear Data Structures — ArrayList & LinkedList
 
-> 13 files — Dynamic arrays, two-pointer search algorithms, and custom singly linked list implementation
+> 16 files — Dynamic arrays, two-pointer algorithms, singly linked lists, and list manipulation
 
 #### 11.1 · Dynamic Arrays (`ArrayList`)
 
@@ -324,12 +324,15 @@ DSA/
 | File | Concept | Time | Space |
 | :--- | :--- | :---: | :---: |
 | [`LinkedList.java`](./Linear_Structure/LInkedList/LinkedList.java) | Singly Linked List — `Node` class, `head`/`tail`, `addFirst`, `addLast`, `print` | $O(1)$ add / $O(N)$ print | $O(N)$ |
+| [`reverseLinkedList.java`](./Linear_Structure/LInkedList/reverseLinkedList.java) | Reverse Linked List — Iterative 3-pointer (`prev`, `curr`, `next`) in-place reversal | $O(N)$ | $O(1)$ |
+| [`removeNthnodefromEnd.java`](./Linear_Structure/LInkedList/removeNthnodefromEnd.java) | Remove N-th Node From End — Index offset traversal & node link bypass | $O(N)$ | $O(1)$ |
+| [`CheckLLisPalindrome.java`](./Linear_Structure/LInkedList/CheckLLisPalindrome.java) | Palindrome Linked List — Slow/fast mid finding, 2nd-half reversal & dual pointer match | $O(N)$ | $O(1)$ |
 
 ---
 
 ## 💡 LeetCode Solutions Tracker
 
-### 🟢 Easy — 16 Problems
+### 🟢 Easy — 18 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
@@ -339,6 +342,8 @@ DSA/
 | 0088 | [Merge Sorted Array](./LeetCode_Problems/0088-merge-sorted-array) | Two Pointers | [Java](./LeetCode_Problems/0088-merge-sorted-array/0088-merge-sorted-array.java) |
 | 0121 | [Best Time to Buy and Sell Stock](./LeetCode_Problems/0121-best-time-to-buy-and-sell-stock) | DP / Single Pass | [Java](./LeetCode_Problems/0121-best-time-to-buy-and-sell-stock/0121-best-time-to-buy-and-sell-stock.java) |
 | 0190 | [Reverse Bits](./LeetCode_Problems/0190-reverse-bits) | Bit Manipulation | [Java](./LeetCode_Problems/0190-reverse-bits/0190-reverse-bits.java) |
+| 0206 | [Reverse Linked List](./LeetCode_Problems/0206-reverse-linked-list) | Linked List | [Java](./LeetCode_Problems/0206-reverse-linked-list/0206-reverse-linked-list.java) |
+| 0234 | [Palindrome Linked List](./LeetCode_Problems/0234-palindrome-linked-list) | Linked List / Two Pointers | [Java](./LeetCode_Problems/0234-palindrome-linked-list/0234-palindrome-linked-list.java) |
 | 0283 | [Move Zeroes](./LeetCode_Problems/0283-move-zeroes) | Two Pointers | [Java](./LeetCode_Problems/0283-move-zeroes/0283-move-zeroes.java) |
 | 0344 | [Reverse String](./LeetCode_Problems/0344-reverse-string) | Two Pointers | [Java](./LeetCode_Problems/0344-reverse-string/0344-reverse-string.java) |
 | 0509 | [Fibonacci Number](./LeetCode_Problems/0509-fibonacci-number) | Math / DP | [Java](./LeetCode_Problems/0509-fibonacci-number/0509-fibonacci-number.java) |
@@ -352,13 +357,14 @@ DSA/
 
 ---
 
-### 🟡 Medium — 21 Problems
+### 🟡 Medium — 22 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
 | 0002 | [Add Two Numbers](./LeetCode_Problems/0002-add-two-numbers) | Linked List / Math | [Java](./LeetCode_Problems/0002-add-two-numbers/0002-add-two-numbers.java) |
 | 0007 | [Reverse Integer](./LeetCode_Problems/0007-reverse-integer) | Math | [Java](./LeetCode_Problems/0007-reverse-integer/0007-reverse-integer.java) |
 | 0011 | [Container With Most Water](./LeetCode_Problems/0011-container-with-most-water) | Two Pointers / Array | [Java](./LeetCode_Problems/0011-container-with-most-water/0011-container-with-most-water.java) |
+| 0019 | [Remove Nth Node From End of List](./LeetCode_Problems/0019-remove-nth-node-from-end-of-list) | Linked List / Two Pointers | [Java](./LeetCode_Problems/0019-remove-nth-node-from-end-of-list/0019-remove-nth-node-from-end-of-list.java) |
 | 0078 | [Subsets](./LeetCode_Problems/0078-subsets) | Backtracking | [Java](./LeetCode_Problems/0078-subsets/0078-subsets.java) |
 | 0090 | [Subsets II](./LeetCode_Problems/0090-subsets-ii) | Backtracking | [Java](./LeetCode_Problems/0090-subsets-ii/0090-subsets-ii.java) |
 | 0153 | [Find Min in Rotated Sorted Array](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array) | Binary Search | [Java](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.java) · [C++](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.cpp) |
@@ -415,6 +421,9 @@ DSA/
 | Pair Sum 2 (Rotated Array) | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Modular arithmetic pointer wrap-around |
 | Singly LinkedList Add (First / Last) | $O(1)$ | $O(1)$ | $O(1)$ | $O(1)$ | Head/tail pointer update |
 | Singly LinkedList Print / Search | $O(1)$ | $O(N)$ | $O(N)$ | $O(1)$ | Sequential node traversal |
+| LinkedList Reversal (Iterative) | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | 3-pointer (`prev`, `curr`, `next`) reversal |
+| Remove N-th Node From End | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Two-pass size subtraction / pointer offset |
+| Check LinkedList Palindrome | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Slow/fast mid find + 2nd half reverse + match |
 | Bubble Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Stable |
 | Selection Sort | $O(N^2)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Unstable |
 | Insertion Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Online, stable |
@@ -439,10 +448,14 @@ DSA/
 ### ☕ Java
 
 ```bash
-# Custom LinkedList Implementation
+# Check Palindrome Linked List Example
 cd DSA/Linear_Structure/LInkedList
-javac LinkedList.java
-java Linear_Structure.LInkedList.LinkedList
+javac CheckLLisPalindrome.java
+java Linear_Structure.LInkedList.CheckLLisPalindrome
+
+# Reverse Linked List Example
+javac reverseLinkedList.java
+java Linear_Structure.LInkedList.reverseLinkedList
 
 # Recursion Example
 cd DSA/Recursion
