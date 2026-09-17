@@ -10,7 +10,7 @@
 [![LeetCode](https://img.shields.io/badge/LeetCode-52_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> A curated collection of **150+ production-grade implementations** spanning  
+> A curated collection of **152+ production-grade implementations** spanning  
 > Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear Structures · 52 LeetCode Solutions
 
 </div>
@@ -22,7 +22,7 @@
 <table>
   <tr>
     <td align="center"><strong>11</strong><br/>Core Modules</td>
-    <td align="center"><strong>150+</strong><br/>Code Files</td>
+    <td align="center"><strong>152+</strong><br/>Code Files</td>
     <td align="center"><strong>52</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
@@ -61,7 +61,7 @@ DSA/
 ├── 📂 DivideNConquer/        → Merge sort, quick sort, search in rotated sorted array
 ├── 📂 Linear_Structure/      → ArrayList & LinkedList implementations
 │   ├── 📂 ArrayList/         → 12 files: CRUD, sorting, 2D lists, Container With Most Water, Pair Sum 1 & 2
-│   └── 📂 LInkedList/        → 4 files: Node structure, iterative reversal, remove N-th node from end, palindrome check
+│   └── 📂 LInkedList/        → 6 files: Node structure, iterative reversal, remove N-th node from end, palindrome check, cycle detection & removal
 ├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism
 ├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling, binary strings
 ├── 📂 Sorting/               → Bubble, selection, insertion, counting sort
@@ -96,7 +96,7 @@ DSA/
     R --> LC["📂 LeetCode"]
 
     LS --> AL["📂 ArrayList × 12"]
-    LS --> LL["📂 LinkedList × 4"]
+    LS --> LL["📂 LinkedList × 6"]
 
     LC --> E["🟢 Easy × 18"]
     LC --> MD["🟡 Medium × 22"]
@@ -300,7 +300,7 @@ DSA/
 
 ### 11 · Linear Data Structures — ArrayList & LinkedList
 
-> 16 files — Dynamic arrays, two-pointer algorithms, singly linked lists, and list manipulation
+> 18 files — Dynamic arrays, two-pointer algorithms, singly linked lists, cycle detection & removal, and list manipulation
 
 #### 11.1 · Dynamic Arrays (`ArrayList`)
 
@@ -327,6 +327,8 @@ DSA/
 | [`reverseLinkedList.java`](./Linear_Structure/LInkedList/reverseLinkedList.java) | Reverse Linked List — Iterative 3-pointer (`prev`, `curr`, `next`) in-place reversal | $O(N)$ | $O(1)$ |
 | [`removeNthnodefromEnd.java`](./Linear_Structure/LInkedList/removeNthnodefromEnd.java) | Remove N-th Node From End — Index offset traversal & node link bypass | $O(N)$ | $O(1)$ |
 | [`CheckLLisPalindrome.java`](./Linear_Structure/LInkedList/CheckLLisPalindrome.java) | Palindrome Linked List — Slow/fast mid finding, 2nd-half reversal & dual pointer match | $O(N)$ | $O(1)$ |
+| [`CycleinLL.java`](./Linear_Structure/LInkedList/CycleinLL.java) | Cycle Detection — Floyd's cycle-finding algorithm using fast & slow pointers | $O(N)$ | $O(1)$ |
+| [`removeCycleinLL.java`](./Linear_Structure/LInkedList/removeCycleinLL.java) | Cycle Removal — Meeting point detection and node pointer breaking | $O(N)$ | $O(1)$ |
 
 ---
 
@@ -424,6 +426,8 @@ DSA/
 | LinkedList Reversal (Iterative) | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | 3-pointer (`prev`, `curr`, `next`) reversal |
 | Remove N-th Node From End | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Two-pass size subtraction / pointer offset |
 | Check LinkedList Palindrome | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Slow/fast mid find + 2nd half reverse + match |
+| Cycle Detection in Linked List | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Floyd's cycle-finding algorithm (slow/fast pointers) |
+| Cycle Removal in Linked List | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Meeting point pointer realignment & cycle unlinking |
 | Bubble Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Stable |
 | Selection Sort | $O(N^2)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Unstable |
 | Insertion Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Online, stable |
@@ -452,6 +456,10 @@ DSA/
 cd DSA/Linear_Structure/LInkedList
 javac CheckLLisPalindrome.java
 java Linear_Structure.LInkedList.CheckLLisPalindrome
+
+# Cycle Detection in Linked List Example
+javac CycleinLL.java
+java Linear_Structure.LInkedList.CycleinLL
 
 # Reverse Linked List Example
 javac reverseLinkedList.java
