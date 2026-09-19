@@ -10,8 +10,8 @@
 [![LeetCode](https://img.shields.io/badge/LeetCode-52_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> A curated collection of **152+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear Structures · 52 LeetCode Solutions
+> A curated collection of **162+ production-grade implementations** spanning  
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear Structures (Arrays, Linked Lists, Stacks) · 52 LeetCode Solutions
 
 </div>
 
@@ -22,7 +22,7 @@
 <table>
   <tr>
     <td align="center"><strong>11</strong><br/>Core Modules</td>
-    <td align="center"><strong>152+</strong><br/>Code Files</td>
+    <td align="center"><strong>162+</strong><br/>Code Files</td>
     <td align="center"><strong>52</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
@@ -42,8 +42,8 @@
 | :--- | :--- |
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
-| [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All 11 modules with file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 52 problems sorted by ID |
+| [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All modules with complete file catalogs |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 52 problems sorted by difficulty & ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -53,15 +53,15 @@
 
 ```D2 Diagram
 DSA/
-│
 ├── 📂 Arrays/                → Linear search, binary search, Kadane's, trapping rainwater
 ├── 📂 2D.Arrays/             → Spiral traversal, diagonal sum, staircase search
 ├── 📂 Backracking/           → Array backtracking, subsets, permutations, N-Queens, Sudoku
 ├── 📂 BitManipulation/       → AND, OR, XOR, shifts, ith-bit ops, power-of-2 checks
 ├── 📂 DivideNConquer/        → Merge sort, quick sort, search in rotated sorted array
-├── 📂 Linear_Structure/      → ArrayList & LinkedList implementations
+├── 📂 Linear_Structure/      → ArrayList, LinkedList & Stack implementations
 │   ├── 📂 ArrayList/         → 12 files: CRUD, sorting, 2D lists, Container With Most Water, Pair Sum 1 & 2
-│   └── 📂 LInkedList/        → 6 files: Node structure, iterative reversal, remove N-th node from end, palindrome check, cycle detection & removal
+│   ├── 📂 LInkedList/        → 12 files: Singly & Doubly LL, reversal, merge sort, zig-zag layout, cycle operations, JCF LinkedList
+│   └── 📂 Stack/             → 4 files: ArrayList & LinkedList backed stacks, recursive push-at-bottom, string reversal
 ├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism
 ├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling, binary strings
 ├── 📂 Sorting/               → Bubble, selection, insertion, counting sort
@@ -96,7 +96,8 @@ DSA/
     R --> LC["📂 LeetCode"]
 
     LS --> AL["📂 ArrayList × 12"]
-    LS --> LL["📂 LinkedList × 6"]
+    LS --> LL["📂 LinkedList × 12"]
+    LS --> STK["📂 Stack × 4"]
 
     LC --> E["🟢 Easy × 18"]
     LC --> MD["🟡 Medium × 22"]
@@ -111,6 +112,7 @@ DSA/
     style LS fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style AL fill:#154360,stroke:#1a5276,color:#d6eaf8
     style LL fill:#154360,stroke:#1a5276,color:#d6eaf8
+    style STK fill:#154360,stroke:#1a5276,color:#d6eaf8
     style O fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style REC fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style S fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
@@ -298,9 +300,9 @@ DSA/
 
 ---
 
-### 11 · Linear Data Structures — ArrayList & LinkedList
+### 11 · Linear Data Structures — ArrayList, LinkedList & Stack
 
-> 18 files — Dynamic arrays, two-pointer algorithms, singly linked lists, cycle detection & removal, and list manipulation
+> 28 files — Dynamic arrays, singly & doubly linked lists, stack abstractions, cycle operations, and reordering algorithms
 
 #### 11.1 · Dynamic Arrays (`ArrayList`)
 
@@ -319,16 +321,31 @@ DSA/
 | [`PairSum1TwoP.java`](./Linear_Structure/ArrayList/PairSum1TwoP.java) | Pair Sum 1 (Two Pointer) — dual-pointer target search on sorted list | $O(N)$ | $O(1)$ |
 | [`PairSum2.java`](./Linear_Structure/ArrayList/PairSum2.java) | Pair Sum 2 (Rotated Array) — modular arithmetic 2-pointer on rotated list | $O(N)$ | $O(1)$ |
 
-#### 11.2 · Custom Linked List (`LinkedList`)
+#### 11.2 · Custom & Framework Linked Lists (`LinkedList`)
 
 | File | Concept | Time | Space |
 | :--- | :--- | :---: | :---: |
-| [`LinkedList.java`](./Linear_Structure/LInkedList/LinkedList.java) | Singly Linked List — `Node` class, `head`/`tail`, `addFirst`, `addLast`, `print` | $O(1)$ add / $O(N)$ print | $O(N)$ |
+| [`LinkedList.java`](./Linear_Structure/LInkedList/LinkedList.java) | Singly Linked List — `Node` structure, `addFirst`, `addLast`, `removeFirst`, `removeLast` | $O(1)$ add/remove | $O(N)$ |
 | [`reverseLinkedList.java`](./Linear_Structure/LInkedList/reverseLinkedList.java) | Reverse Linked List — Iterative 3-pointer (`prev`, `curr`, `next`) in-place reversal | $O(N)$ | $O(1)$ |
 | [`removeNthnodefromEnd.java`](./Linear_Structure/LInkedList/removeNthnodefromEnd.java) | Remove N-th Node From End — Index offset traversal & node link bypass | $O(N)$ | $O(1)$ |
 | [`CheckLLisPalindrome.java`](./Linear_Structure/LInkedList/CheckLLisPalindrome.java) | Palindrome Linked List — Slow/fast mid finding, 2nd-half reversal & dual pointer match | $O(N)$ | $O(1)$ |
 | [`CycleinLL.java`](./Linear_Structure/LInkedList/CycleinLL.java) | Cycle Detection — Floyd's cycle-finding algorithm using fast & slow pointers | $O(N)$ | $O(1)$ |
 | [`removeCycleinLL.java`](./Linear_Structure/LInkedList/removeCycleinLL.java) | Cycle Removal — Meeting point detection and node pointer breaking | $O(N)$ | $O(1)$ |
+| [`DoublyLL.java`](./Linear_Structure/LInkedList/DoublyLL.java) | Doubly Linked List — Bidirectional node references (`prev`/`next`), `addFirst`, `addLast`, `removeFirst`, `removeLast` | $O(1)$ | $O(N)$ |
+| [`reverseDLL.java`](./Linear_Structure/LInkedList/reverseDLL.java) | Reverse Doubly Linked List — Pointer swapping (`curr.next` & `curr.prev` interchange) | $O(N)$ | $O(1)$ |
+| [`MergeSortLL.java`](./Linear_Structure/LInkedList/MergeSortLL.java) | Merge Sort on Linked List — Divide & conquer sorting using mid-finding and list merging | $O(N \log N)$ | $O(\log N)$ |
+| [`ZigZagLL.java`](./Linear_Structure/LInkedList/ZigZagLL.java) | Zig-Zag Linked List — Mid-split, 2nd-half reversal, and alternate merging ($1 \to N \to 2 \to N{-}1 \dots$) | $O(N)$ | $O(1)$ |
+| [`circularLL.java`](./Linear_Structure/LInkedList/circularLL.java) | Circular Linked List — Node structure with circular tail-to-head reference | $O(1)$ | $O(N)$ |
+| [`collectionLL.java`](./Linear_Structure/LInkedList/collectionLL.java) | JCF LinkedList — Java Collections Framework `java.util.LinkedList` operations | $O(1)$ add/remove | $O(N)$ |
+
+#### 11.3 · Stack Data Structure (`Stack`)
+
+| File | Concept | Time | Space |
+| :--- | :--- | :---: | :---: |
+| [`StackB.java`](./Linear_Structure/Stack/StackB.java) | Stack via ArrayList — Dynamic LIFO stack implementation backed by `java.util.ArrayList` | $O(1)$ amortized | $O(N)$ |
+| [`StackbyLL.java`](./Linear_Structure/Stack/StackbyLL.java) | Stack via Linked List — LIFO stack implementation using custom singly Linked List nodes | $O(1)$ | $O(N)$ |
+| [`PushAtBottom.java`](./Linear_Structure/Stack/PushAtBottom.java) | Push at Bottom — Recursive algorithm to insert element at the bottom of a stack | $O(N)$ | $O(N)$ |
+| [`reverseStringByStack.java`](./Linear_Structure/Stack/reverseStringByStack.java) | Reverse String via Stack — Reversing a string character sequence using `java.util.Stack` | $O(N)$ | $O(N)$ |
 
 ---
 
@@ -421,13 +438,20 @@ DSA/
 | Container With Most Water (Two Pointer) | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Inward pointer contraction |
 | Pair Sum 1 (Two Pointer) | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Dual pointer search on sorted array |
 | Pair Sum 2 (Rotated Array) | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Modular arithmetic pointer wrap-around |
-| Singly LinkedList Add (First / Last) | $O(1)$ | $O(1)$ | $O(1)$ | $O(1)$ | Head/tail pointer update |
+| Singly LinkedList Add / Remove | $O(1)$ | $O(1)$ | $O(1)$ | $O(1)$ | Head / tail pointer operations |
 | Singly LinkedList Print / Search | $O(1)$ | $O(N)$ | $O(N)$ | $O(1)$ | Sequential node traversal |
 | LinkedList Reversal (Iterative) | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | 3-pointer (`prev`, `curr`, `next`) reversal |
 | Remove N-th Node From End | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Two-pass size subtraction / pointer offset |
 | Check LinkedList Palindrome | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Slow/fast mid find + 2nd half reverse + match |
 | Cycle Detection in Linked List | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Floyd's cycle-finding algorithm (slow/fast pointers) |
 | Cycle Removal in Linked List | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Meeting point pointer realignment & cycle unlinking |
+| Doubly LinkedList Operations | $O(1)$ | $O(1)$ | $O(1)$ | $O(1)$ | Head/tail node operations with `prev` & `next` links |
+| Doubly LinkedList Reversal | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Node pointer swapping (`next` & `prev`) |
+| Merge Sort on Linked List | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(\log N)$ | Mid split recursion and sub-list merging |
+| Zig-Zag Linked List Reordering | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Slow/fast mid split, 2nd half reverse & alternate merge |
+| Stack Operations (ArrayList / LinkedList) | $O(1)$ | $O(1)$ | $O(1)$ | $O(1)$ | Amortized for ArrayList; constant for Linked List |
+| Push at Bottom of Stack | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Recursive implicit stack allocation |
+| String Reversal via Stack | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | LIFO push/pop string character processing |
 | Bubble Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Stable |
 | Selection Sort | $O(N^2)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Unstable |
 | Insertion Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Online, stable |
@@ -457,16 +481,29 @@ cd DSA/Linear_Structure/LInkedList
 javac CheckLLisPalindrome.java
 java Linear_Structure.LInkedList.CheckLLisPalindrome
 
-# Cycle Detection in Linked List Example
-javac CycleinLL.java
-java Linear_Structure.LInkedList.CycleinLL
+# Reverse Doubly Linked List Example
+javac DoublyLL.java reverseDLL.java
+java Linear_Structure.LInkedList.reverseDLL
 
-# Reverse Linked List Example
-javac reverseLinkedList.java
-java Linear_Structure.LInkedList.reverseLinkedList
+# Merge Sort on Linked List Example
+javac MergeSortLL.java
+java Linear_Structure.LInkedList.MergeSortLL
+
+# Zig-Zag Linked List Example
+javac ZigZagLL.java
+java Linear_Structure.LInkedList.ZigZagLL
+
+# Stack Implementation (Linked List backed) Example
+cd ../Stack
+javac StackbyLL.java
+java Linear_Structure.Stack.StackbyLL
+
+# Reverse String using Stack Example
+javac reverseStringByStack.java
+java Linear_Structure.Stack.reverseStringByStack
 
 # Recursion Example
-cd DSA/Recursion
+cd ../../Recursion
 javac BinaryString.java
 java Recursion.BinaryString
 ```
