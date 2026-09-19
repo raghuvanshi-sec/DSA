@@ -1,4 +1,4 @@
-import java.util.*;
+
 //largest number from an array
 
 public class LargestNumber {

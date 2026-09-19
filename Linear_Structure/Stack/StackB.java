@@ -35,6 +35,7 @@ public class StackB {
         
     }
 
+    @SuppressWarnings("static-access")
     public static void main(String args[]){
         Stack s = new Stack();
         s.push(1);

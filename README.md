@@ -10,7 +10,7 @@
 [![LeetCode](https://img.shields.io/badge/LeetCode-52_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> A curated collection of **162+ production-grade implementations** spanning  
+> A curated collection of **166+ production-grade implementations** spanning  
 > Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear Structures (Arrays, Linked Lists, Stacks) · 52 LeetCode Solutions
 
 </div>
@@ -22,7 +22,7 @@
 <table>
   <tr>
     <td align="center"><strong>11</strong><br/>Core Modules</td>
-    <td align="center"><strong>162+</strong><br/>Code Files</td>
+    <td align="center"><strong>166+</strong><br/>Code Files</td>
     <td align="center"><strong>52</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
@@ -61,7 +61,7 @@ DSA/
 ├── 📂 Linear_Structure/      → ArrayList, LinkedList & Stack implementations
 │   ├── 📂 ArrayList/         → 12 files: CRUD, sorting, 2D lists, Container With Most Water, Pair Sum 1 & 2
 │   ├── 📂 LInkedList/        → 12 files: Singly & Doubly LL, reversal, merge sort, zig-zag layout, cycle operations, JCF LinkedList
-│   └── 📂 Stack/             → 4 files: ArrayList & LinkedList backed stacks, recursive push-at-bottom, string reversal
+│   └── 📂 Stack/             → 8 files: ArrayList & LinkedList stacks, push-at-bottom, stack reversal, stock span, next greater element, valid parentheses, string reversal
 ├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism
 ├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling, binary strings
 ├── 📂 Sorting/               → Bubble, selection, insertion, counting sort
@@ -97,7 +97,7 @@ DSA/
 
     LS --> AL["📂 ArrayList × 12"]
     LS --> LL["📂 LinkedList × 12"]
-    LS --> STK["📂 Stack × 4"]
+    LS --> STK["📂 Stack × 8"]
 
     LC --> E["🟢 Easy × 18"]
     LC --> MD["🟡 Medium × 22"]
@@ -302,7 +302,7 @@ DSA/
 
 ### 11 · Linear Data Structures — ArrayList, LinkedList & Stack
 
-> 28 files — Dynamic arrays, singly & doubly linked lists, stack abstractions, cycle operations, and reordering algorithms
+> 32 files — Dynamic arrays, singly & doubly linked lists, stack abstractions, monotonic stacks, cycle operations, and reordering algorithms
 
 #### 11.1 · Dynamic Arrays (`ArrayList`)
 
@@ -344,8 +344,12 @@ DSA/
 | :--- | :--- | :---: | :---: |
 | [`StackB.java`](./Linear_Structure/Stack/StackB.java) | Stack via ArrayList — Dynamic LIFO stack implementation backed by `java.util.ArrayList` | $O(1)$ amortized | $O(N)$ |
 | [`StackbyLL.java`](./Linear_Structure/Stack/StackbyLL.java) | Stack via Linked List — LIFO stack implementation using custom singly Linked List nodes | $O(1)$ | $O(N)$ |
-| [`PushAtBottom.java`](./Linear_Structure/Stack/PushAtBottom.java) | Push at Bottom — Recursive algorithm to insert element at the bottom of a stack | $O(N)$ | $O(N)$ |
+| [`PushAtBottom.java`](./Linear_Structure/Stack/PushAtBottom.java) | Push at Bottom — Recursive algorithm to insert an element at the bottom of a stack | $O(N)$ | $O(N)$ |
 | [`reverseStringByStack.java`](./Linear_Structure/Stack/reverseStringByStack.java) | Reverse String via Stack — Reversing a string character sequence using `java.util.Stack` | $O(N)$ | $O(N)$ |
+| [`ReverseStack.java`](./Linear_Structure/Stack/ReverseStack.java) | Reverse Stack — In-place stack reversal using pure recursion without extra data structures | $O(N^2)$ | $O(N)$ |
+| [`StockSpan.java`](./Linear_Structure/Stack/StockSpan.java) | Stock Span Problem — Monotonic stack to calculate consecutive days with lower/equal price | $O(N)$ | $O(N)$ |
+| [`NextGreaterElement.java`](./Linear_Structure/Stack/NextGreaterElement.java) | Next Greater Element — Monotonic stack for nearest greater element to the right | $O(N)$ | $O(N)$ |
+| [`ValidParantheses.java`](./Linear_Structure/Stack/ValidParantheses.java) | Valid Parentheses — Matching bracket pairs `()`, `[]`, `{}` using stack | $O(N)$ | $O(N)$ |
 
 ---
 
@@ -452,6 +456,10 @@ DSA/
 | Stack Operations (ArrayList / LinkedList) | $O(1)$ | $O(1)$ | $O(1)$ | $O(1)$ | Amortized for ArrayList; constant for Linked List |
 | Push at Bottom of Stack | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Recursive implicit stack allocation |
 | String Reversal via Stack | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | LIFO push/pop string character processing |
+| Reverse Stack (Recursive) | $O(N^2)$ | $O(N^2)$ | $O(N^2)$ | $O(N)$ | Pure recursive in-place stack reversal |
+| Stock Span Problem | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Monotonic stack for consecutive lower prices |
+| Next Greater Element | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Monotonic stack right-to-left element scan |
+| Valid Parentheses Verification | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Bracket matching with LIFO stack |
 | Bubble Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Stable |
 | Selection Sort | $O(N^2)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Unstable |
 | Insertion Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Online, stable |
@@ -476,31 +484,27 @@ DSA/
 ### ☕ Java
 
 ```bash
+# Stack Applications Example: Stock Span Problem
+cd DSA/Linear_Structure/Stack
+javac StockSpan.java
+java Linear_Structure.Stack.StockSpan
+
+# Next Greater Element Example
+javac NextGreaterElement.java
+java Linear_Structure.Stack.NextGreaterElement
+
+# Valid Parentheses Example
+javac ValidParantheses.java
+java Linear_Structure.Stack.ValidParantheses
+
+# Reverse Stack via Recursion Example
+javac ReverseStack.java
+java Linear_Structure.Stack.ReverseStack
+
 # Check Palindrome Linked List Example
-cd DSA/Linear_Structure/LInkedList
+cd ../LInkedList
 javac CheckLLisPalindrome.java
 java Linear_Structure.LInkedList.CheckLLisPalindrome
-
-# Reverse Doubly Linked List Example
-javac DoublyLL.java reverseDLL.java
-java Linear_Structure.LInkedList.reverseDLL
-
-# Merge Sort on Linked List Example
-javac MergeSortLL.java
-java Linear_Structure.LInkedList.MergeSortLL
-
-# Zig-Zag Linked List Example
-javac ZigZagLL.java
-java Linear_Structure.LInkedList.ZigZagLL
-
-# Stack Implementation (Linked List backed) Example
-cd ../Stack
-javac StackbyLL.java
-java Linear_Structure.Stack.StackbyLL
-
-# Reverse String using Stack Example
-javac reverseStringByStack.java
-java Linear_Structure.Stack.reverseStringByStack
 
 # Recursion Example
 cd ../../Recursion
