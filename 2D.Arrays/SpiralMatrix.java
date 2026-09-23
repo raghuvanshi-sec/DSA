@@ -17,9 +17,10 @@ public static void printSpiral(int matrix[][]) {
         }
 
         // Bottom
-        for (int j = endCol - 1; j >= startCol; j--) {
-            if (startRow == endRow)
+        for (int j = startCol - 1; j >= startCol; j--) {
+            if (startRow == endRow){
                 break;
+            }
             System.out.print(matrix[endRow][j] + " ");
         }
 

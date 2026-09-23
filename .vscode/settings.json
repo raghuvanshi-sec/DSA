@@ -1,5 +1,7 @@
 {
-    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx3G -Xms256m -Xlog:disable",
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms256m -Xlog:disable",
+
+    "java.server.launchMode": "Standard",
 
     "java.configuration.runtimes": [
         {
@@ -11,6 +13,5 @@
             "name": "JavaSE-1.8",
             "path": "C:\\Program Files\\Java\\jre1.8.0_503"
         }
-    ],
-    "java.debug.settings.onBuildFailureProceed": true
+    ]
 }
