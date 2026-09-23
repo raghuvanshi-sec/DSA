@@ -7,11 +7,11 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-52_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-68_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> A curated collection of **168+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear Structures (Arrays, Linked Lists, Stacks) · 52 LeetCode Solutions
+> A curated collection of **195+ production-grade implementations** spanning  
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear Structures (Arrays, Linked Lists, Stacks, Queues) · 68 LeetCode Solutions
 
 </div>
 
@@ -22,14 +22,14 @@
 <table>
   <tr>
     <td align="center"><strong>11</strong><br/>Core Modules</td>
-    <td align="center"><strong>168+</strong><br/>Code Files</td>
-    <td align="center"><strong>52</strong><br/>LeetCode Problems</td>
+    <td align="center"><strong>195+</strong><br/>Code Files</td>
+    <td align="center"><strong>68</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
   <tr>
-    <td align="center">🟢 18 Easy</td>
-    <td align="center">🟡 22 Medium</td>
-    <td align="center">🔴 12 Hard</td>
+    <td align="center">🟢 25 Easy</td>
+    <td align="center">🟡 30 Medium</td>
+    <td align="center">🔴 13 Hard</td>
     <td align="center">☕ 💻 🐍</td>
   </tr>
 </table>
@@ -43,7 +43,7 @@
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
 | [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All modules with complete file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 52 problems sorted by difficulty & ID |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 68 problems sorted by difficulty & ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -58,9 +58,10 @@ DSA/
 ├── 📂 Backracking/           → Array backtracking, subsets, permutations, N-Queens, Sudoku
 ├── 📂 BitManipulation/       → AND, OR, XOR, shifts, ith-bit ops, power-of-2 checks
 ├── 📂 DivideNConquer/        → Merge sort, quick sort, search in rotated sorted array
-├── 📂 Linear_Structure/      → ArrayList, LinkedList & Stack implementations
+├── 📂 Linear_Structure/      → ArrayList, LinkedList, Stack & Queue implementations
 │   ├── 📂 ArrayList/         → 12 files: CRUD, sorting, 2D lists, Container With Most Water, Pair Sum 1 & 2
 │   ├── 📂 LInkedList/        → 12 files: Singly & Doubly LL, reversal, merge sort, zig-zag layout, cycle operations, JCF LinkedList
+│   ├── 📂 Queue/             → 10 files: Queue via Array, Linked List, JCF Queue/Deque, Queue using 2 Stacks, Stack using 2 Queues, First non-repeating char, Interleave halves, Queue reversal, Stack/Queue using Deque
 │   └── 📂 Stack/             → 10 files: Stacks via ArrayList & LL, push-at-bottom, stack reversal, stock span, next greater element, valid & duplicate parentheses, max area histogram
 ├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism
 ├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling, binary strings
@@ -68,10 +69,10 @@ DSA/
 ├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion
 ├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms, exponentiation
 │
-└── 📂 LeetCode_Problems/     → 52 standalone solutions with markdown explanations
-    ├── 🟢 18 Easy
-    ├── 🟡 22 Medium
-    └── 🔴 12 Hard
+└── 📂 LeetCode_Problems/     → 68 standalone solutions with markdown explanations
+    ├── 🟢 25 Easy
+    ├── 🟡 30 Medium
+    └── 🔴 13 Hard
 ```
 
 ---
@@ -97,11 +98,12 @@ DSA/
 
     LS --> AL["📂 ArrayList × 12"]
     LS --> LL["📂 LinkedList × 12"]
+    LS --> Q["📂 Queue × 10"]
     LS --> STK["📂 Stack × 10"]
 
-    LC --> E["🟢 Easy × 18"]
-    LC --> MD["🟡 Medium × 22"]
-    LC --> H["🔴 Hard × 12"]
+    LC --> E["🟢 Easy × 25"]
+    LC --> MD["🟡 Medium × 30"]
+    LC --> H["🔴 Hard × 13"]
 
     style R fill:#6c3483,stroke:#a569bd,stroke-width:3px,color:#fff
     style A fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
@@ -112,6 +114,7 @@ DSA/
     style LS fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style AL fill:#154360,stroke:#1a5276,color:#d6eaf8
     style LL fill:#154360,stroke:#1a5276,color:#d6eaf8
+    style Q fill:#154360,stroke:#1a5276,color:#d6eaf8
     style STK fill:#154360,stroke:#1a5276,color:#d6eaf8
     style O fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style REC fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
@@ -170,18 +173,18 @@ DSA/
 | File | Operation | Formula / Rule |
 | :--- | :--- | :--- |
 | [`BinaryAND.java`](./BitManipulation/BinaryAND.java) | AND (`&`) | 1 only if both bits are 1 |
-| [`BinaryOR.java`](./BitManipulation/BinaryOR.java) | OR (`\|`) | 1 if at least one bit is 1 |
+| [`BinaryOR.java`](./BitManipulation/BinaryOR.java) | OR (`|`) | 1 if at least one bit is 1 |
 | [`BinaryXOR.java`](./BitManipulation/BinaryXOR.java) | XOR (`^`) | 1 if bits differ |
 | [`BinaryNOT.java`](./BitManipulation/BinaryNOT.java) | NOT (`~`) | Inverts all bits |
 | [`BInaryLeft.java`](./BitManipulation/BInaryLeft.java) | Left Shift (`<<`) | $a \ll b = a \times 2^b$ |
 | [`BinaryRight.java`](./BitManipulation/BinaryRight.java) | Right Shift (`>>`) | $a \gg b = \lfloor a / 2^b \rfloor$ |
 | [`OddorEven.java`](./BitManipulation/OddorEven.java) | Parity Check | `(n & 1) == 0` → Even |
 | [`getIthbit.java`](./BitManipulation/getIthbit.java) | Read $i$-th Bit | `(n & (1 << i)) != 0` |
-| [`setIthBit.java`](./BitManipulation/setIthBit.java) | Set $i$-th Bit | `n \| (1 << i)` |
+| [`setIthBit.java`](./BitManipulation/setIthBit.java) | Set $i$-th Bit | `n | (1 << i)` |
 | [`clearIthBit.java`](./BitManipulation/clearIthBit.java) | Clear $i$-th Bit | `n & ~(1 << i)` |
 | [`updateIthBit.java`](./BitManipulation/updateIthBit.java) | Update $i$-th Bit | Clear then `newBit << i` |
 | [`clearLastIthBit.java`](./BitManipulation/clearLastIthBit.java) | Clear $i$ LSBs | `n & (~0 << i)` |
-| [`clearRange.java`](./BitManipulation/clearRange.java) | Clear Range $[i, j]$ | Mask: `(~0 << (j+1))` \| `((1 << i) - 1)` |
+| [`clearRange.java`](./BitManipulation/clearRange.java) | Clear Range $[i, j]$ | Mask: `(~0 << (j+1))` | `((1 << i) - 1)` |
 | [`CheckPower.java`](./BitManipulation/CheckPower.java) | Power of 2 | `(n & (n-1)) == 0` |
 
 ---
@@ -300,9 +303,9 @@ DSA/
 
 ---
 
-### 11 · Linear Data Structures — ArrayList, LinkedList & Stack
+### 11 · Linear Data Structures — ArrayList, LinkedList, Stack & Queue
 
-> 34 files — Dynamic arrays, singly & doubly linked lists, stack abstractions, monotonic stacks, cycle operations, and reordering algorithms
+> 44 files — Dynamic arrays, singly & doubly linked lists, queue implementations, stack abstractions, monotonic stacks, cycle operations, and reordering algorithms
 
 #### 11.1 · Dynamic Arrays (`ArrayList`)
 
@@ -338,7 +341,22 @@ DSA/
 | [`circularLL.java`](./Linear_Structure/LInkedList/circularLL.java) | Circular Linked List — Node structure with circular tail-to-head reference | $O(1)$ | $O(N)$ |
 | [`collectionLL.java`](./Linear_Structure/LInkedList/collectionLL.java) | JCF LinkedList — Java Collections Framework `java.util.LinkedList` operations | $O(1)$ add/remove | $O(N)$ |
 
-#### 11.3 · Stack Data Structure (`Stack`)
+#### 11.3 · Queue Data Structure (`Queue`)
+
+| File | Concept | Time | Space |
+| :--- | :--- | :---: | :---: |
+| [`Structure.java`](./Linear_Structure/Queue/Structure.java) | Queue via Array — Array-backed FIFO & circular queue implementation | $O(1)$ amortized | $O(N)$ |
+| [`queueUsingLL.java`](./Linear_Structure/Queue/queueUsingLL.java) | Queue via Linked List — Custom singly linked list nodes with head & tail references | $O(1)$ | $O(N)$ |
+| [`queueUsingJcf.java`](./Linear_Structure/Queue/queueUsingJcf.java) | JCF Queue — Java Collections Framework `java.util.Queue` via `LinkedList` & `ArrayDeque` | $O(1)$ | $O(N)$ |
+| [`queueUsing2Stack.java`](./Linear_Structure/Queue/queueUsing2Stack.java) | Queue using 2 Stacks — FIFO queue emulation using dual LIFO stacks | $O(N)$ push / $O(1)$ pop | $O(N)$ |
+| [`stackUsing2queue.java`](./Linear_Structure/Queue/stackUsing2queue.java) | Stack using 2 Queues — LIFO stack emulation using dual FIFO queues | $O(N)$ push / $O(1)$ pop | $O(N)$ |
+| [`nonRepeatingLetter.java`](./Linear_Structure/Queue/nonRepeatingLetter.java) | First Non-Repeating Character — Stream processing using Queue & frequency array | $O(N)$ | $O(1)$ |
+| [`Interleave2Halves.java`](./Linear_Structure/Queue/Interleave2Halves.java) | Interleave 2 Halves — Queue halving and alternating reordering ($q_1, q_2$ interleave) | $O(N)$ | $O(N)$ |
+| [`queueReversal.java`](./Linear_Structure/Queue/queueReversal.java) | Queue Reversal — Inverting element order using an auxiliary Stack | $O(N)$ | $O(N)$ |
+| [`DequqExample.java`](./Linear_Structure/Queue/DequqExample.java) | Deque Operations — Double Ended Queue using `java.util.Deque` & `LinkedList` | $O(1)$ | $O(N)$ |
+| [`stackUsingDeque.java`](./Linear_Structure/Queue/stackUsingDeque.java) | Stack & Queue via Deque — Abstraction of Stack (LIFO) and Queue (FIFO) over Deque | $O(1)$ | $O(N)$ |
+
+#### 11.4 · Stack Data Structure (`Stack`)
 
 | File | Concept | Time | Space |
 | :--- | :--- | :---: | :---: |
@@ -357,22 +375,29 @@ DSA/
 
 ## 💡 LeetCode Solutions Tracker
 
-### 🟢 Easy — 18 Problems
+### 🟢 Easy — 25 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
 | 0009 | [Palindrome Number](./LeetCode_Problems/0009-palindrome-number) | Math | [Java](./LeetCode_Problems/0009-palindrome-number/0009-palindrome-number.java) |
+| 0020 | [Valid Parentheses](./LeetCode_Problems/0020-valid-parentheses) | Stack / String | [Java](./LeetCode_Problems/0020-valid-parentheses/0020-valid-parentheses.java) |
 | 0026 | [Remove Duplicates from Sorted Array](./LeetCode_Problems/0026-remove-duplicates-from-sorted-array) | Two Pointers | [Java](./LeetCode_Problems/0026-remove-duplicates-from-sorted-array/0026-remove-duplicates-from-sorted-array.java) |
 | 0028 | [Find Index of First Occurrence in String](./LeetCode_Problems/0028-find-the-index-of-the-first-occurrence-in-a-string) | String Matching | [Java](./LeetCode_Problems/0028-find-the-index-of-the-first-occurrence-in-a-string/0028-find-the-index-of-the-first-occurrence-in-a-string.java) |
 | 0088 | [Merge Sorted Array](./LeetCode_Problems/0088-merge-sorted-array) | Two Pointers | [Java](./LeetCode_Problems/0088-merge-sorted-array/0088-merge-sorted-array.java) |
 | 0121 | [Best Time to Buy and Sell Stock](./LeetCode_Problems/0121-best-time-to-buy-and-sell-stock) | DP / Single Pass | [Java](./LeetCode_Problems/0121-best-time-to-buy-and-sell-stock/0121-best-time-to-buy-and-sell-stock.java) |
+| 0141 | [Linked List Cycle](./LeetCode_Problems/0141-linked-list-cycle) | Linked List / Two Pointers | [Java](./LeetCode_Problems/0141-linked-list-cycle/0141-linked-list-cycle.java) |
 | 0190 | [Reverse Bits](./LeetCode_Problems/0190-reverse-bits) | Bit Manipulation | [Java](./LeetCode_Problems/0190-reverse-bits/0190-reverse-bits.java) |
 | 0206 | [Reverse Linked List](./LeetCode_Problems/0206-reverse-linked-list) | Linked List | [Java](./LeetCode_Problems/0206-reverse-linked-list/0206-reverse-linked-list.java) |
+| 0225 | [Implement Stack using Queues](./LeetCode_Problems/0225-implement-stack-using-queues) | Stack / Queue Design | [Java](./LeetCode_Problems/0225-implement-stack-using-queues/0225-implement-stack-using-queues.java) |
+| 0232 | [Implement Queue using Stacks](./LeetCode_Problems/0232-implement-queue-using-stacks) | Queue / Stack Design | [Java](./LeetCode_Problems/0232-implement-queue-using-stacks/0232-implement-queue-using-stacks.java) |
 | 0234 | [Palindrome Linked List](./LeetCode_Problems/0234-palindrome-linked-list) | Linked List / Two Pointers | [Java](./LeetCode_Problems/0234-palindrome-linked-list/0234-palindrome-linked-list.java) |
 | 0283 | [Move Zeroes](./LeetCode_Problems/0283-move-zeroes) | Two Pointers | [Java](./LeetCode_Problems/0283-move-zeroes/0283-move-zeroes.java) |
 | 0344 | [Reverse String](./LeetCode_Problems/0344-reverse-string) | Two Pointers | [Java](./LeetCode_Problems/0344-reverse-string/0344-reverse-string.java) |
+| 0496 | [Next Greater Element I](./LeetCode_Problems/0496-next-greater-element-i) | Monotonic Stack | [Java](./LeetCode_Problems/0496-next-greater-element-i/0496-next-greater-element-i.java) |
 | 0509 | [Fibonacci Number](./LeetCode_Problems/0509-fibonacci-number) | Math / DP | [Java](./LeetCode_Problems/0509-fibonacci-number/0509-fibonacci-number.java) |
+| 0541 | [Reverse String II](./LeetCode_Problems/0541-reverse-string-ii) | Two Pointers / String | [Java](./LeetCode_Problems/0541-reverse-string-ii/0541-reverse-string-ii.java) |
 | 1464 | [Max Product of Two Elements](./LeetCode_Problems/1464-maximum-product-of-two-elements-in-an-array) | Greedy | [Java](./LeetCode_Problems/1464-maximum-product-of-two-elements-in-an-array/1464-maximum-product-of-two-elements-in-an-array.java) |
+| 1572 | [Matrix Diagonal Sum](./LeetCode_Problems/1572-matrix-diagonal-sum) | Matrix / Array | [Java](./LeetCode_Problems/1572-matrix-diagonal-sum/1572-matrix-diagonal-sum.java) |
 | 1624 | [Largest Substring Between Equal Chars](./LeetCode_Problems/1624-largest-substring-between-two-equal-characters) | Hash Table | [Java](./LeetCode_Problems/1624-largest-substring-between-two-equal-characters/1624-largest-substring-between-two-equal-characters.java) |
 | 2769 | [Find Maximum Achievable Number](./LeetCode_Problems/2769-find-the-maximum-achievable-number) | Math | [Java](./LeetCode_Problems/2769-find-the-maximum-achievable-number/2769-find-the-maximum-achievable-number.java) |
 | 3014 | [Min Pushes to Type Word I](./LeetCode_Problems/3014-minimum-number-of-pushes-to-type-word-i) | Greedy | [Java](./LeetCode_Problems/3014-minimum-number-of-pushes-to-type-word-i/3014-minimum-number-of-pushes-to-type-word-i.java) |
@@ -382,21 +407,29 @@ DSA/
 
 ---
 
-### 🟡 Medium — 22 Problems
+### 🟡 Medium — 30 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
 | 0002 | [Add Two Numbers](./LeetCode_Problems/0002-add-two-numbers) | Linked List / Math | [Java](./LeetCode_Problems/0002-add-two-numbers/0002-add-two-numbers.java) |
+| 0003 | [Longest Substring Without Repeating Characters](./LeetCode_Problems/0003-longest-substring-without-repeating-characters) | Sliding Window / Hash Table | [Java](./LeetCode_Problems/0003-longest-substring-without-repeating-characters/0003-longest-substring-without-repeating-characters.java) |
 | 0007 | [Reverse Integer](./LeetCode_Problems/0007-reverse-integer) | Math | [Java](./LeetCode_Problems/0007-reverse-integer/0007-reverse-integer.java) |
 | 0011 | [Container With Most Water](./LeetCode_Problems/0011-container-with-most-water) | Two Pointers / Array | [Java](./LeetCode_Problems/0011-container-with-most-water/0011-container-with-most-water.java) |
 | 0019 | [Remove Nth Node From End of List](./LeetCode_Problems/0019-remove-nth-node-from-end-of-list) | Linked List / Two Pointers | [Java](./LeetCode_Problems/0019-remove-nth-node-from-end-of-list/0019-remove-nth-node-from-end-of-list.java) |
+| 0054 | [Spiral Matrix](./LeetCode_Problems/0054-spiral-matrix) | Matrix Simulation | [Java](./LeetCode_Problems/0054-spiral-matrix/0054-spiral-matrix.java) |
+| 0059 | [Spiral Matrix II](./LeetCode_Problems/0059-spiral-matrix-ii) | Matrix Simulation | [Java](./LeetCode_Problems/0059-spiral-matrix-ii/0059-spiral-matrix-ii.java) |
+| 0074 | [Search a 2D Matrix](./LeetCode_Problems/0074-search-a-2d-matrix) | Binary Search / Matrix | [Java](./LeetCode_Problems/0074-search-a-2d-matrix/0074-search-a-2d-matrix.java) |
 | 0078 | [Subsets](./LeetCode_Problems/0078-subsets) | Backtracking | [Java](./LeetCode_Problems/0078-subsets/0078-subsets.java) |
 | 0090 | [Subsets II](./LeetCode_Problems/0090-subsets-ii) | Backtracking | [Java](./LeetCode_Problems/0090-subsets-ii/0090-subsets-ii.java) |
+| 0092 | [Reverse Linked List II](./LeetCode_Problems/0092-reverse-linked-list-ii) | Linked List | [Java](./LeetCode_Problems/0092-reverse-linked-list-ii/0092-reverse-linked-list-ii.java) |
+| 0142 | [Linked List Cycle II](./LeetCode_Problems/0142-linked-list-cycle-ii) | Linked List / Two Pointers | [Java](./LeetCode_Problems/0142-linked-list-cycle-ii/0142-linked-list-cycle-ii.java) |
 | 0153 | [Find Min in Rotated Sorted Array](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array) | Binary Search | [Java](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.java) · [C++](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.cpp) |
 | 0201 | [Bitwise AND of Numbers Range](./LeetCode_Problems/0201-bitwise-and-of-numbers-range) | Bit Manipulation | [Java](./LeetCode_Problems/0201-bitwise-and-of-numbers-range/0201-bitwise-and-of-numbers-range.java) |
 | 0238 | [Product of Array Except Self](./LeetCode_Problems/0238-product-of-array-except-self) | Prefix / Suffix | [Java](./LeetCode_Problems/0238-product-of-array-except-self/0238-product-of-array-except-self.java) |
 | 0371 | [Sum of Two Integers](./LeetCode_Problems/0371-sum-of-two-integers) | Bit Manipulation | [Java](./LeetCode_Problems/0371-sum-of-two-integers/0371-sum-of-two-integers.java) |
 | 0486 | [Predict the Winner](./LeetCode_Problems/0486-predict-the-winner) | DP / Minimax | [Java](./LeetCode_Problems/0486-predict-the-winner/0486-predict-the-winner.java) |
+| 0503 | [Next Greater Element II](./LeetCode_Problems/0503-next-greater-element-ii) | Monotonic Stack | [Java](./LeetCode_Problems/0503-next-greater-element-ii/0503-next-greater-element-ii.java) |
+| 0556 | [Next Greater Element III](./LeetCode_Problems/0556-next-greater-element-iii) | Math / Two Pointers | [Java](./LeetCode_Problems/0556-next-greater-element-iii/0556-next-greater-element-iii.java) |
 | 0567 | [Permutation in String](./LeetCode_Problems/0567-permutation-in-string) | Sliding Window | [Java](./LeetCode_Problems/0567-permutation-in-string/0567-permutation-in-string.java) |
 | 0735 | [Asteroid Collision](./LeetCode_Problems/0735-asteroid-collision) | Stack | [Java](./LeetCode_Problems/0735-asteroid-collision/0735-asteroid-collision.java) |
 | 0877 | [Stone Game](./LeetCode_Problems/0877-stone-game) | Game Theory / DP | [Java](./LeetCode_Problems/0877-stone-game/0877-stone-game.java) |
@@ -411,15 +444,16 @@ DSA/
 
 ---
 
-### 🔴 Hard — 12 Problems
+### 🔴 Hard — 13 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
 | 0004 | [Median of Two Sorted Arrays](./LeetCode_Problems/0004-median-of-two-sorted-arrays) | Binary Search / D&C | [Java](./LeetCode_Problems/0004-median-of-two-sorted-arrays/0004-median-of-two-sorted-arrays.java) |
 | 0037 | [Sudoku Solver](./LeetCode_Problems/0037-sudoku-solver) | Backtracking | [Java](./LeetCode_Problems/0037-sudoku-solver/0037-sudoku-solver.java) |
-| 0042 | [Trapping Rain Water](./LeetCode_Problems/0042-trapping-rain-water) | Two Pointers / DP | [Java](./LeetCode_Problems/0042-trapping-rain-water/0042-trapping-rain-water.java) |
+| 0042 | [Trapping Rain Water](./LeetCode_Problems/0042-trapping-rain-water) | Two Pointers / Monotonic Stack | [Java](./LeetCode_Problems/0042-trapping-rain-water/0042-trapping-rain-water.java) |
 | 0051 | [N-Queens](./LeetCode_Problems/0051-n-queens) | Backtracking | [Java](./LeetCode_Problems/0051-n-queens/0051-n-queens.java) |
 | 0052 | [N-Queens II](./LeetCode_Problems/0052-n-queens-ii) | Backtracking | [Java](./LeetCode_Problems/0052-n-queens-ii/0052-n-queens-ii.java) |
+| 0084 | [Largest Rectangle in Histogram](./LeetCode_Problems/0084-largest-rectangle-in-histogram) | Monotonic Stack | [Java](./LeetCode_Problems/0084-largest-rectangle-in-histogram/0084-largest-rectangle-in-histogram.java) |
 | 0115 | [Distinct Subsequences](./LeetCode_Problems/0115-distinct-subsequences) | Dynamic Programming / String | [Java](./LeetCode_Problems/0115-distinct-subsequences/0115-distinct-subsequences.java) |
 | 0154 | [Find Min in Rotated Sorted Array II](./LeetCode_Problems/0154-find-minimum-in-rotated-sorted-array-ii) | Binary Search | [C++](./LeetCode_Problems/0154-find-minimum-in-rotated-sorted-array-ii/0154-find-minimum-in-rotated-sorted-array-ii.cpp) |
 | 1406 | [Stone Game III](./LeetCode_Problems/1406-stone-game-iii) | Minimax DP | [Java](./LeetCode_Problems/1406-stone-game-iii/1406-stone-game-iii.java) |
@@ -455,6 +489,13 @@ DSA/
 | Doubly LinkedList Reversal | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Node pointer swapping (`next` & `prev`) |
 | Merge Sort on Linked List | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(\log N)$ | Mid split recursion and sub-list merging |
 | Zig-Zag Linked List Reordering | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Slow/fast mid split, 2nd half reverse & alternate merge |
+| Queue Enqueue / Dequeue (Array / LL) | $O(1)$ | $O(1)$ | $O(1)$ | $O(1)$ | Constant time FIFO push/pop operations |
+| Queue using 2 Stacks | $O(1)$ | $O(1)$ | $O(N)$ | $O(N)$ | Amortized $O(1)$ push/pop using dual LIFO stacks |
+| Stack using 2 Queues | $O(1)$ | $O(1)$ | $O(N)$ | $O(N)$ | Amortized $O(1)$ push/pop using dual FIFO queues |
+| First Non-Repeating Character | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Stream character evaluation with queue & frequency array |
+| Interleave 2 Halves of Queue | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Halving queue & alternating push/pop reordering |
+| Queue Reversal via Stack | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Order inversion using auxiliary LIFO stack |
+| Deque Operations (Add/Remove Ends) | $O(1)$ | $O(1)$ | $O(1)$ | $O(1)$ | Double ended operations at head and tail |
 | Stack Operations (ArrayList / LinkedList) | $O(1)$ | $O(1)$ | $O(1)$ | $O(1)$ | Amortized for ArrayList; constant for Linked List |
 | Push at Bottom of Stack | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Recursive implicit stack allocation |
 | String Reversal via Stack | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | LIFO push/pop string character processing |
@@ -488,8 +529,21 @@ DSA/
 ### ☕ Java
 
 ```bash
+# Queue Implementation Example
+cd DSA/Linear_Structure/Queue
+javac Structure.java
+java Linear_Structure.Queue.Structure
+
+# Queue using 2 Stacks Example
+javac queueUsing2Stack.java
+java Linear_Structure.Queue.queueUsing2Stack
+
+# First Non-Repeating Character Example
+javac nonRepeatingLetter.java
+java Linear_Structure.Queue.nonRepeatingLetter
+
 # Max Area in Histogram Example
-cd DSA/Linear_Structure/Stack
+cd ../Stack
 javac MaxAreaHistogram.java
 java Linear_Structure.Stack.MaxAreaHistogram
 
