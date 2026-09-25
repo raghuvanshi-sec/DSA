@@ -7,11 +7,11 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-68_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-71_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> A curated collection of **195+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear Structures (Arrays, Linked Lists, Stacks, Queues) · 68 LeetCode Solutions
+> A curated collection of **200+ production-grade implementations** spanning  
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear Structures (Arrays, Linked Lists, Stacks, Queues) · Greedy Algorithms · 71 LeetCode Solutions
 
 </div>
 
@@ -21,13 +21,13 @@
 
 <table>
   <tr>
-    <td align="center"><strong>11</strong><br/>Core Modules</td>
-    <td align="center"><strong>195+</strong><br/>Code Files</td>
-    <td align="center"><strong>68</strong><br/>LeetCode Problems</td>
+    <td align="center"><strong>12</strong><br/>Core Modules</td>
+    <td align="center"><strong>200+</strong><br/>Code Files</td>
+    <td align="center"><strong>71</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
   <tr>
-    <td align="center">🟢 25 Easy</td>
+    <td align="center">🟢 28 Easy</td>
     <td align="center">🟡 30 Medium</td>
     <td align="center">🔴 13 Hard</td>
     <td align="center">☕ 💻 🐍</td>
@@ -43,7 +43,7 @@
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
 | [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All modules with complete file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 68 problems sorted by difficulty & ID |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 71 problems sorted by difficulty & ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -58,6 +58,7 @@ DSA/
 ├── 📂 Backracking/           → Array backtracking, subsets, permutations, N-Queens, Sudoku
 ├── 📂 BitManipulation/       → AND, OR, XOR, shifts, ith-bit ops, power-of-2 checks
 ├── 📂 DivideNConquer/        → Merge sort, quick sort, search in rotated sorted array
+├── 📂 Greedy_Algorithm/      → Activity selection, fractional knapsack, min abs diff, max length chain, non-overlapping intervals
 ├── 📂 Linear_Structure/      → ArrayList, LinkedList, Stack & Queue implementations
 │   ├── 📂 ArrayList/         → 12 files: CRUD, sorting, 2D lists, Container With Most Water, Pair Sum 1 & 2
 │   ├── 📂 LInkedList/        → 12 files: Singly & Doubly LL, reversal, merge sort, zig-zag layout, cycle operations, JCF LinkedList
@@ -69,8 +70,8 @@ DSA/
 ├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion
 ├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms, exponentiation
 │
-└── 📂 LeetCode_Problems/     → 68 standalone solutions with markdown explanations
-    ├── 🟢 25 Easy
+└── 📂 LeetCode_Problems/     → 71 standalone solutions with markdown explanations
+    ├── 🟢 28 Easy
     ├── 🟡 30 Medium
     └── 🔴 13 Hard
 ```
@@ -88,6 +89,7 @@ DSA/
     R --> B["📂 Bit Manipulation"]
     R --> DC["📂 Divide & Conquer"]
     R --> BK["📂 Backtracking"]
+    R --> GA["📂 Greedy Algorithm"]
     R --> LS["📂 Linear Structure"]
     R --> O["📂 OOPs"]
     R --> REC["📂 Recursion"]
@@ -101,7 +103,7 @@ DSA/
     LS --> Q["📂 Queue × 10"]
     LS --> STK["📂 Stack × 10"]
 
-    LC --> E["🟢 Easy × 25"]
+    LC --> E["🟢 Easy × 28"]
     LC --> MD["🟡 Medium × 30"]
     LC --> H["🔴 Hard × 13"]
 
@@ -111,6 +113,7 @@ DSA/
     style B fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style DC fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style BK fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
+    style GA fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style LS fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style AL fill:#154360,stroke:#1a5276,color:#d6eaf8
     style LL fill:#154360,stroke:#1a5276,color:#d6eaf8
@@ -373,12 +376,28 @@ DSA/
 
 ---
 
+### 12 · Greedy Algorithms & Optimization Strategy
+
+> 6 files — Activity selection, fractional knapsack, pair diff minimization, maximum chain length, and non-overlapping interval optimization
+
+| File | Concept | Time | Space |
+| :--- | :--- | :---: | :---: |
+| [`ActivitySelection.java`](./Greedy_Algorithm/ActivitySelection.java) | Activity Selection (Sorted) — Greedy choice by end time | $O(N)$ | $O(1)$ |
+| [`unsortedActSelecn.java`](./Greedy_Algorithm/unsortedActSelecn.java) | Activity Selection (Unsorted) — Custom 2D sorting by end time | $O(N \log N)$ | $O(N)$ |
+| [`FractionalKanpsack.java`](./Greedy_Algorithm/FractionalKanpsack.java) | Fractional Knapsack — Value-to-weight ratio sorting | $O(N \log N)$ | $O(N)$ |
+| [`MinAbsoluteDiffPairs.java`](./Greedy_Algorithm/MinAbsoluteDiffPairs.java) | Min Absolute Difference Pairs — Sorting dual arrays & matching | $O(N \log N)$ | $O(1)$ |
+| [`ManLengthChainOfPairs.java`](./Greedy_Algorithm/ManLengthChainOfPairs.java) | Max Length Chain of Pairs — Pair sorting by 2nd element | $O(N \log N)$ | $O(1)$ |
+| [`NonOverlappingIntervals.java`](./Greedy_Algorithm/NonOverlappingIntervals.java) | Non-Overlapping Intervals — Greedy interval exclusion by end time | $O(N \log N)$ | $O(1)$ |
+
+---
+
 ## 💡 LeetCode Solutions Tracker
 
-### 🟢 Easy — 25 Problems
+### 🟢 Easy — 28 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
+| 0001 | [Two Sum](./LeetCode_Problems/0001-two-sum) | Hash Table / Array | [Java](./LeetCode_Problems/0001-two-sum/0001-two-sum.java) |
 | 0009 | [Palindrome Number](./LeetCode_Problems/0009-palindrome-number) | Math | [Java](./LeetCode_Problems/0009-palindrome-number/0009-palindrome-number.java) |
 | 0020 | [Valid Parentheses](./LeetCode_Problems/0020-valid-parentheses) | Stack / String | [Java](./LeetCode_Problems/0020-valid-parentheses/0020-valid-parentheses.java) |
 | 0026 | [Remove Duplicates from Sorted Array](./LeetCode_Problems/0026-remove-duplicates-from-sorted-array) | Two Pointers | [Java](./LeetCode_Problems/0026-remove-duplicates-from-sorted-array/0026-remove-duplicates-from-sorted-array.java) |
@@ -393,9 +412,11 @@ DSA/
 | 0234 | [Palindrome Linked List](./LeetCode_Problems/0234-palindrome-linked-list) | Linked List / Two Pointers | [Java](./LeetCode_Problems/0234-palindrome-linked-list/0234-palindrome-linked-list.java) |
 | 0283 | [Move Zeroes](./LeetCode_Problems/0283-move-zeroes) | Two Pointers | [Java](./LeetCode_Problems/0283-move-zeroes/0283-move-zeroes.java) |
 | 0344 | [Reverse String](./LeetCode_Problems/0344-reverse-string) | Two Pointers | [Java](./LeetCode_Problems/0344-reverse-string/0344-reverse-string.java) |
+| 0455 | [Assign Cookies](./LeetCode_Problems/0455-assign-cookies) | Greedy / Two Pointers | [Java](./LeetCode_Problems/0455-assign-cookies/0455-assign-cookies.java) |
 | 0496 | [Next Greater Element I](./LeetCode_Problems/0496-next-greater-element-i) | Monotonic Stack | [Java](./LeetCode_Problems/0496-next-greater-element-i/0496-next-greater-element-i.java) |
 | 0509 | [Fibonacci Number](./LeetCode_Problems/0509-fibonacci-number) | Math / DP | [Java](./LeetCode_Problems/0509-fibonacci-number/0509-fibonacci-number.java) |
 | 0541 | [Reverse String II](./LeetCode_Problems/0541-reverse-string-ii) | Two Pointers / String | [Java](./LeetCode_Problems/0541-reverse-string-ii/0541-reverse-string-ii.java) |
+| 1189 | [Maximum Number of Balloons](./LeetCode_Problems/1189-maximum-number-of-balloons) | Hash Table / Counting | [Java](./LeetCode_Problems/1189-maximum-number-of-balloons/1189-maximum-number-of-balloons.java) |
 | 1464 | [Max Product of Two Elements](./LeetCode_Problems/1464-maximum-product-of-two-elements-in-an-array) | Greedy | [Java](./LeetCode_Problems/1464-maximum-product-of-two-elements-in-an-array/1464-maximum-product-of-two-elements-in-an-array.java) |
 | 1572 | [Matrix Diagonal Sum](./LeetCode_Problems/1572-matrix-diagonal-sum) | Matrix / Array | [Java](./LeetCode_Problems/1572-matrix-diagonal-sum/1572-matrix-diagonal-sum.java) |
 | 1624 | [Largest Substring Between Equal Chars](./LeetCode_Problems/1624-largest-substring-between-two-equal-characters) | Hash Table | [Java](./LeetCode_Problems/1624-largest-substring-between-two-equal-characters/1624-largest-substring-between-two-equal-characters.java) |
@@ -423,7 +444,7 @@ DSA/
 | 0090 | [Subsets II](./LeetCode_Problems/0090-subsets-ii) | Backtracking | [Java](./LeetCode_Problems/0090-subsets-ii/0090-subsets-ii.java) |
 | 0092 | [Reverse Linked List II](./LeetCode_Problems/0092-reverse-linked-list-ii) | Linked List | [Java](./LeetCode_Problems/0092-reverse-linked-list-ii/0092-reverse-linked-list-ii.java) |
 | 0142 | [Linked List Cycle II](./LeetCode_Problems/0142-linked-list-cycle-ii) | Linked List / Two Pointers | [Java](./LeetCode_Problems/0142-linked-list-cycle-ii/0142-linked-list-cycle-ii.java) |
-| 0153 | [Find Min in Rotated Sorted Array](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array) | Binary Search | [Java](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.java) · [C++](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.cpp) |
+| 0153 | [Find Min in Rotated Sorted Array](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array) | Binary Search | [Java](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.cpp) |
 | 0201 | [Bitwise AND of Numbers Range](./LeetCode_Problems/0201-bitwise-and-of-numbers-range) | Bit Manipulation | [Java](./LeetCode_Problems/0201-bitwise-and-of-numbers-range/0201-bitwise-and-of-numbers-range.java) |
 | 0238 | [Product of Array Except Self](./LeetCode_Problems/0238-product-of-array-except-self) | Prefix / Suffix | [Java](./LeetCode_Problems/0238-product-of-array-except-self/0238-product-of-array-except-self.java) |
 | 0371 | [Sum of Two Integers](./LeetCode_Problems/0371-sum-of-two-integers) | Bit Manipulation | [Java](./LeetCode_Problems/0371-sum-of-two-integers/0371-sum-of-two-integers.java) |
@@ -505,6 +526,12 @@ DSA/
 | Valid Parentheses Verification | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Bracket matching with LIFO stack |
 | Duplicate Parentheses Check | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Redundant bracket detection with stack count |
 | Max Area in Histogram | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Monotonic stack with Next Smaller Left & Right boundaries |
+| Activity Selection (Sorted) | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Greedy selection by end-time on pre-sorted array |
+| Activity Selection (Unsorted) | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(N)$ | 2D custom comparator sorting by end-time |
+| Fractional Knapsack | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(N)$ | Value/Weight ratio sorting & greedy pick |
+| Min Absolute Difference Pairs | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(1)$ | Sort dual arrays & greedy element matching |
+| Max Length Chain of Pairs | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(1)$ | Sort pairs by 2nd element & chain greedy check |
+| Non-Overlapping Intervals | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(1)$ | Greedy interval elimination based on end time |
 | Bubble Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Stable |
 | Selection Sort | $O(N^2)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Unstable |
 | Insertion Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Online, stable |
@@ -529,40 +556,24 @@ DSA/
 ### ☕ Java
 
 ```bash
+# Greedy Algorithm - Activity Selection Example
+cd DSA/Greedy_Algorithm
+javac ActivitySelection.java
+java Greedy_Algorithm.ActivitySelection
+
+# Fractional Knapsack Example
+javac FractionalKanpsack.java
+java Greedy_Algorithm.FractionalKanpsack
+
 # Queue Implementation Example
-cd DSA/Linear_Structure/Queue
+cd ../Linear_Structure/Queue
 javac Structure.java
 java Linear_Structure.Queue.Structure
-
-# Queue using 2 Stacks Example
-javac queueUsing2Stack.java
-java Linear_Structure.Queue.queueUsing2Stack
-
-# First Non-Repeating Character Example
-javac nonRepeatingLetter.java
-java Linear_Structure.Queue.nonRepeatingLetter
 
 # Max Area in Histogram Example
 cd ../Stack
 javac MaxAreaHistogram.java
 java Linear_Structure.Stack.MaxAreaHistogram
-
-# Duplicate Parentheses Example
-javac DuplicateParantheses.java
-java Linear_Structure.Stack.DuplicateParantheses
-
-# Stock Span Problem Example
-javac StockSpan.java
-java Linear_Structure.Stack.StockSpan
-
-# Next Greater Element Example
-javac NextGreaterElement.java
-java Linear_Structure.Stack.NextGreaterElement
-
-# Check Palindrome Linked List Example
-cd ../LInkedList
-javac CheckLLisPalindrome.java
-java Linear_Structure.LInkedList.CheckLLisPalindrome
 
 # Recursion Example
 cd ../../Recursion
