@@ -7,11 +7,11 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-71_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-72_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 > A curated collection of **200+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear Structures (Arrays, Linked Lists, Stacks, Queues) · Greedy Algorithms · 71 LeetCode Solutions
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear Structures (Arrays, Linked Lists, Stacks, Queues) · Greedy Algorithms · 72 LeetCode Solutions
 
 </div>
 
@@ -23,12 +23,12 @@
   <tr>
     <td align="center"><strong>12</strong><br/>Core Modules</td>
     <td align="center"><strong>200+</strong><br/>Code Files</td>
-    <td align="center"><strong>71</strong><br/>LeetCode Problems</td>
+    <td align="center"><strong>72</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
   <tr>
     <td align="center">🟢 28 Easy</td>
-    <td align="center">🟡 30 Medium</td>
+    <td align="center">🟡 31 Medium</td>
     <td align="center">🔴 13 Hard</td>
     <td align="center">☕ 💻 🐍</td>
   </tr>
@@ -43,7 +43,7 @@
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
 | [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All modules with complete file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 71 problems sorted by difficulty & ID |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 72 problems sorted by difficulty & ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -58,7 +58,7 @@ DSA/
 ├── 📂 Backracking/           → Array backtracking, subsets, permutations, N-Queens, Sudoku
 ├── 📂 BitManipulation/       → AND, OR, XOR, shifts, ith-bit ops, power-of-2 checks
 ├── 📂 DivideNConquer/        → Merge sort, quick sort, search in rotated sorted array
-├── 📂 Greedy_Algorithm/      → Activity selection, fractional knapsack, min abs diff, max length chain, non-overlapping intervals
+├── 📂 Greedy_Algorithm/      → Activity selection, fractional knapsack, min abs diff, max length chain, non-overlapping intervals, Indian coins, job sequencing, chocola board cutting
 ├── 📂 Linear_Structure/      → ArrayList, LinkedList, Stack & Queue implementations
 │   ├── 📂 ArrayList/         → 12 files: CRUD, sorting, 2D lists, Container With Most Water, Pair Sum 1 & 2
 │   ├── 📂 LInkedList/        → 12 files: Singly & Doubly LL, reversal, merge sort, zig-zag layout, cycle operations, JCF LinkedList
@@ -70,9 +70,9 @@ DSA/
 ├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion
 ├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms, exponentiation
 │
-└── 📂 LeetCode_Problems/     → 71 standalone solutions with markdown explanations
+└── 📂 LeetCode_Problems/     → 72 standalone solutions with markdown explanations
     ├── 🟢 28 Easy
-    ├── 🟡 30 Medium
+    ├── 🟡 31 Medium
     └── 🔴 13 Hard
 ```
 
@@ -104,7 +104,7 @@ DSA/
     LS --> STK["📂 Stack × 10"]
 
     LC --> E["🟢 Easy × 28"]
-    LC --> MD["🟡 Medium × 30"]
+    LC --> MD["🟡 Medium × 31"]
     LC --> H["🔴 Hard × 13"]
 
     style R fill:#6c3483,stroke:#a569bd,stroke-width:3px,color:#fff
@@ -378,7 +378,7 @@ DSA/
 
 ### 12 · Greedy Algorithms & Optimization Strategy
 
-> 6 files — Activity selection, fractional knapsack, pair diff minimization, maximum chain length, and non-overlapping interval optimization
+> 9 files — Activity selection, fractional knapsack, pair diff minimization, maximum chain length, non-overlapping intervals, Indian coins, job sequencing, and chocola board cutting
 
 | File | Concept | Time | Space |
 | :--- | :--- | :---: | :---: |
@@ -388,6 +388,9 @@ DSA/
 | [`MinAbsoluteDiffPairs.java`](./Greedy_Algorithm/MinAbsoluteDiffPairs.java) | Min Absolute Difference Pairs — Sorting dual arrays & matching | $O(N \log N)$ | $O(1)$ |
 | [`ManLengthChainOfPairs.java`](./Greedy_Algorithm/ManLengthChainOfPairs.java) | Max Length Chain of Pairs — Pair sorting by 2nd element | $O(N \log N)$ | $O(1)$ |
 | [`NonOverlappingIntervals.java`](./Greedy_Algorithm/NonOverlappingIntervals.java) | Non-Overlapping Intervals — Greedy interval exclusion by end time | $O(N \log N)$ | $O(1)$ |
+| [`IndianCoins.java`](./Greedy_Algorithm/IndianCoins.java) | Indian Coins (Coin Change) — Greedy largest-denomination pick | $O(N \log N)$ | $O(N)$ |
+| [`JobSequencing.java`](./Greedy_Algorithm/JobSequencing.java) | Job Sequencing Problem — Profit-based greedy sorting & deadline allocation | $O(N \log N)$ | $O(N)$ |
+| [`ChocolaProblem.java`](./Greedy_Algorithm/ChocolaProblem.java) | Chocola Problem — Min-cost chocolate board cutting via greedy cost sorting | $O(N \log N + M \log M)$ | $O(1)$ |
 
 ---
 
@@ -428,7 +431,7 @@ DSA/
 
 ---
 
-### 🟡 Medium — 30 Problems
+### 🟡 Medium — 31 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
@@ -448,6 +451,7 @@ DSA/
 | 0201 | [Bitwise AND of Numbers Range](./LeetCode_Problems/0201-bitwise-and-of-numbers-range) | Bit Manipulation | [Java](./LeetCode_Problems/0201-bitwise-and-of-numbers-range/0201-bitwise-and-of-numbers-range.java) |
 | 0238 | [Product of Array Except Self](./LeetCode_Problems/0238-product-of-array-except-self) | Prefix / Suffix | [Java](./LeetCode_Problems/0238-product-of-array-except-self/0238-product-of-array-except-self.java) |
 | 0371 | [Sum of Two Integers](./LeetCode_Problems/0371-sum-of-two-integers) | Bit Manipulation | [Java](./LeetCode_Problems/0371-sum-of-two-integers/0371-sum-of-two-integers.java) |
+| 0435 | [Non-overlapping Intervals](./LeetCode_Problems/0435-non-overlapping-intervals) | Greedy / Sorting | [Java](./LeetCode_Problems/0435-non-overlapping-intervals/0435-non-overlapping-intervals.java) |
 | 0486 | [Predict the Winner](./LeetCode_Problems/0486-predict-the-winner) | DP / Minimax | [Java](./LeetCode_Problems/0486-predict-the-winner/0486-predict-the-winner.java) |
 | 0503 | [Next Greater Element II](./LeetCode_Problems/0503-next-greater-element-ii) | Monotonic Stack | [Java](./LeetCode_Problems/0503-next-greater-element-ii/0503-next-greater-element-ii.java) |
 | 0556 | [Next Greater Element III](./LeetCode_Problems/0556-next-greater-element-iii) | Math / Two Pointers | [Java](./LeetCode_Problems/0556-next-greater-element-iii/0556-next-greater-element-iii.java) |
@@ -532,6 +536,9 @@ DSA/
 | Min Absolute Difference Pairs | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(1)$ | Sort dual arrays & greedy element matching |
 | Max Length Chain of Pairs | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(1)$ | Sort pairs by 2nd element & chain greedy check |
 | Non-Overlapping Intervals | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(1)$ | Greedy interval elimination based on end time |
+| Indian Coins Problem (Canonical) | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(N)$ | Greedy largest-denomination pick on canonical coin systems |
+| Job Sequencing with Deadlines | $O(N \log N)$ | $O(N \log N)$ | $O(N^2)$ | $O(N)$ | Profit-based greedy sorting & latest deadline slot allocation |
+| Chocola Problem (Board Cutting) | $O(N \log N + M \log M)$ | $O(N \log N + M \log M)$ | $O(N \log N + M \log M)$ | $O(1)$ | Greedy cost-based choice between horizontal & vertical cuts |
 | Bubble Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Stable |
 | Selection Sort | $O(N^2)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Unstable |
 | Insertion Sort | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Online, stable |
@@ -551,19 +558,29 @@ DSA/
 
 ---
 
-## 🛠️ How to Compile & Run
+## 🛠️ How to Run
 
 ### ☕ Java
 
 ```bash
-# Greedy Algorithm - Activity Selection Example
+# Greedy Algorithm Examples
 cd DSA/Greedy_Algorithm
+
+# Activity Selection
 javac ActivitySelection.java
 java Greedy_Algorithm.ActivitySelection
 
-# Fractional Knapsack Example
-javac FractionalKanpsack.java
-java Greedy_Algorithm.FractionalKanpsack
+# Indian Coins Problem
+javac IndianCoins.java
+java Greedy_Algorithm.IndianCoins
+
+# Job Sequencing Problem
+javac JobSequencing.java
+java Greedy_Algorithm.JobSequencing
+
+# Chocola Problem (Board Cutting)
+javac ChocolaProblem.java
+java Greedy_Algorithm.ChocolaProblem
 
 # Queue Implementation Example
 cd ../Linear_Structure/Queue
