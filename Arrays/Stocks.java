@@ -1,4 +1,4 @@
-package Arrays;
+
 
 public class Stocks {
     
@@ -19,7 +19,7 @@ public class Stocks {
 
 
     public static void main(String args[]){
-        int prices[]={7,1,5,3,6,4};
+        int prices[] = {2, 4, 1, 7, 3, 9};
         System.out.println("Maximum profit is: " + buyAndSellStocks(prices));
     }
 }
