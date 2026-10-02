@@ -13,5 +13,6 @@
             "name": "JavaSE-1.8",
             "path": "C:\\Program Files\\Java\\jre1.8.0_503"
         }
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }

@@ -7,11 +7,11 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-72_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-74_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 > A curated collection of **200+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear Structures (Arrays, Linked Lists, Stacks, Queues) · Greedy Algorithms · 72 LeetCode Solutions
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear & NonLinear Structures (Arrays, Linked Lists, Stacks, Queues, Binary Trees) · Greedy Algorithms · 74 LeetCode Solutions
 
 </div>
 
@@ -21,15 +21,15 @@
 
 <table>
   <tr>
-    <td align="center"><strong>12</strong><br/>Core Modules</td>
+    <td align="center"><strong>13</strong><br/>Core Modules</td>
     <td align="center"><strong>200+</strong><br/>Code Files</td>
-    <td align="center"><strong>72</strong><br/>LeetCode Problems</td>
+    <td align="center"><strong>74</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
   <tr>
     <td align="center">🟢 28 Easy</td>
     <td align="center">🟡 31 Medium</td>
-    <td align="center">🔴 13 Hard</td>
+    <td align="center">🔴 15 Hard</td>
     <td align="center">☕ 💻 🐍</td>
   </tr>
 </table>
@@ -43,7 +43,7 @@
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
 | [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All modules with complete file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 72 problems sorted by difficulty & ID |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 74 problems sorted by difficulty & ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -64,16 +64,18 @@ DSA/
 │   ├── 📂 LInkedList/        → 12 files: Singly & Doubly LL, reversal, merge sort, zig-zag layout, cycle operations, JCF LinkedList
 │   ├── 📂 Queue/             → 10 files: Queue via Array, Linked List, JCF Queue/Deque, Queue using 2 Stacks, Stack using 2 Queues, First non-repeating char, Interleave halves, Queue reversal, Stack/Queue using Deque
 │   └── 📂 Stack/             → 10 files: Stacks via ArrayList & LL, push-at-bottom, stack reversal, stock span, next greater element, valid & duplicate parentheses, max area histogram
+├── 📂 NonLinear_Structure/   → Binary Tree implementations
+│   └── 📂 BinaryTree/        → 11 files: Traversals, LCA, height, diameter, subtree, top view, transform sum
 ├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism
 ├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling, binary strings
 ├── 📂 Sorting/               → Bubble, selection, insertion, counting sort
 ├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion
 ├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms, exponentiation
 │
-└── 📂 LeetCode_Problems/     → 72 standalone solutions with markdown explanations
+└── 📂 LeetCode_Problems/     → 74 standalone solutions with markdown explanations
     ├── 🟢 28 Easy
     ├── 🟡 31 Medium
-    └── 🔴 13 Hard
+    └── 🔴 15 Hard
 ```
 
 ---
@@ -91,6 +93,7 @@ DSA/
     R --> BK["📂 Backtracking"]
     R --> GA["📂 Greedy Algorithm"]
     R --> LS["📂 Linear Structure"]
+    R --> NLS["📂 NonLinear Structure"]
     R --> O["📂 OOPs"]
     R --> REC["📂 Recursion"]
     R --> S["📂 Sorting"]
@@ -102,6 +105,7 @@ DSA/
     LS --> LL["📂 LinkedList × 12"]
     LS --> Q["📂 Queue × 10"]
     LS --> STK["📂 Stack × 10"]
+    NLS --> BT["📂 Binary Tree × 11"]
 
     LC --> E["🟢 Easy × 28"]
     LC --> MD["🟡 Medium × 31"]
@@ -119,6 +123,7 @@ DSA/
     style LL fill:#154360,stroke:#1a5276,color:#d6eaf8
     style Q fill:#154360,stroke:#1a5276,color:#d6eaf8
     style STK fill:#154360,stroke:#1a5276,color:#d6eaf8
+    style BT fill:#154360,stroke:#1a5276,color:#d6eaf8
     style O fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style REC fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style S fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
@@ -376,6 +381,24 @@ DSA/
 
 ---
 
+### 11.5 · Binary Tree (`BinaryTree`)
+
+| File | Concept | Time | Space |
+| :--- | :--- | :---: | :---: |
+| [`Classroom.java`](./NonLinear_Structure/BinaryTree/Classroom.java) | Tree Basics — Structure, Pre/In/Post/Level order traversals | $O(N)$ | $O(N)$ |
+| [`CountOfNodes.java`](./NonLinear_Structure/BinaryTree/CountOfNodes.java) | Node Count — Total number of nodes & sum of nodes | $O(N)$ | $O(N)$ |
+| [`DiameteOfTree.java`](./NonLinear_Structure/BinaryTree/DiameteOfTree.java) | Tree Diameter — Longest path between nodes ($O(N^2)$ & $O(N)$ approaches) | $O(N)$ | $O(N)$ |
+| [`HeightOfTree.java`](./NonLinear_Structure/BinaryTree/HeightOfTree.java) | Tree Height — Maximum depth | $O(N)$ | $O(N)$ |
+| [`KthAncestor.java`](./NonLinear_Structure/BinaryTree/KthAncestor.java) | K-th Ancestor — Ancestor at level K | $O(N)$ | $O(N)$ |
+| [`KthLevel.java`](./NonLinear_Structure/BinaryTree/KthLevel.java) | K-th Level Elements — Print nodes at a specific depth | $O(N)$ | $O(N)$ |
+| [`LowestCommonAncestor.java`](./NonLinear_Structure/BinaryTree/LowestCommonAncestor.java) | LCA — Lowest Common Ancestor ($O(N)$ path & single traversal) | $O(N)$ | $O(N)$ |
+| [`MinDistance.java`](./NonLinear_Structure/BinaryTree/MinDistance.java) | Min Distance — Shortest path between two nodes | $O(N)$ | $O(N)$ |
+| [`Subtree.java`](./NonLinear_Structure/BinaryTree/Subtree.java) | Subtree Check — Verify if a tree is a subtree of another | $O(N \times M)$ | $O(N)$ |
+| [`TopView.java`](./NonLinear_Structure/BinaryTree/TopView.java) | Top View — Map-based horizontal distance traversal | $O(N)$ | $O(N)$ |
+| [`TransformSum.java`](./NonLinear_Structure/BinaryTree/TransformSum.java) | Transform to Sum Tree — Replace nodes with sum of subtrees | $O(N)$ | $O(N)$ |
+
+---
+
 ### 12 · Greedy Algorithms & Optimization Strategy
 
 > 9 files — Activity selection, fractional knapsack, pair diff minimization, maximum chain length, non-overlapping intervals, Indian coins, job sequencing, and chocola board cutting
@@ -469,7 +492,7 @@ DSA/
 
 ---
 
-### 🔴 Hard — 13 Problems
+### 🔴 Hard — 15 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
@@ -482,7 +505,9 @@ DSA/
 | 0115 | [Distinct Subsequences](./LeetCode_Problems/0115-distinct-subsequences) | Dynamic Programming / String | [Java](./LeetCode_Problems/0115-distinct-subsequences/0115-distinct-subsequences.java) |
 | 0154 | [Find Min in Rotated Sorted Array II](./LeetCode_Problems/0154-find-minimum-in-rotated-sorted-array-ii) | Binary Search | [C++](./LeetCode_Problems/0154-find-minimum-in-rotated-sorted-array-ii/0154-find-minimum-in-rotated-sorted-array-ii.cpp) |
 | 1406 | [Stone Game III](./LeetCode_Problems/1406-stone-game-iii) | Minimax DP | [Java](./LeetCode_Problems/1406-stone-game-iii/1406-stone-game-iii.java) |
+| 1483 | [Kth Ancestor of a Tree Node](./LeetCode_Problems/1483-kth-ancestor-of-a-tree-node) | Tree / DP | [Java](./LeetCode_Problems/1483-kth-ancestor-of-a-tree-node/1483-kth-ancestor-of-a-tree-node.java) |
 | 1510 | [Stone Game IV](./LeetCode_Problems/1510-stone-game-iv) | DP / Game Theory | [Java](./LeetCode_Problems/1510-stone-game-iv/1510-stone-game-iv.java) |
+| 2267 | [Check if There Is a Valid Parentheses String Path](./LeetCode_Problems/2267-check-if-there-is-a-valid-parentheses-string-path) | DP / Matrix / String | [Java](./LeetCode_Problems/2267-check-if-there-is-a-valid-parentheses-string-path/2267-check-if-there-is-a-valid-parentheses-string-path.java) |
 | 3348 | [Smallest Divisible Digit Product II](./LeetCode_Problems/3348-smallest-divisible-digit-product-ii) | Greedy / Math | [Java](./LeetCode_Problems/3348-smallest-divisible-digit-product-ii/3348-smallest-divisible-digit-product-ii.java) |
 | 3518 | [Smallest Palindromic Rearrangement II](./LeetCode_Problems/3518-smallest-palindromic-rearrangement-ii) | DP / Combinatorics | [Java](./LeetCode_Problems/3518-smallest-palindromic-rearrangement-ii/3518-smallest-palindromic-rearrangement-ii.java) |
 | 3962 | [Max Subarray Sum After K Swaps](./LeetCode_Problems/3962-maximum-subarray-sum-after-at-most-k-swaps) | DP / Prefix Sums | [Java](./LeetCode_Problems/3962-maximum-subarray-sum-after-at-most-k-swaps/3962-maximum-subarray-sum-after-at-most-k-swaps.java) |
