@@ -21,7 +21,7 @@
 
 <table>
   <tr>
-    <td align="center"><strong>13</strong><br/>Core Modules</td>
+    <td align="center"><strong>14</strong><br/>Core Modules</td>
     <td align="center"><strong>200+</strong><br/>Code Files</td>
     <td align="center"><strong>74</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
@@ -66,6 +66,7 @@ DSA/
 │   └── 📂 Stack/             → 10 files: Stacks via ArrayList & LL, push-at-bottom, stack reversal, stock span, next greater element, valid & duplicate parentheses, max area histogram
 ├── 📂 NonLinear_Structure/   → Binary Tree implementations
 │   └── 📂 BinaryTree/        → 11 files: Traversals, LCA, height, diameter, subtree, top view, transform sum
+├── 📂 BinarySearch_Tree/     → Binary Search Tree: insertion, deletion, searching, print in range
 ├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism
 ├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling, binary strings
 ├── 📂 Sorting/               → Bubble, selection, insertion, counting sort
@@ -94,6 +95,7 @@ DSA/
     R --> GA["📂 Greedy Algorithm"]
     R --> LS["📂 Linear Structure"]
     R --> NLS["📂 NonLinear Structure"]
+    R --> BST["📂 Binary Search Tree"]
     R --> O["📂 OOPs"]
     R --> REC["📂 Recursion"]
     R --> S["📂 Sorting"]
@@ -414,6 +416,18 @@ DSA/
 | [`IndianCoins.java`](./Greedy_Algorithm/IndianCoins.java) | Indian Coins (Coin Change) — Greedy largest-denomination pick | $O(N \log N)$ | $O(N)$ |
 | [`JobSequencing.java`](./Greedy_Algorithm/JobSequencing.java) | Job Sequencing Problem — Profit-based greedy sorting & deadline allocation | $O(N \log N)$ | $O(N)$ |
 | [`ChocolaProblem.java`](./Greedy_Algorithm/ChocolaProblem.java) | Chocola Problem — Min-cost chocolate board cutting via greedy cost sorting | $O(N \log N + M \log M)$ | $O(1)$ |
+
+---
+
+### 13 · Binary Search Tree (`BinarySearch_Tree`)
+
+> 3 files — BST insertion, searching, deletion, and printing in range
+
+| File | Concept | Time | Space |
+| :--- | :--- | :---: | :---: |
+| [`BST.java`](./BinarySearch_Tree/BST.java) | Binary Search Tree Basics — Insertion | $O(H)$ | $O(H)$ |
+| [`SearchBST.java`](./BinarySearch_Tree/SearchBST.java) | Searching in BST — Binary search traversal | $O(H)$ | $O(H)$ |
+| [`DeleteNode.java`](./BinarySearch_Tree/DeleteNode.java) | Deletion & Range Print — Deleting a node & printing within $K_1$ and $K_2$ | $O(H)$ | $O(H)$ |
 
 ---
 
