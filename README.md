@@ -7,11 +7,11 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-74_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-76_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 > A curated collection of **200+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear & NonLinear Structures (Arrays, Linked Lists, Stacks, Queues, Binary Trees) · Greedy Algorithms · 74 LeetCode Solutions
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear & NonLinear Structures (Arrays, Linked Lists, Stacks, Queues, Binary Trees) · Greedy Algorithms · 76 LeetCode Solutions
 
 </div>
 
@@ -23,12 +23,12 @@
   <tr>
     <td align="center"><strong>14</strong><br/>Core Modules</td>
     <td align="center"><strong>200+</strong><br/>Code Files</td>
-    <td align="center"><strong>74</strong><br/>LeetCode Problems</td>
+    <td align="center"><strong>76</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
   <tr>
-    <td align="center">🟢 28 Easy</td>
-    <td align="center">🟡 31 Medium</td>
+    <td align="center">🟢 29 Easy</td>
+    <td align="center">🟡 32 Medium</td>
     <td align="center">🔴 15 Hard</td>
     <td align="center">☕ 💻 🐍</td>
   </tr>
@@ -43,7 +43,7 @@
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
 | [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All modules with complete file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 74 problems sorted by difficulty & ID |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 76 problems sorted by difficulty & ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -66,16 +66,16 @@ DSA/
 │   └── 📂 Stack/             → 10 files: Stacks via ArrayList & LL, push-at-bottom, stack reversal, stock span, next greater element, valid & duplicate parentheses, max area histogram
 ├── 📂 NonLinear_Structure/   → Binary Tree implementations
 │   └── 📂 BinaryTree/        → 11 files: Traversals, LCA, height, diameter, subtree, top view, transform sum
-├── 📂 BinarySearch_Tree/     → Binary Search Tree: insertion, deletion, searching, print in range
+├── 📂 BinarySearch_Tree/     → Binary Search Tree: insertion, deletion, searching, print in range, balancing, mirroring, validation
 ├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism
 ├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling, binary strings
 ├── 📂 Sorting/               → Bubble, selection, insertion, counting sort
 ├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion
 ├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms, exponentiation
 │
-└── 📂 LeetCode_Problems/     → 74 standalone solutions with markdown explanations
-    ├── 🟢 28 Easy
-    ├── 🟡 31 Medium
+└── 📂 LeetCode_Problems/     → 76 standalone solutions with markdown explanations
+    ├── 🟢 29 Easy
+    ├── 🟡 32 Medium
     └── 🔴 15 Hard
 ```
 
@@ -109,8 +109,8 @@ DSA/
     LS --> STK["📂 Stack × 10"]
     NLS --> BT["📂 Binary Tree × 11"]
 
-    LC --> E["🟢 Easy × 28"]
-    LC --> MD["🟡 Medium × 31"]
+    LC --> E["🟢 Easy × 29"]
+    LC --> MD["🟡 Medium × 32"]
     LC --> H["🔴 Hard × 13"]
 
     style R fill:#6c3483,stroke:#a569bd,stroke-width:3px,color:#fff
@@ -421,19 +421,24 @@ DSA/
 
 ### 13 · Binary Search Tree (`BinarySearch_Tree`)
 
-> 3 files — BST insertion, searching, deletion, and printing in range
+> 8 files — BST insertion, searching, deletion, printing in range, balancing, mirroring, and validation
 
 | File | Concept | Time | Space |
 | :--- | :--- | :---: | :---: |
 | [`BST.java`](./BinarySearch_Tree/BST.java) | Binary Search Tree Basics — Insertion | $O(H)$ | $O(H)$ |
 | [`SearchBST.java`](./BinarySearch_Tree/SearchBST.java) | Searching in BST — Binary search traversal | $O(H)$ | $O(H)$ |
 | [`DeleteNode.java`](./BinarySearch_Tree/DeleteNode.java) | Deletion & Range Print — Deleting a node & printing within $K_1$ and $K_2$ | $O(H)$ | $O(H)$ |
+| [`BSTtoBalancedBST.java`](./BinarySearch_Tree/BSTtoBalancedBST.java) | BST to Balanced BST — Convert normal BST to balanced BST | $O(N)$ | $O(N)$ |
+| [`MirrorBST.java`](./BinarySearch_Tree/MirrorBST.java) | Mirror a BST — Swap left and right subtrees | $O(N)$ | $O(H)$ |
+| [`Paths.java`](./BinarySearch_Tree/Paths.java) | Root to Leaf Paths — Find all paths from root to leaves | $O(N)$ | $O(H)$ |
+| [`SortedArrayToBST.java`](./BinarySearch_Tree/SortedArrayToBST.java) | Sorted Array to Balanced BST — Create balanced BST from sorted array | $O(N)$ | $O(H)$ |
+| [`ValidateBST.java`](./BinarySearch_Tree/ValidateBST.java) | Validate Binary Search Tree — Check if tree satisfies BST property | $O(N)$ | $O(H)$ |
 
 ---
 
 ## 💡 LeetCode Solutions Tracker
 
-### 🟢 Easy — 28 Problems
+### 🟢 Easy — 29 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
@@ -443,6 +448,7 @@ DSA/
 | 0026 | [Remove Duplicates from Sorted Array](./LeetCode_Problems/0026-remove-duplicates-from-sorted-array) | Two Pointers | [Java](./LeetCode_Problems/0026-remove-duplicates-from-sorted-array/0026-remove-duplicates-from-sorted-array.java) |
 | 0028 | [Find Index of First Occurrence in String](./LeetCode_Problems/0028-find-the-index-of-the-first-occurrence-in-a-string) | String Matching | [Java](./LeetCode_Problems/0028-find-the-index-of-the-first-occurrence-in-a-string/0028-find-the-index-of-the-first-occurrence-in-a-string.java) |
 | 0088 | [Merge Sorted Array](./LeetCode_Problems/0088-merge-sorted-array) | Two Pointers | [Java](./LeetCode_Problems/0088-merge-sorted-array/0088-merge-sorted-array.java) |
+| 0108 | [Convert Sorted Array to Binary Search Tree](./LeetCode_Problems/0108-convert-sorted-array-to-binary-search-tree) | Tree / BST / Divide & Conquer | [Java](./LeetCode_Problems/0108-convert-sorted-array-to-binary-search-tree/0108-convert-sorted-array-to-binary-search-tree.java) |
 | 0121 | [Best Time to Buy and Sell Stock](./LeetCode_Problems/0121-best-time-to-buy-and-sell-stock) | DP / Single Pass | [Java](./LeetCode_Problems/0121-best-time-to-buy-and-sell-stock/0121-best-time-to-buy-and-sell-stock.java) |
 | 0141 | [Linked List Cycle](./LeetCode_Problems/0141-linked-list-cycle) | Linked List / Two Pointers | [Java](./LeetCode_Problems/0141-linked-list-cycle/0141-linked-list-cycle.java) |
 | 0190 | [Reverse Bits](./LeetCode_Problems/0190-reverse-bits) | Bit Manipulation | [Java](./LeetCode_Problems/0190-reverse-bits/0190-reverse-bits.java) |
@@ -468,7 +474,7 @@ DSA/
 
 ---
 
-### 🟡 Medium — 31 Problems
+### 🟡 Medium — 32 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
@@ -491,6 +497,7 @@ DSA/
 | 0435 | [Non-overlapping Intervals](./LeetCode_Problems/0435-non-overlapping-intervals) | Greedy / Sorting | [Java](./LeetCode_Problems/0435-non-overlapping-intervals/0435-non-overlapping-intervals.java) |
 | 0486 | [Predict the Winner](./LeetCode_Problems/0486-predict-the-winner) | DP / Minimax | [Java](./LeetCode_Problems/0486-predict-the-winner/0486-predict-the-winner.java) |
 | 0503 | [Next Greater Element II](./LeetCode_Problems/0503-next-greater-element-ii) | Monotonic Stack | [Java](./LeetCode_Problems/0503-next-greater-element-ii/0503-next-greater-element-ii.java) |
+| 0538 | [Convert BST to Greater Tree](./LeetCode_Problems/0538-convert-bst-to-greater-tree) | Tree / Depth-First Search / BST | [Java](./LeetCode_Problems/0538-convert-bst-to-greater-tree/0538-convert-bst-to-greater-tree.java) |
 | 0556 | [Next Greater Element III](./LeetCode_Problems/0556-next-greater-element-iii) | Math / Two Pointers | [Java](./LeetCode_Problems/0556-next-greater-element-iii/0556-next-greater-element-iii.java) |
 | 0567 | [Permutation in String](./LeetCode_Problems/0567-permutation-in-string) | Sliding Window | [Java](./LeetCode_Problems/0567-permutation-in-string/0567-permutation-in-string.java) |
 | 0735 | [Asteroid Collision](./LeetCode_Problems/0735-asteroid-collision) | Stack | [Java](./LeetCode_Problems/0735-asteroid-collision/0735-asteroid-collision.java) |
