@@ -7,11 +7,11 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-76_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-81_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-> A curated collection of **200+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear & NonLinear Structures (Arrays, Linked Lists, Stacks, Queues, Binary Trees) · Greedy Algorithms · 76 LeetCode Solutions
+> A curated collection of **240+ production-grade implementations** spanning  
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear & NonLinear Structures (Arrays, Linked Lists, Stacks, Queues, Binary Trees, BSTs) · Greedy Algorithms · Dynamic Programming · 81 LeetCode Solutions
 
 </div>
 
@@ -21,14 +21,14 @@
 
 <table>
   <tr>
-    <td align="center"><strong>14</strong><br/>Core Modules</td>
-    <td align="center"><strong>200+</strong><br/>Code Files</td>
-    <td align="center"><strong>76</strong><br/>LeetCode Problems</td>
+    <td align="center"><strong>15</strong><br/>Core Modules</td>
+    <td align="center"><strong>240+</strong><br/>Code Files</td>
+    <td align="center"><strong>81</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
   <tr>
-    <td align="center">🟢 29 Easy</td>
-    <td align="center">🟡 32 Medium</td>
+    <td align="center">🟢 32 Easy</td>
+    <td align="center">🟡 34 Medium</td>
     <td align="center">🔴 15 Hard</td>
     <td align="center">☕ 💻 🐍</td>
   </tr>
@@ -42,8 +42,8 @@
 | :--- | :--- |
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
-| [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All modules with complete file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 76 problems sorted by difficulty & ID |
+| [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All 15 modules with complete file catalogs |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 81 problems sorted by difficulty & ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -53,29 +53,30 @@
 
 ```D2 Diagram
 DSA/
-├── 📂 Arrays/                → Linear search, binary search, Kadane's, trapping rainwater
-├── 📂 2D.Arrays/             → Spiral traversal, diagonal sum, staircase search
-├── 📂 Backracking/           → Array backtracking, subsets, permutations, N-Queens, Sudoku
-├── 📂 BitManipulation/       → AND, OR, XOR, shifts, ith-bit ops, power-of-2 checks
-├── 📂 DivideNConquer/        → Merge sort, quick sort, search in rotated sorted array
-├── 📂 Greedy_Algorithm/      → Activity selection, fractional knapsack, min abs diff, max length chain, non-overlapping intervals, Indian coins, job sequencing, chocola board cutting
-├── 📂 Linear_Structure/      → ArrayList, LinkedList, Stack & Queue implementations
+├── 📂 Arrays/                → Linear search, binary search, Kadane's, trapping rainwater (13 files)
+├── 📂 2D.Arrays/             → Spiral traversal, spiral matrix generation, diagonal sum, staircase search (5 files)
+├── 📂 Backracking/           → Array backtracking, subsets, permutations, N-Queens, Sudoku (9 files)
+├── 📂 BitManipulation/       → AND, OR, XOR, shifts, ith-bit ops, power-of-2 checks (14 files)
+├── 📂 DivideNConquer/        → Merge sort, quick sort, search in rotated sorted array (3 files)
+├── 📂 Dyanmic_Programming/   → Fibonacci (Memo/Tab), Climbing Stairs (Rec/Memo/Tab), 0-1 Knapsack (3 files)
+├── 📂 Greedy_Algorithm/      → Activity selection, fractional knapsack, min abs diff, max length chain, non-overlapping intervals, Indian coins, job sequencing, chocola board cutting (9 files)
+├── 📂 Linear_Structure/      → ArrayList, LinkedList, Stack & Queue implementations (44 files)
 │   ├── 📂 ArrayList/         → 12 files: CRUD, sorting, 2D lists, Container With Most Water, Pair Sum 1 & 2
 │   ├── 📂 LInkedList/        → 12 files: Singly & Doubly LL, reversal, merge sort, zig-zag layout, cycle operations, JCF LinkedList
 │   ├── 📂 Queue/             → 10 files: Queue via Array, Linked List, JCF Queue/Deque, Queue using 2 Stacks, Stack using 2 Queues, First non-repeating char, Interleave halves, Queue reversal, Stack/Queue using Deque
 │   └── 📂 Stack/             → 10 files: Stacks via ArrayList & LL, push-at-bottom, stack reversal, stock span, next greater element, valid & duplicate parentheses, max area histogram
-├── 📂 NonLinear_Structure/   → Binary Tree implementations
+├── 📂 NonLinear_Structure/   → Binary Tree implementations (11 files)
 │   └── 📂 BinaryTree/        → 11 files: Traversals, LCA, height, diameter, subtree, top view, transform sum
-├── 📂 BinarySearch_Tree/     → Binary Search Tree: insertion, deletion, searching, print in range, balancing, mirroring, validation
-├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism
-├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling, binary strings
-├── 📂 Sorting/               → Bubble, selection, insertion, counting sort
-├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion
-├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms, exponentiation
+├── 📂 BinarySearch_Tree/     → Binary Search Tree: insertion, deletion, searching, print in range, balancing, mirroring, validation, largest BST (9 files)
+├── 📂 OOPs/                  → Encapsulation, inheritance, abstraction, polymorphism (12 files)
+├── 📂 Recursion/             → Factorials, Fibonacci, occurrence search, tiling, binary strings (12 files)
+├── 📂 Sorting/               → Bubble, selection, insertion, counting sort (4 files)
+├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion (8 files)
+├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms, exponentiation (3 files)
 │
-└── 📂 LeetCode_Problems/     → 76 standalone solutions with markdown explanations
-    ├── 🟢 29 Easy
-    ├── 🟡 32 Medium
+└── 📂 LeetCode_Problems/     → 81 standalone solutions with markdown explanations
+    ├── 🟢 32 Easy
+    ├── 🟡 34 Medium
     └── 🔴 15 Hard
 ```
 
@@ -96,6 +97,7 @@ DSA/
     R --> LS["📂 Linear Structure"]
     R --> NLS["📂 NonLinear Structure"]
     R --> BST["📂 Binary Search Tree"]
+    R --> DP["📂 Dynamic Programming"]
     R --> O["📂 OOPs"]
     R --> REC["📂 Recursion"]
     R --> S["📂 Sorting"]
@@ -109,9 +111,12 @@ DSA/
     LS --> STK["📂 Stack × 10"]
     NLS --> BT["📂 Binary Tree × 11"]
 
-    LC --> E["🟢 Easy × 29"]
-    LC --> MD["🟡 Medium × 32"]
-    LC --> H["🔴 Hard × 13"]
+    DP --> DPF["📂 DP Problems × 3"]
+    BST --> BSTF["📂 BST Ops × 9"]
+
+    LC --> E["🟢 Easy × 32"]
+    LC --> MD["🟡 Medium × 34"]
+    LC --> H["🔴 Hard × 15"]
 
     style R fill:#6c3483,stroke:#a569bd,stroke-width:3px,color:#fff
     style A fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
@@ -125,7 +130,12 @@ DSA/
     style LL fill:#154360,stroke:#1a5276,color:#d6eaf8
     style Q fill:#154360,stroke:#1a5276,color:#d6eaf8
     style STK fill:#154360,stroke:#1a5276,color:#d6eaf8
+    style NLS fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style BT fill:#154360,stroke:#1a5276,color:#d6eaf8
+    style BST fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
+    style BSTF fill:#154360,stroke:#1a5276,color:#d6eaf8
+    style DP fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
+    style DPF fill:#154360,stroke:#1a5276,color:#d6eaf8
     style O fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style REC fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
     style S fill:#1a5276,stroke:#2e86c1,color:#d6eaf8
@@ -165,12 +175,13 @@ DSA/
 
 ### 2 · 2D Matrices & Multi-Axis Search
 
-> 4 files — Spiral traversal, diagonal sums, staircase search
+> 5 files — Spiral traversal, spiral matrix generation, diagonal sums, staircase search
 
 | File | Concept | Time | Space |
 | :--- | :--- | :---: | :---: |
 | [`Matrices.java`](./2D.Arrays/Matrices.java) | Matrix Fundamentals — row-column iteration | $O(N \times M)$ | $O(N \times M)$ |
 | [`SpiralMatrix.java`](./2D.Arrays/SpiralMatrix.java) | Spiral Traversal — clockwise layer peeling | $O(N \times M)$ | $O(1)$ |
+| [`generateMatrix.java`](./2D.Arrays/generateMatrix.java) | Spiral Matrix II — clockwise boundary matrix construction ($1 \dots N^2$) | $O(N^2)$ | $O(N^2)$ |
 | [`DaigonalSum.java`](./2D.Arrays/DaigonalSum.java) | Diagonal Sum — primary + secondary with overlap check | $O(N)$ | $O(1)$ |
 | [`SearchSortedMatrix.java`](./2D.Arrays/SearchSortedMatrix.java) | Staircase Search — corner-pivot elimination | $O(N + M)$ | $O(1)$ |
 
@@ -205,18 +216,18 @@ DSA/
 
 | File | Pillar / Keyword | Description |
 | :--- | :--- | :--- |
-| [`Abstraction.java`](./OOPs/OOPs/Abstraction.java) | Abstraction | Abstract classes, methods, constructor chaining |
-| [`ClassesAndObjects.java`](./OOPs/OOPs/ClassesAndObjects.java) | Classes & Objects | Fields, methods, instantiation |
-| [`GettersAndSetters.java`](./OOPs/OOPs/GettersAndSetters.java) | Encapsulation | Private data with public accessors/mutators |
-| [`Constructors.java`](./OOPs/OOPs/Constructors.java) | Constructors | Parameterized overloading |
-| [`CopyConstructor.java`](./OOPs/OOPs/CopyConstructor.java) | Object Cloning | Shallow vs deep copy |
-| [`Inheritance.java`](./OOPs/OOPs/Inheritance.java) | Inheritance | `extends` and code reusability |
-| [`HybridInheritance.java`](./OOPs/OOPs/HybridInheritance.java) | Hybrid Hierarchies | Multi-level + hierarchical combos |
-| [`Interface.java`](./OOPs/OOPs/Interface.java) | Interfaces | `interface` & `implements` contracts |
-| [`Polymorphism.java`](./OOPs/OOPs/Polymorphism.java) | Polymorphism | Overloading (compile) & overriding (runtime) |
-| [`Modifiers.java`](./OOPs/OOPs/Modifiers.java) | Access Modifiers | `public`, `private`, `protected`, default |
-| [`Satic.java`](./OOPs/OOPs/Satic.java) | Static Keyword | Class-level fields, methods, blocks |
-| [`Super.java`](./OOPs/OOPs/Super.java) | Super Keyword | `super()` and parent method calls |
+| [`Abstraction.java`](./OOPs/Abstraction.java) | Abstraction | Abstract classes, methods, constructor chaining |
+| [`ClassesAndObjects.java`](./OOPs/ClassesAndObjects.java) | Classes & Objects | Fields, methods, instantiation |
+| [`GettersAndSetters.java`](./OOPs/GettersAndSetters.java) | Encapsulation | Private data with public accessors/mutators |
+| [`Constructors.java`](./OOPs/Constructors.java) | Constructors | Parameterized overloading |
+| [`CopyConstructor.java`](./OOPs/CopyConstructor.java) | Object Cloning | Shallow vs deep copy |
+| [`Inheritance.java`](./OOPs/Inheritance.java) | Inheritance | `extends` and code reusability |
+| [`HybridInheritance.java`](./OOPs/HybridInheritance.java) | Hybrid Hierarchies | Multi-level + hierarchical combos |
+| [`Interface.java`](./OOPs/Interface.java) | Interfaces | `interface` & `implements` contracts |
+| [`Polymorphism.java`](./OOPs/Polymorphism.java) | Polymorphism | Overloading (compile) & overriding (runtime) |
+| [`Modifiers.java`](./OOPs/Modifiers.java) | Access Modifiers | `public`, `private`, `protected`, default |
+| [`Satic.java`](./OOPs/Satic.java) | Static Keyword | Class-level fields, methods, blocks |
+| [`Super.java`](./OOPs/Super.java) | Super Keyword | `super()` and parent method calls |
 
 ---
 
@@ -237,16 +248,16 @@ DSA/
 
 > 8 files — Immutability, palindromes, compression, and case formatting
 
-| File | Concept | Time |
-| :--- | :--- | :---: |
-| [`StringBasics.java`](./String/StringBasics.java) | Immutability, `.length()`, `.charAt()` | $O(N)$ |
-| [`IsPalindrome.java`](./String/IsPalindrome.java) | Two-pointer palindrome check | $O(N)$ |
-| [`Directions.java`](./String/Directions.java) | Displacement vector $\sqrt{x^2 + y^2}$ | $O(N)$ |
-| [`Substring.java`](./String/Substring.java) | Range extraction vs `.substring()` | $O(K)$ |
-| [`largestString.java`](./String/largestString.java) | Lexicographic max via `.compareTo()` | $O(N \times L)$ |
-| [`StringBuilderDemo.java`](./String/StringBuilderDemo.java) | Mutable buffer append operations | $O(N)$ |
-| [`StringUpperCase.java`](./String/StringUpperCase.java) | Title case — first char uppercase per word | $O(N)$ |
-| [`Compress.java`](./String/Compress.java) | Run-length encoding (`"aaabbc"` → `"a3b2c1"`) | $O(N)$ |
+| File | Concept | Time | Space |
+| :--- | :--- | :---: | :---: |
+| [`StringBasics.java`](./String/StringBasics.java) | Immutability, `.length()`, `.charAt()` | $O(N)$ | $O(1)$ |
+| [`IsPalindrome.java`](./String/IsPalindrome.java) | Two-pointer palindrome check | $O(N)$ | $O(1)$ |
+| [`Directions.java`](./String/Directions.java) | Displacement vector $\sqrt{x^2 + y^2}$ | $O(N)$ | $O(1)$ |
+| [`Substring.java`](./String/Substring.java) | Range extraction vs `.substring()` | $O(K)$ | $O(K)$ |
+| [`largestString.java`](./String/largestString.java) | Lexicographic max via `.compareTo()` | $O(N \times L)$ | $O(1)$ |
+| [`StringBuilderDemo.java`](./String/StringBuilderDemo.java) | Mutable buffer append operations | $O(N)$ | $O(N)$ |
+| [`StringUpperCase.java`](./String/StringUpperCase.java) | Title case — first char uppercase per word | $O(N)$ | $O(N)$ |
+| [`Compress.java`](./String/Compress.java) | Run-length encoding (`"aaabbc"` → `"a3b2c1"`) | $O(N)$ | $O(N)$ |
 
 ---
 
@@ -383,7 +394,9 @@ DSA/
 
 ---
 
-### 11.5 · Binary Tree (`BinaryTree`)
+### 12 · Binary Tree (`NonLinear_Structure/BinaryTree`)
+
+> 11 files — Tree traversals, LCA, height, diameter, subtree verification, and sum tree transformations
 
 | File | Concept | Time | Space |
 | :--- | :--- | :---: | :---: |
@@ -401,7 +414,7 @@ DSA/
 
 ---
 
-### 12 · Greedy Algorithms & Optimization Strategy
+### 13 · Greedy Algorithms & Optimization Strategy
 
 > 9 files — Activity selection, fractional knapsack, pair diff minimization, maximum chain length, non-overlapping intervals, Indian coins, job sequencing, and chocola board cutting
 
@@ -419,26 +432,39 @@ DSA/
 
 ---
 
-### 13 · Binary Search Tree (`BinarySearch_Tree`)
+### 14 · Binary Search Tree (`BinarySearch_Tree`)
 
-> 8 files — BST insertion, searching, deletion, printing in range, balancing, mirroring, and validation
+> 9 files — BST insertion, searching, deletion, printing in range, balancing, mirroring, validation, and largest BST in binary tree
 
 | File | Concept | Time | Space |
 | :--- | :--- | :---: | :---: |
-| [`BST.java`](./BinarySearch_Tree/BST.java) | Binary Search Tree Basics — Insertion | $O(H)$ | $O(H)$ |
+| [`BST.java`](./BinarySearch_Tree/BST.java) | Binary Search Tree Basics — Insertion & Inorder Traversal | $O(H)$ | $O(H)$ |
 | [`SearchBST.java`](./BinarySearch_Tree/SearchBST.java) | Searching in BST — Binary search traversal | $O(H)$ | $O(H)$ |
 | [`DeleteNode.java`](./BinarySearch_Tree/DeleteNode.java) | Deletion & Range Print — Deleting a node & printing within $K_1$ and $K_2$ | $O(H)$ | $O(H)$ |
-| [`BSTtoBalancedBST.java`](./BinarySearch_Tree/BSTtoBalancedBST.java) | BST to Balanced BST — Convert normal BST to balanced BST | $O(N)$ | $O(N)$ |
-| [`MirrorBST.java`](./BinarySearch_Tree/MirrorBST.java) | Mirror a BST — Swap left and right subtrees | $O(N)$ | $O(H)$ |
-| [`Paths.java`](./BinarySearch_Tree/Paths.java) | Root to Leaf Paths — Find all paths from root to leaves | $O(N)$ | $O(H)$ |
-| [`SortedArrayToBST.java`](./BinarySearch_Tree/SortedArrayToBST.java) | Sorted Array to Balanced BST — Create balanced BST from sorted array | $O(N)$ | $O(H)$ |
-| [`ValidateBST.java`](./BinarySearch_Tree/ValidateBST.java) | Validate Binary Search Tree — Check if tree satisfies BST property | $O(N)$ | $O(H)$ |
+| [`BSTtoBalancedBST.java`](./BinarySearch_Tree/BSTtoBalancedBST.java) | BST to Balanced BST — Inorder extraction and balanced construction | $O(N)$ | $O(N)$ |
+| [`MirrorBST.java`](./BinarySearch_Tree/MirrorBST.java) | Mirror a BST — Swap left and right subtrees recursively | $O(N)$ | $O(H)$ |
+| [`Paths.java`](./BinarySearch_Tree/Paths.java) | Root to Leaf Paths — Find and print all paths from root to leaves | $O(N)$ | $O(H)$ |
+| [`SortedArrayToBST.java`](./BinarySearch_Tree/SortedArrayToBST.java) | Sorted Array to Balanced BST — Divide-and-conquer middle pivot creation | $O(N)$ | $O(H)$ |
+| [`ValidateBST.java`](./BinarySearch_Tree/ValidateBST.java) | Validate Binary Search Tree — Min/max range validation | $O(N)$ | $O(H)$ |
+| [`LargestBST.java`](./BinarySearch_Tree/LargestBST.java) | Largest BST in Binary Tree — Bottom-up post-order subtree size & boundary check | $O(N)$ | $O(H)$ |
+
+---
+
+### 15 · Dynamic Programming (`Dyanmic_Programming`)
+
+> 3 files — Memoization (Top-Down), Tabulation (Bottom-Up), and 0-1 optimization
+
+| File | Concept | Approach | Time | Space |
+| :--- | :--- | :--- | :---: | :---: |
+| [`DP.java`](./Dyanmic_Programming/DP.java) | Fibonacci Numbers | Memoization & Tabulation state caching | $O(N)$ | $O(N)$ |
+| [`Climbing.java`](./Dyanmic_Programming/Climbing.java) | Climbing Stairs | Recursion, Top-Down Memoization & Tabulation | $O(N)$ | $O(N)$ |
+| [`Knapsack.java`](./Dyanmic_Programming/Knapsack.java) | 0-1 Knapsack Problem | Optimal subset value maximization with weight bounds | $O(N \times W)$ | $O(N \times W)$ |
 
 ---
 
 ## 💡 LeetCode Solutions Tracker
 
-### 🟢 Easy — 29 Problems
+### 🟢 Easy — 32 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
@@ -447,6 +473,7 @@ DSA/
 | 0020 | [Valid Parentheses](./LeetCode_Problems/0020-valid-parentheses) | Stack / String | [Java](./LeetCode_Problems/0020-valid-parentheses/0020-valid-parentheses.java) |
 | 0026 | [Remove Duplicates from Sorted Array](./LeetCode_Problems/0026-remove-duplicates-from-sorted-array) | Two Pointers | [Java](./LeetCode_Problems/0026-remove-duplicates-from-sorted-array/0026-remove-duplicates-from-sorted-array.java) |
 | 0028 | [Find Index of First Occurrence in String](./LeetCode_Problems/0028-find-the-index-of-the-first-occurrence-in-a-string) | String Matching | [Java](./LeetCode_Problems/0028-find-the-index-of-the-first-occurrence-in-a-string/0028-find-the-index-of-the-first-occurrence-in-a-string.java) |
+| 0070 | [Climbing Stairs](./LeetCode_Problems/0070-climbing-stairs) | Dynamic Programming / Math | [Java](./LeetCode_Problems/0070-climbing-stairs/0070-climbing-stairs.java) |
 | 0088 | [Merge Sorted Array](./LeetCode_Problems/0088-merge-sorted-array) | Two Pointers | [Java](./LeetCode_Problems/0088-merge-sorted-array/0088-merge-sorted-array.java) |
 | 0108 | [Convert Sorted Array to Binary Search Tree](./LeetCode_Problems/0108-convert-sorted-array-to-binary-search-tree) | Tree / BST / Divide & Conquer | [Java](./LeetCode_Problems/0108-convert-sorted-array-to-binary-search-tree/0108-convert-sorted-array-to-binary-search-tree.java) |
 | 0121 | [Best Time to Buy and Sell Stock](./LeetCode_Problems/0121-best-time-to-buy-and-sell-stock) | DP / Single Pass | [Java](./LeetCode_Problems/0121-best-time-to-buy-and-sell-stock/0121-best-time-to-buy-and-sell-stock.java) |
@@ -462,9 +489,11 @@ DSA/
 | 0496 | [Next Greater Element I](./LeetCode_Problems/0496-next-greater-element-i) | Monotonic Stack | [Java](./LeetCode_Problems/0496-next-greater-element-i/0496-next-greater-element-i.java) |
 | 0509 | [Fibonacci Number](./LeetCode_Problems/0509-fibonacci-number) | Math / DP | [Java](./LeetCode_Problems/0509-fibonacci-number/0509-fibonacci-number.java) |
 | 0541 | [Reverse String II](./LeetCode_Problems/0541-reverse-string-ii) | Two Pointers / String | [Java](./LeetCode_Problems/0541-reverse-string-ii/0541-reverse-string-ii.java) |
+| 0700 | [Search in a Binary Search Tree](./LeetCode_Problems/0700-search-in-a-binary-search-tree) | Tree / Binary Search Tree | [Java](./LeetCode_Problems/0700-search-in-a-binary-search-tree/0700-search-in-a-binary-search-tree.java) |
 | 1189 | [Maximum Number of Balloons](./LeetCode_Problems/1189-maximum-number-of-balloons) | Hash Table / Counting | [Java](./LeetCode_Problems/1189-maximum-number-of-balloons/1189-maximum-number-of-balloons.java) |
 | 1464 | [Max Product of Two Elements](./LeetCode_Problems/1464-maximum-product-of-two-elements-in-an-array) | Greedy | [Java](./LeetCode_Problems/1464-maximum-product-of-two-elements-in-an-array/1464-maximum-product-of-two-elements-in-an-array.java) |
 | 1572 | [Matrix Diagonal Sum](./LeetCode_Problems/1572-matrix-diagonal-sum) | Matrix / Array | [Java](./LeetCode_Problems/1572-matrix-diagonal-sum/1572-matrix-diagonal-sum.java) |
+| 1614 | [Maximum Nesting Depth of the Parentheses](./LeetCode_Problems/1614-maximum-nesting-depth-of-the-parentheses) | Stack / String | [Java](./LeetCode_Problems/1614-maximum-nesting-depth-of-the-parentheses/1614-maximum-nesting-depth-of-the-parentheses.java) |
 | 1624 | [Largest Substring Between Equal Chars](./LeetCode_Problems/1624-largest-substring-between-two-equal-characters) | Hash Table | [Java](./LeetCode_Problems/1624-largest-substring-between-two-equal-characters/1624-largest-substring-between-two-equal-characters.java) |
 | 2769 | [Find Maximum Achievable Number](./LeetCode_Problems/2769-find-the-maximum-achievable-number) | Math | [Java](./LeetCode_Problems/2769-find-the-maximum-achievable-number/2769-find-the-maximum-achievable-number.java) |
 | 3014 | [Min Pushes to Type Word I](./LeetCode_Problems/3014-minimum-number-of-pushes-to-type-word-i) | Greedy | [Java](./LeetCode_Problems/3014-minimum-number-of-pushes-to-type-word-i/3014-minimum-number-of-pushes-to-type-word-i.java) |
@@ -474,12 +503,13 @@ DSA/
 
 ---
 
-### 🟡 Medium — 32 Problems
+### 🟡 Medium — 34 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
 | 0002 | [Add Two Numbers](./LeetCode_Problems/0002-add-two-numbers) | Linked List / Math | [Java](./LeetCode_Problems/0002-add-two-numbers/0002-add-two-numbers.java) |
 | 0003 | [Longest Substring Without Repeating Characters](./LeetCode_Problems/0003-longest-substring-without-repeating-characters) | Sliding Window / Hash Table | [Java](./LeetCode_Problems/0003-longest-substring-without-repeating-characters/0003-longest-substring-without-repeating-characters.java) |
+| 0006 | [Zigzag Conversion](./LeetCode_Problems/0006-zigzag-conversion) | String / Simulation | [Java](./LeetCode_Problems/0006-zigzag-conversion/0006-zigzag-conversion.java) |
 | 0007 | [Reverse Integer](./LeetCode_Problems/0007-reverse-integer) | Math | [Java](./LeetCode_Problems/0007-reverse-integer/0007-reverse-integer.java) |
 | 0011 | [Container With Most Water](./LeetCode_Problems/0011-container-with-most-water) | Two Pointers / Array | [Java](./LeetCode_Problems/0011-container-with-most-water/0011-container-with-most-water.java) |
 | 0019 | [Remove Nth Node From End of List](./LeetCode_Problems/0019-remove-nth-node-from-end-of-list) | Linked List / Two Pointers | [Java](./LeetCode_Problems/0019-remove-nth-node-from-end-of-list/0019-remove-nth-node-from-end-of-list.java) |
@@ -490,11 +520,12 @@ DSA/
 | 0090 | [Subsets II](./LeetCode_Problems/0090-subsets-ii) | Backtracking | [Java](./LeetCode_Problems/0090-subsets-ii/0090-subsets-ii.java) |
 | 0092 | [Reverse Linked List II](./LeetCode_Problems/0092-reverse-linked-list-ii) | Linked List | [Java](./LeetCode_Problems/0092-reverse-linked-list-ii/0092-reverse-linked-list-ii.java) |
 | 0142 | [Linked List Cycle II](./LeetCode_Problems/0142-linked-list-cycle-ii) | Linked List / Two Pointers | [Java](./LeetCode_Problems/0142-linked-list-cycle-ii/0142-linked-list-cycle-ii.java) |
-| 0153 | [Find Min in Rotated Sorted Array](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array) | Binary Search | [Java](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.cpp) |
+| 0153 | [Find Min in Rotated Sorted Array](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array) | Binary Search | [Java](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.java) · [C++](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.cpp) |
 | 0201 | [Bitwise AND of Numbers Range](./LeetCode_Problems/0201-bitwise-and-of-numbers-range) | Bit Manipulation | [Java](./LeetCode_Problems/0201-bitwise-and-of-numbers-range/0201-bitwise-and-of-numbers-range.java) |
 | 0238 | [Product of Array Except Self](./LeetCode_Problems/0238-product-of-array-except-self) | Prefix / Suffix | [Java](./LeetCode_Problems/0238-product-of-array-except-self/0238-product-of-array-except-self.java) |
 | 0371 | [Sum of Two Integers](./LeetCode_Problems/0371-sum-of-two-integers) | Bit Manipulation | [Java](./LeetCode_Problems/0371-sum-of-two-integers/0371-sum-of-two-integers.java) |
 | 0435 | [Non-overlapping Intervals](./LeetCode_Problems/0435-non-overlapping-intervals) | Greedy / Sorting | [Java](./LeetCode_Problems/0435-non-overlapping-intervals/0435-non-overlapping-intervals.java) |
+| 0450 | [Delete Node in a BST](./LeetCode_Problems/0450-delete-node-in-a-bst) | Tree / Binary Search Tree | [Java](./LeetCode_Problems/0450-delete-node-in-a-bst/0450-delete-node-in-a-bst.java) |
 | 0486 | [Predict the Winner](./LeetCode_Problems/0486-predict-the-winner) | DP / Minimax | [Java](./LeetCode_Problems/0486-predict-the-winner/0486-predict-the-winner.java) |
 | 0503 | [Next Greater Element II](./LeetCode_Problems/0503-next-greater-element-ii) | Monotonic Stack | [Java](./LeetCode_Problems/0503-next-greater-element-ii/0503-next-greater-element-ii.java) |
 | 0538 | [Convert BST to Greater Tree](./LeetCode_Problems/0538-convert-bst-to-greater-tree) | Tree / Depth-First Search / BST | [Java](./LeetCode_Problems/0538-convert-bst-to-greater-tree/0538-convert-bst-to-greater-tree.java) |
@@ -543,6 +574,7 @@ DSA/
 | Binary Search | $O(1)$ | $O(\log N)$ | $O(\log N)$ | $O(1)$ | Requires sorted input |
 | Search in Rotated Array | $O(1)$ | $O(\log N)$ | $O(\log N)$ | $O(\log N)$ | Modified binary search |
 | Staircase Search | $O(1)$ | $O(N{+}M)$ | $O(N{+}M)$ | $O(1)$ | Row + column sorted matrix |
+| Spiral Matrix Generation | $O(N^2)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | Clockwise boundary layer contraction |
 | Kadane's Algorithm | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Max subarray (DP) |
 | Prefix Sum | $O(N)$ | $O(N^2)$ | $O(N^2)$ | $O(N)$ | $O(1)$ range queries |
 | Container With Most Water (Brute Force) | $O(N^2)$ | $O(N^2)$ | $O(N^2)$ | $O(1)$ | All height pair combinations |
@@ -576,6 +608,10 @@ DSA/
 | Valid Parentheses Verification | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Bracket matching with LIFO stack |
 | Duplicate Parentheses Check | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Redundant bracket detection with stack count |
 | Max Area in Histogram | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Monotonic stack with Next Smaller Left & Right boundaries |
+| Largest BST in Binary Tree | $O(N)$ | $O(N)$ | $O(N)$ | $O(H)$ | Post-order traversal with subtree bounds validation |
+| Fibonacci DP (Memo / Tab) | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Top-down memoization cache or bottom-up array |
+| Climbing Stairs DP | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Linear recurrence $DP[i] = DP[i-1] + DP[i-2]$ |
+| 0-1 Knapsack Problem | $O(N \cdot W)$ | $O(N \cdot W)$ | $O(N \cdot W)$ | $O(N \cdot W)$ | DP state table optimization under capacity bound $W$ |
 | Activity Selection (Sorted) | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Greedy selection by end-time on pre-sorted array |
 | Activity Selection (Unsorted) | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(N)$ | 2D custom comparator sorting by end-time |
 | Fractional Knapsack | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(N)$ | Value/Weight ratio sorting & greedy pick |
@@ -609,8 +645,24 @@ DSA/
 ### ☕ Java
 
 ```bash
+# Dynamic Programming Examples
+cd DSA/Dyanmic_Programming
+
+# Climbing Stairs
+javac Climbing.java
+java Dyanmic_Programming.Climbing
+
+# Fibonacci DP
+javac DP.java
+java Dyanmic_Programming.DP
+
+# Binary Search Tree - Largest BST
+cd ../BinarySearch_Tree
+javac LargestBST.java
+java BinarySearch_Tree.LargestBST
+
 # Greedy Algorithm Examples
-cd DSA/Greedy_Algorithm
+cd ../Greedy_Algorithm
 
 # Activity Selection
 javac ActivitySelection.java
