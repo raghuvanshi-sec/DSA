@@ -7,11 +7,11 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode](https://img.shields.io/badge/LeetCode-81_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode](https://img.shields.io/badge/LeetCode-83_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 > A curated collection of **240+ production-grade implementations** spanning  
-> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear & NonLinear Structures (Arrays, Linked Lists, Stacks, Queues, Binary Trees, BSTs) · Greedy Algorithms · Dynamic Programming · 81 LeetCode Solutions
+> Data Structures · Algorithm Design · Bit Manipulation · OOP Paradigms · Linear & NonLinear Structures (Arrays, Linked Lists, Stacks, Queues, Binary Trees, BSTs) · Greedy Algorithms · Dynamic Programming · 83 LeetCode Solutions
 
 </div>
 
@@ -23,12 +23,12 @@
   <tr>
     <td align="center"><strong>15</strong><br/>Core Modules</td>
     <td align="center"><strong>240+</strong><br/>Code Files</td>
-    <td align="center"><strong>81</strong><br/>LeetCode Problems</td>
+    <td align="center"><strong>83</strong><br/>LeetCode Problems</td>
     <td align="center"><strong>3</strong><br/>Languages</td>
   </tr>
   <tr>
     <td align="center">🟢 32 Easy</td>
-    <td align="center">🟡 34 Medium</td>
+    <td align="center">🟡 36 Medium</td>
     <td align="center">🔴 15 Hard</td>
     <td align="center">☕ 💻 🐍</td>
   </tr>
@@ -43,7 +43,7 @@
 | [📁 Directory Architecture](#-directory-architecture) | Project folder layout |
 | [🗺️ Visual Repository Map](#️-visual-repository-map) | Mermaid diagram overview |
 | [🧩 Topic Breakdown](#-topic-breakdown--code-catalog) | All 15 modules with complete file catalogs |
-| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 81 problems sorted by difficulty & ID |
+| [💡 LeetCode Tracker](#-leetcode-solutions-tracker) | 83 problems sorted by difficulty & ID |
 | [⏱️ Complexity Reference](#️-complexity-reference-matrix) | Big-O cheat sheet |
 | [🛠️ How to Run](#️-how-to-compile--run) | Compile & execute instructions |
 
@@ -58,7 +58,7 @@ DSA/
 ├── 📂 Backracking/           → Array backtracking, subsets, permutations, N-Queens, Sudoku (9 files)
 ├── 📂 BitManipulation/       → AND, OR, XOR, shifts, ith-bit ops, power-of-2 checks (14 files)
 ├── 📂 DivideNConquer/        → Merge sort, quick sort, search in rotated sorted array (3 files)
-├── 📂 Dyanmic_Programming/   → Fibonacci (Memo/Tab), Climbing Stairs (Rec/Memo/Tab), 0-1 Knapsack (3 files)
+├── 📂 Dyanmic_Programming/   → Fibonacci (Memo/Tab), Climbing Stairs (Rec/Memo/Tab), 0-1 Knapsack (Rec/Memo/Tab), Target Sum Subset, Unbounded Knapsack (5 files)
 ├── 📂 Greedy_Algorithm/      → Activity selection, fractional knapsack, min abs diff, max length chain, non-overlapping intervals, Indian coins, job sequencing, chocola board cutting (9 files)
 ├── 📂 Linear_Structure/      → ArrayList, LinkedList, Stack & Queue implementations (44 files)
 │   ├── 📂 ArrayList/         → 12 files: CRUD, sorting, 2D lists, Container With Most Water, Pair Sum 1 & 2
@@ -74,9 +74,9 @@ DSA/
 ├── 📂 String/                → Palindromes, compression, StringBuilder, case conversion (8 files)
 ├── 📂 TimeNSpace_Complexity/ → Complexity analysis, optimized algorithms, exponentiation (3 files)
 │
-└── 📂 LeetCode_Problems/     → 81 standalone solutions with markdown explanations
+└── 📂 LeetCode_Problems/     → 83 standalone solutions with markdown explanations
     ├── 🟢 32 Easy
-    ├── 🟡 34 Medium
+    ├── 🟡 36 Medium
     └── 🔴 15 Hard
 ```
 
@@ -111,11 +111,11 @@ DSA/
     LS --> STK["📂 Stack × 10"]
     NLS --> BT["📂 Binary Tree × 11"]
 
-    DP --> DPF["📂 DP Problems × 3"]
+    DP --> DPF["📂 DP Problems × 5"]
     BST --> BSTF["📂 BST Ops × 9"]
 
     LC --> E["🟢 Easy × 32"]
-    LC --> MD["🟡 Medium × 34"]
+    LC --> MD["🟡 Medium × 36"]
     LC --> H["🔴 Hard × 15"]
 
     style R fill:#6c3483,stroke:#a569bd,stroke-width:3px,color:#fff
@@ -452,13 +452,15 @@ DSA/
 
 ### 15 · Dynamic Programming (`Dyanmic_Programming`)
 
-> 3 files — Memoization (Top-Down), Tabulation (Bottom-Up), and 0-1 optimization
+> 5 files — Memoization (Top-Down), Tabulation (Bottom-Up), 0-1 Knapsack variants, Subset Sum, and Unbounded Knapsack
 
 | File | Concept | Approach | Time | Space |
 | :--- | :--- | :--- | :---: | :---: |
 | [`DP.java`](./Dyanmic_Programming/DP.java) | Fibonacci Numbers | Memoization & Tabulation state caching | $O(N)$ | $O(N)$ |
 | [`Climbing.java`](./Dyanmic_Programming/Climbing.java) | Climbing Stairs | Recursion, Top-Down Memoization & Tabulation | $O(N)$ | $O(N)$ |
-| [`Knapsack.java`](./Dyanmic_Programming/Knapsack.java) | 0-1 Knapsack Problem | Optimal subset value maximization with weight bounds | $O(N \times W)$ | $O(N \times W)$ |
+| [`Knapsack.java`](./Dyanmic_Programming/Knapsack.java) | 0-1 Knapsack Problem | Recursion, Top-Down Memoization & Bottom-Up Tabulation | $O(N \times W)$ | $O(N \times W)$ |
+| [`TargetSumSubset.java`](./Dyanmic_Programming/TargetSumSubset.java) | Target Sum Subset | 0-1 Knapsack boolean variation via Tabulation | $O(N \times \text{sum})$ | $O(N \times \text{sum})$ |
+| [`UnboundesKnapsack.java`](./Dyanmic_Programming/UnboundesKnapsack.java) | Unbounded Knapsack | Knapsack with unlimited item reuse / repetitions | $O(N \times W)$ | $O(N \times W)$ |
 
 ---
 
@@ -503,7 +505,7 @@ DSA/
 
 ---
 
-### 🟡 Medium — 34 Problems
+### 🟡 Medium — 36 Problems
 
 | # | Problem | Category | Solution |
 | :---: | :--- | :--- | :---: |
@@ -527,11 +529,13 @@ DSA/
 | 0435 | [Non-overlapping Intervals](./LeetCode_Problems/0435-non-overlapping-intervals) | Greedy / Sorting | [Java](./LeetCode_Problems/0435-non-overlapping-intervals/0435-non-overlapping-intervals.java) |
 | 0450 | [Delete Node in a BST](./LeetCode_Problems/0450-delete-node-in-a-bst) | Tree / Binary Search Tree | [Java](./LeetCode_Problems/0450-delete-node-in-a-bst/0450-delete-node-in-a-bst.java) |
 | 0486 | [Predict the Winner](./LeetCode_Problems/0486-predict-the-winner) | DP / Minimax | [Java](./LeetCode_Problems/0486-predict-the-winner/0486-predict-the-winner.java) |
+| 0494 | [Target Sum](./LeetCode_Problems/0494-target-sum) | Dynamic Programming / Knapsack | [Java](./LeetCode_Problems/0494-target-sum/0494-target-sum.java) |
 | 0503 | [Next Greater Element II](./LeetCode_Problems/0503-next-greater-element-ii) | Monotonic Stack | [Java](./LeetCode_Problems/0503-next-greater-element-ii/0503-next-greater-element-ii.java) |
 | 0538 | [Convert BST to Greater Tree](./LeetCode_Problems/0538-convert-bst-to-greater-tree) | Tree / Depth-First Search / BST | [Java](./LeetCode_Problems/0538-convert-bst-to-greater-tree/0538-convert-bst-to-greater-tree.java) |
 | 0556 | [Next Greater Element III](./LeetCode_Problems/0556-next-greater-element-iii) | Math / Two Pointers | [Java](./LeetCode_Problems/0556-next-greater-element-iii/0556-next-greater-element-iii.java) |
 | 0567 | [Permutation in String](./LeetCode_Problems/0567-permutation-in-string) | Sliding Window | [Java](./LeetCode_Problems/0567-permutation-in-string/0567-permutation-in-string.java) |
 | 0735 | [Asteroid Collision](./LeetCode_Problems/0735-asteroid-collision) | Stack | [Java](./LeetCode_Problems/0735-asteroid-collision/0735-asteroid-collision.java) |
+| 0813 | [Largest Sum of Averages](./LeetCode_Problems/0813-largest-sum-of-averages) | Dynamic Programming / Prefix Sum | [Java](./LeetCode_Problems/0813-largest-sum-of-averages/0813-largest-sum-of-averages.java) |
 | 0877 | [Stone Game](./LeetCode_Problems/0877-stone-game) | Game Theory / DP | [Java](./LeetCode_Problems/0877-stone-game/0877-stone-game.java) |
 | 1222 | [Queens That Can Attack the King](./LeetCode_Problems/1222-queens-that-can-attack-the-king) | Matrix / Simulation | [Java](./LeetCode_Problems/1222-queens-that-can-attack-the-king/1222-queens-that-can-attack-the-king.java) |
 | 2812 | [Find Safest Path in a Grid](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid) | BFS / Binary Search | [Java](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid/2812-find-the-safest-path-in-a-grid.java) |
@@ -611,7 +615,11 @@ DSA/
 | Largest BST in Binary Tree | $O(N)$ | $O(N)$ | $O(N)$ | $O(H)$ | Post-order traversal with subtree bounds validation |
 | Fibonacci DP (Memo / Tab) | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Top-down memoization cache or bottom-up array |
 | Climbing Stairs DP | $O(N)$ | $O(N)$ | $O(N)$ | $O(N)$ | Linear recurrence $DP[i] = DP[i-1] + DP[i-2]$ |
-| 0-1 Knapsack Problem | $O(N \cdot W)$ | $O(N \cdot W)$ | $O(N \cdot W)$ | $O(N \cdot W)$ | DP state table optimization under capacity bound $W$ |
+| 0-1 Knapsack Problem | $O(N \cdot W)$ | $O(N \cdot W)$ | $O(N \cdot W)$ | $O(N \cdot W)$ | DP state table optimization under capacity bound $W$ (Rec / Memo / Tab) |
+| Target Sum Subset | $O(N \cdot \text{sum})$ | $O(N \cdot \text{sum})$ | $O(N \cdot \text{sum})$ | $O(N \cdot \text{sum})$ | Boolean table DP tabulation (knapsack variation) |
+| Unbounded Knapsack | $O(N \cdot W)$ | $O(N \cdot W)$ | $O(N \cdot W)$ | $O(N \cdot W)$ | DP state table allowing repeated item selection |
+| Target Sum (LeetCode 494) | $O(N \cdot S)$ | $O(N \cdot S)$ | $O(N \cdot S)$ | $O(S)$ | Space-optimized 1D subset sum DP tabulation ($S = \frac{\text{target}+\text{total}}{2}$) |
+| Largest Sum of Averages (LeetCode 813) | $O(K \cdot N^2)$ | $O(K \cdot N^2)$ | $O(K \cdot N^2)$ | $O(N \cdot K)$ | 2D dynamic programming with prefix sum partitioning |
 | Activity Selection (Sorted) | $O(N)$ | $O(N)$ | $O(N)$ | $O(1)$ | Greedy selection by end-time on pre-sorted array |
 | Activity Selection (Unsorted) | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(N)$ | 2D custom comparator sorting by end-time |
 | Fractional Knapsack | $O(N \log N)$ | $O(N \log N)$ | $O(N \log N)$ | $O(N)$ | Value/Weight ratio sorting & greedy pick |
@@ -655,6 +663,18 @@ java Dyanmic_Programming.Climbing
 # Fibonacci DP
 javac DP.java
 java Dyanmic_Programming.DP
+
+# 0-1 Knapsack (Recursion, Memoization, Tabulation)
+javac Knapsack.java
+java Dyanmic_Programming.Knapsack
+
+# Target Sum Subset
+javac TargetSumSubset.java
+java Dyanmic_Programming.TargetSumSubset
+
+# Unbounded Knapsack
+javac UnboundesKnapsack.java
+java Dyanmic_Programming.UnboundesKnapsack
 
 # Binary Search Tree - Largest BST
 cd ../BinarySearch_Tree
