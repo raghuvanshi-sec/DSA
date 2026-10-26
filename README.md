@@ -30,43 +30,116 @@
 
 ## 📁 Repository Architecture
 
+### 🗺️ System Architecture Diagram
+
+```mermaid
+flowchart TB
+    Root(["⚡ DSA & OOPs Master Architecture"]):::rootNode
+
+    Root --> D1["🧱 Core Foundations<br/><b>59 Files</b>"]
+    Root --> D2["⚡ Recursion & Search<br/><b>24 Files</b>"]
+    Root --> D3["🔗 Linear Structures<br/><b>44 Files</b>"]
+    Root --> D4["🌲 Tree Structures<br/><b>20 Files</b>"]
+    Root --> D5["🎯 Optimization & DP<br/><b>15 Files</b>"]
+    Root --> D6["💡 LeetCode Suite<br/><b>86 Solved</b>"]
+
+    subgraph CoreFoundations ["🧱 Core Foundations"]
+        direction TB
+        CF1["Arrays · 13 files"]
+        CF2["2D Matrices · 5 files"]
+        CF3["Strings · 8 files"]
+        CF4["Sorting · 4 files"]
+        CF5["Bit Manipulation · 14 files"]
+        CF6["OOPs Design · 12 files"]
+        CF7["Complexity Analysis · 3 files"]
+    end
+
+    subgraph RecursionSearch ["⚡ Recursion & Search"]
+        direction TB
+        RS1["Recursion Foundations · 12 files"]
+        RS2["Divide & Conquer · 3 files"]
+        RS3["Backtracking Solvers · 9 files"]
+    end
+
+    subgraph LinearStruct ["🔗 Linear Structures"]
+        direction TB
+        LS1["Dynamic ArrayList · 12 files"]
+        LS2["LinkedList (Singly & Doubly) · 12 files"]
+        LS3["Queue & Deque Variants · 10 files"]
+        LS4["Monotonic & Custom Stacks · 10 files"]
+    end
+
+    subgraph TreeStruct ["🌲 Tree Structures"]
+        direction TB
+        TS1["Binary Tree Operations · 11 files"]
+        TS2["Binary Search Tree (BST) · 9 files"]
+    end
+
+    subgraph DynamicOpt ["🎯 Optimization & DP"]
+        direction TB
+        DO1["Greedy Strategies · 9 files"]
+        DO2["Dynamic Programming · 6 files"]
+    end
+
+    subgraph LeetCodeHub ["💡 LeetCode Suite"]
+        direction LR
+        LCE["🟢 33 Easy"]
+        LCM["🟡 38 Medium"]
+        LCH["🔴 15 Hard"]
+    end
+
+    D1 --- CoreFoundations
+    D2 --- RecursionSearch
+    D3 --- LinearStruct
+    D4 --- TreeStruct
+    D5 --- DynamicOpt
+    D6 --- LeetCodeHub
+
+    classDef rootNode fill:#4c1d95,stroke:#7c3aed,stroke-width:2px,color:#ffffff,font-weight:bold;
+    classDef default fill:#1e293b,stroke:#334155,stroke-width:1px,color:#f8fafc;
+```
+
+### 🏛️ Modular Domain Directory
+
+| Domain & Focus | Modules & Paths | Scale | Core Algorithmic Concepts |
+| :--- | :--- | :---: | :--- |
+| **🧱 Core Foundations**<br/><sub>Fundamental data models, memory access patterns, bitwise arithmetic, and object-oriented principles</sub> | • [`Arrays/`](./Arrays)<br/>• [`2D.Arrays/`](./2D.Arrays)<br/>• [`String/`](./String)<br/>• [`Sorting/`](./Sorting)<br/>• [`BitManipulation/`](./BitManipulation)<br/>• [`TimeNSpace_Complexity/`](./TimeNSpace_Complexity)<br/>• [`OOPs/`](./OOPs) | **59** Files<br/><sub>7 Modules</sub> | Prefix sums, Kadane's algorithm, staircase matrix search, bitmasks, string displacement vectors, run-length compression, 4 OOP pillars |
+| **⚡ Recursion & Search**<br/><sub>Call-stack execution, divide-and-conquer recurrences, and decision-tree pruning</sub> | • [`Recursion/`](./Recursion)<br/>• [`DivideNConquer/`](./DivideNConquer)<br/>• [`Backracking/`](./Backracking) | **24** Files<br/><sub>3 Modules</sub> | Functional recursion, floor tiling, binary string construction, merge sort, in-place quick sort, N-Queens constraint pruning, Sudoku solver |
+| **🔗 Linear Structures**<br/><sub>Sequential storage architectures, pointer management, and monotonic element boundaries</sub> | • [`Linear_Structure/ArrayList/`](./Linear_Structure/ArrayList)<br/>• [`Linear_Structure/LInkedList/`](./Linear_Structure/LInkedList)<br/>• [`Linear_Structure/Queue/`](./Linear_Structure/Queue)<br/>• [`Linear_Structure/Stack/`](./Linear_Structure/Stack) | **44** Files<br/><sub>4 Sub-modules</sub> | Two-pointer water containers, Floyd's cycle detection, LL merge sort, zig-zag relinking, circular queues, monotonic next greater/smaller stacks |
+| **🌲 Tree Structures**<br/><sub>Hierarchical tree traversals, binary search validation, and topological ancestor lifting</sub> | • [`NonLinear_Structure/BinaryTree/`](./NonLinear_Structure/BinaryTree)<br/>• [`BinarySearch_Tree/`](./BinarySearch_Tree) | **20** Files<br/><sub>2 Modules</sub> | Pre/In/Post/Level order traversals, Lowest Common Ancestor (LCA), tree diameter, top view, BST range search, height-balanced rebuilds, largest BST subtree |
+| **🎯 Optimization & DP**<br/><sub>Greedy heuristic choice strategies, state memoization, and tabular optimization</sub> | • [`Greedy_Algorithm/`](./Greedy_Algorithm)<br/>• [`Dyanmic_Programming/`](./Dyanmic_Programming) | **15** Files<br/><sub>2 Modules</sub> | Earliest finish-time activity scheduling, fractional knapsack, job sequencing, 0-1 Knapsack, unbounded knapsack, subset sum, coin change combinations |
+| **💡 LeetCode Suite**<br/><sub>Curated competitive programming solutions with markdown editorial explanations</sub> | • [`LeetCode_Problems/`](./LeetCode_Problems) | **86** Solved<br/><sub>33 🟢 · 38 🟡 · 15 🔴</sub> | Sliding windows, monotonic stacks, multi-dimensional DP, minimax game theory, directed graph traversal, binary search inflection points |
+
+<details>
+<summary><b>📂 Expand Complete Directory Tree View</b></summary>
+<br/>
+
 ```text
 DSA/
-├── 📂 Core Foundations/
-│   ├── Arrays/                 → 13 files: Prefix sums, Kadane's algorithm, two-pointer bounds, rainwater trapping
-│   ├── 2D.Arrays/              → 5 files: Layer-by-layer spiral traversal, matrix generation, diagonal sum, staircase search
-│   ├── String/                 → 8 files: Palindrome verification, displacement vectors, string compression, StringBuilder
-│   ├── Sorting/                → 4 files: Bubble sort, Selection sort, Insertion sort, Counting sort
-│   ├── BitManipulation/        → 14 files: Bitwise operations, bitmasking, bit isolation, range clears, power-of-2 checks
-│   ├── TimeNSpace_Complexity/  → 3 files: Early-exit bubble optimization, linear recursion, divide-and-conquer power
-│   └── OOPs/                   → 12 files: Encapsulation, inheritance, polymorphism, abstraction, constructors, modifiers
-│
-├── 📂 Recursion & Search Paradigms/
-│   ├── Recursion/              → 12 files: Functional recursion, floor tiling, binary string generation, friends pairing
-│   ├── DivideNConquer/         → 3 files: Merge sort, in-place quick sort, search in rotated sorted array
-│   └── Backracking/            → 9 files: Decision tree traversal, subsets, permutations, N-Queens, Sudoku solver
-│
-├── 📂 Linear Data Structures/
-│   └── Linear_Structure/       → 44 files:
-│       ├── ArrayList/          → 12 files: Dynamic resizing, 2D lists, Container With Most Water, Pair Sum 1 & 2
-│       ├── LInkedList/         → 12 files: Singly & doubly lists, reversal, Floyd's cycle detection, merge sort, zig-zag
-│       ├── Queue/              → 10 files: Circular queue, LL queue, dual-stack queue, stream processing, deque wrappers
-│       └── Stack/              → 10 files: Dynamic & LL stacks, monotonic stacks, valid parentheses, max histogram area
-│
-├── 📂 Hierarchical & Tree Structures/
-│   ├── NonLinear_Structure/
-│   │   └── BinaryTree/         → 11 files: Traversals, LCA, subtree verification, diameter, top view, sum tree
-│   └── BinarySearch_Tree/      → 9 files: BST insertion, search, deletion, range query, balancing, largest BST subtree
-│
-├── 📂 Optimization & Dynamic Programming/
-│   ├── Greedy_Algorithm/       → 9 files: Activity selection, fractional knapsack, interval scheduling, job sequencing
-│   └── Dyanmic_Programming/    → 6 files: Fibonacci, Climbing Stairs, 0-1 Knapsack, Target Sum, Unbounded Knapsack, Coin Change
-│
-└── 📂 LeetCode_Problems/        → 86 problems: Markdown explanations & validated source implementations
-    ├── 🟢 Easy (33)            → Core data structures, simulation, bitwise math, greedy scans
-    ├── 🟡 Medium (38)          → Monotonic stacks, multi-dimensional DP, two-pointer sliding windows, tree DFS/BFS
-    └── 🔴 Hard (15)            → Minimax game theory, monotonic boundary stacks, combinatorial DP, hard backtracking
+├── 📂 Arrays/                      → 13 files: Prefix sums, Kadane's algorithm, two-pointer bounds, rainwater trapping
+├── 📂 2D.Arrays/                   → 5 files: Layer-by-layer spiral traversal, matrix generation, diagonal sum, staircase search
+├── 📂 BitManipulation/             → 14 files: Bitwise operations, bitmasking, bit isolation, range clears, power-of-2 checks
+├── 📂 OOPs/                        → 12 files: Encapsulation, inheritance, polymorphism, abstraction, constructors, modifiers
+├── 📂 Sorting/                     → 4 files: Bubble sort, Selection sort, Insertion sort, Counting sort
+├── 📂 String/                      → 8 files: Palindrome verification, displacement vectors, string compression, StringBuilder
+├── 📂 Recursion/                   → 12 files: Functional recursion, floor tiling, binary string generation, friends pairing
+├── 📂 DivideNConquer/              → 3 files: Merge sort, in-place quick sort, search in rotated sorted array
+├── 📂 TimeNSpace_Complexity/       → 3 files: Early-exit bubble optimization, linear recursion, divide-and-conquer power
+├── 📂 Backracking/                 → 9 files: Decision tree traversal, subsets, permutations, N-Queens, Sudoku solver
+├── 📂 Linear_Structure/            → 44 files:
+│   ├── 📂 ArrayList/               → 12 files: Dynamic resizing, 2D lists, Container With Most Water, Pair Sum 1 & 2
+│   ├── 📂 LInkedList/              → 12 files: Singly & doubly lists, reversal, Floyd's cycle detection, merge sort, zig-zag
+│   ├── 📂 Queue/                   → 10 files: Circular queue, LL queue, dual-stack queue, stream processing, deque wrappers
+│   └── 📂 Stack/                   → 10 files: Dynamic & LL stacks, monotonic stacks, valid parentheses, max histogram area
+├── 📂 NonLinear_Structure/
+│   └── 📂 BinaryTree/              → 11 files: Traversals, LCA, subtree verification, diameter, top view, sum tree
+├── 📂 BinarySearch_Tree/           → 9 files: BST insertion, search, deletion, range query, balancing, largest BST subtree
+├── 📂 Greedy_Algorithm/            → 9 files: Activity selection, fractional knapsack, interval scheduling, job sequencing
+├── 📂 Dyanmic_Programming/         → 6 files: Fibonacci, Climbing Stairs, 0-1 Knapsack, Target Sum, Unbounded Knapsack, Coin Change
+└── 📂 LeetCode_Problems/           → 86 problems: 33 Easy · 38 Medium · 15 Hard
 ```
+
+</details>
 
 ---
 
