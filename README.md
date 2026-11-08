@@ -5,7 +5,7 @@
 [![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](https://www.oracle.com/java/)
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://isocpp.org/)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
-[![LeetCode Solved](https://img.shields.io/badge/LeetCode-86_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
+[![LeetCode Solved](https://img.shields.io/badge/LeetCode-89_Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black)](#-leetcode-solutions-tracker)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 **A comprehensive, production-grade repository of fundamental computer science concepts, algorithmic patterns, object-oriented designs, and competitive programming solutions.**
@@ -20,11 +20,12 @@
 
 | Metric | Count | Details |
 | :--- | :---: | :--- |
-| **Core Modules** | `15` | Structured topical units from fundamental arrays to dynamic programming |
-| **Production Source Files** | `151` | Complete, standalone Java implementations with driver tests |
-| **LeetCode Solutions** | `86` | Comprehensive problem breakdown with dedicated solution files |
-| **Languages Supported** | `3` | Primary: Java (151 core + 84 LC) · C++ (2 LC) · Python (1 LC) |
-| **Difficulty Distribution** | 🟢 `33` Easy | 🟡 `38` Medium · 🔴 `15` Hard |
+| **Core Modules** | `15` | Structured topical units from fundamental arrays to multi-dimensional dynamic programming |
+| **Production Source Files** | `168` | Standalone Java implementations with driver tests and edge-case verifications |
+| **LeetCode Solutions** | `89` | Curated LeetCode problem breakdowns with standalone source files and markdown editorials |
+| **Total Java Files** | `255` | 168 Core Topic Classes + 87 LeetCode Solution Classes |
+| **Languages Supported** | `3` | Java (168 core + 87 LC) · C++ (2 LC) · Python (1 LC) |
+| **Difficulty Distribution** | 🟢 `33` Easy | 🟡 `41` Medium · 🔴 `15` Hard |
 
 ---
 
@@ -36,14 +37,14 @@
 flowchart TB
     Root(["⚡ DSA & OOPs Master Architecture"]):::rootNode
 
-    Root --> D1["🧱 Core Foundations<br/><b>59 Files</b>"]
-    Root --> D2["⚡ Recursion & Search<br/><b>24 Files</b>"]
-    Root --> D3["🔗 Linear Structures<br/><b>44 Files</b>"]
-    Root --> D4["🌲 Tree Structures<br/><b>20 Files</b>"]
-    Root --> D5["🎯 Optimization & DP<br/><b>15 Files</b>"]
-    Root --> D6["💡 LeetCode Suite<br/><b>86 Solved</b>"]
+    Root --> D1["🧱 Core Foundations<br/><b>59 Files</b>"]:::foundations
+    Root --> D2["⚡ Recursion & Search<br/><b>24 Files</b>"]:::recursion
+    Root --> D3["🔗 Linear Structures<br/><b>44 Files</b>"]:::linear
+    Root --> D4["🌲 Tree Structures<br/><b>20 Files</b>"]:::trees
+    Root --> D5["🎯 Optimization & DP<br/><b>21 Files</b>"]:::dp
+    Root --> D6["💡 LeetCode Suite<br/><b>89 Solved</b>"]:::leetcode
 
-    subgraph CoreFoundations ["🧱 Core Foundations"]
+    subgraph CoreFoundations ["🧱 Core Foundations (59 Files)"]
         direction TB
         CF1["Arrays · 13 files"]
         CF2["2D Matrices · 5 files"]
@@ -54,37 +55,37 @@ flowchart TB
         CF7["Complexity Analysis · 3 files"]
     end
 
-    subgraph RecursionSearch ["⚡ Recursion & Search"]
+    subgraph RecursionSearch ["⚡ Recursion & Search (24 Files)"]
         direction TB
         RS1["Recursion Foundations · 12 files"]
         RS2["Divide & Conquer · 3 files"]
         RS3["Backtracking Solvers · 9 files"]
     end
 
-    subgraph LinearStruct ["🔗 Linear Structures"]
+    subgraph LinearStruct ["🔗 Linear Structures (44 Files)"]
         direction TB
         LS1["Dynamic ArrayList · 12 files"]
-        LS2["LinkedList (Singly & Doubly) · 12 files"]
+        LS2["LinkedList (Singly, Doubly, Circular) · 12 files"]
         LS3["Queue & Deque Variants · 10 files"]
         LS4["Monotonic & Custom Stacks · 10 files"]
     end
 
-    subgraph TreeStruct ["🌲 Tree Structures"]
+    subgraph TreeStruct ["🌲 Tree Structures (20 Files)"]
         direction TB
         TS1["Binary Tree Operations · 11 files"]
         TS2["Binary Search Tree (BST) · 9 files"]
     end
 
-    subgraph DynamicOpt ["🎯 Optimization & DP"]
+    subgraph DynamicOpt ["🎯 Optimization & DP (21 Files)"]
         direction TB
         DO1["Greedy Strategies · 9 files"]
-        DO2["Dynamic Programming · 6 files"]
+        DO2["Dynamic Programming · 12 files"]
     end
 
-    subgraph LeetCodeHub ["💡 LeetCode Suite"]
+    subgraph LeetCodeHub ["💡 LeetCode Suite (89 Problems)"]
         direction LR
         LCE["🟢 33 Easy"]
-        LCM["🟡 38 Medium"]
+        LCM["🟡 41 Medium"]
         LCH["🔴 15 Hard"]
     end
 
@@ -95,9 +96,53 @@ flowchart TB
     D5 --- DynamicOpt
     D6 --- LeetCodeHub
 
-    classDef rootNode fill:#4c1d95,stroke:#7c3aed,stroke-width:2px,color:#ffffff,font-weight:bold;
-    classDef default fill:#1e293b,stroke:#334155,stroke-width:1px,color:#f8fafc;
+    classDef rootNode fill:#4338ca,stroke:#6366f1,stroke-width:3px,color:#ffffff,font-weight:bold;
+    classDef foundations fill:#1e293b,stroke:#0284c7,stroke-width:2px,color:#f8fafc;
+    classDef recursion fill:#1e293b,stroke:#06b6d4,stroke-width:2px,color:#f8fafc;
+    classDef linear fill:#1e293b,stroke:#10b981,stroke-width:2px,color:#f8fafc;
+    classDef trees fill:#1e293b,stroke:#14b8a6,stroke-width:2px,color:#f8fafc;
+    classDef dp fill:#1e293b,stroke:#f59e0b,stroke-width:2px,color:#f8fafc;
+    classDef leetcode fill:#1e293b,stroke:#ec4899,stroke-width:2px,color:#f8fafc;
+    classDef default fill:#0f172a,stroke:#334155,stroke-width:1px,color:#f8fafc;
 ```
+
+### 🧠 Dynamic Programming & Optimization Taxonomy
+
+```mermaid
+flowchart TD
+    DPRoot["🎯 Dynamic Programming & Greedy Paradigms"]:::dpRoot
+
+    DPRoot --> G["Greedy Heuristics<br/><i>Local Optimal Choice</i>"]
+    DPRoot --> DPTypes["Dynamic Programming<br/><i>Overlapping Subproblems & Optimal Substructure</i>"]
+
+    G --> G1["Activity Selection & Non-Overlapping Intervals"]
+    G --> G2["Fractional Knapsack & Coin Systems"]
+    G --> G3["Job Sequencing with Deadlines"]
+    G --> G4["Chocola Board Cutting"]
+
+    DPTypes --> DP1["1D Linear DP"]
+    DPTypes --> DP2["Knapsack Family"]
+    DPTypes --> DP3["String Alignment & Subsequences"]
+
+    DP1 --> DP1A["Fibonacci Numbers (Memo / Tab)"]
+    DP1 --> DP1B["Climbing Stairs (Varied Steps)"]
+    DP1 --> DP1C["Longest Increasing Subsequence (LIS)"]
+
+    DP2 --> DP2A["0-1 Knapsack (Bounded State)"]
+    DP2 --> DP2B["Target Sum Subset (Boolean Matrix)"]
+    DP2 --> DP2C["Unbounded Knapsack & Coin Change"]
+    DP2 --> DP2D["Rod Cutting Problem"]
+
+    DP3 --> DP3A["Longest Common Subsequence (LCS)"]
+    DP3 --> DP3B["Longest Common Substring"]
+    DP3 --> DP3C["Edit Distance (Levenshtein)"]
+    DP3 --> DP3D["String Conversion (Deletions + Insertions)"]
+
+    classDef dpRoot fill:#b45309,stroke:#f59e0b,stroke-width:2px,color:#ffffff,font-weight:bold;
+    classDef default fill:#1e293b,stroke:#475569,stroke-width:1px,color:#f8fafc;
+```
+
+---
 
 ### 🏛️ Modular Domain Directory
 
@@ -107,8 +152,8 @@ flowchart TB
 | **⚡ Recursion & Search**<br/><sub>Call-stack execution, divide-and-conquer recurrences, and decision-tree pruning</sub> | • [`Recursion/`](./Recursion)<br/>• [`DivideNConquer/`](./DivideNConquer)<br/>• [`Backracking/`](./Backracking) | **24** Files<br/><sub>3 Modules</sub> | Functional recursion, floor tiling, binary string construction, merge sort, in-place quick sort, N-Queens constraint pruning, Sudoku solver |
 | **🔗 Linear Structures**<br/><sub>Sequential storage architectures, pointer management, and monotonic element boundaries</sub> | • [`Linear_Structure/ArrayList/`](./Linear_Structure/ArrayList)<br/>• [`Linear_Structure/LInkedList/`](./Linear_Structure/LInkedList)<br/>• [`Linear_Structure/Queue/`](./Linear_Structure/Queue)<br/>• [`Linear_Structure/Stack/`](./Linear_Structure/Stack) | **44** Files<br/><sub>4 Sub-modules</sub> | Two-pointer water containers, Floyd's cycle detection, LL merge sort, zig-zag relinking, circular queues, monotonic next greater/smaller stacks |
 | **🌲 Tree Structures**<br/><sub>Hierarchical tree traversals, binary search validation, and topological ancestor lifting</sub> | • [`NonLinear_Structure/BinaryTree/`](./NonLinear_Structure/BinaryTree)<br/>• [`BinarySearch_Tree/`](./BinarySearch_Tree) | **20** Files<br/><sub>2 Modules</sub> | Pre/In/Post/Level order traversals, Lowest Common Ancestor (LCA), tree diameter, top view, BST range search, height-balanced rebuilds, largest BST subtree |
-| **🎯 Optimization & DP**<br/><sub>Greedy heuristic choice strategies, state memoization, and tabular optimization</sub> | • [`Greedy_Algorithm/`](./Greedy_Algorithm)<br/>• [`Dyanmic_Programming/`](./Dyanmic_Programming) | **15** Files<br/><sub>2 Modules</sub> | Earliest finish-time activity scheduling, fractional knapsack, job sequencing, 0-1 Knapsack, unbounded knapsack, subset sum, coin change combinations |
-| **💡 LeetCode Suite**<br/><sub>Curated competitive programming solutions with markdown editorial explanations</sub> | • [`LeetCode_Problems/`](./LeetCode_Problems) | **86** Solved<br/><sub>33 🟢 · 38 🟡 · 15 🔴</sub> | Sliding windows, monotonic stacks, multi-dimensional DP, minimax game theory, directed graph traversal, binary search inflection points |
+| **🎯 Optimization & DP**<br/><sub>Greedy heuristic choice strategies, state memoization, tabular optimization, and string alignment</sub> | • [`Greedy_Algorithm/`](./Greedy_Algorithm)<br/>• [`Dyanmic_Programming/`](./Dyanmic_Programming) | **21** Files<br/><sub>2 Modules</sub> | Earliest finish-time activity scheduling, fractional knapsack, 0-1 & unbounded knapsack, subset sum, coin change, rod cutting, LCS, LCSubstring, LIS, Edit Distance, String Conversion |
+| **💡 LeetCode Suite**<br/><sub>Curated competitive programming solutions with markdown editorial explanations</sub> | • [`LeetCode_Problems/`](./LeetCode_Problems) | **89** Solved<br/><sub>33 🟢 · 41 🟡 · 15 🔴</sub> | Sliding windows, monotonic stacks, multi-dimensional DP, minimax game theory, directed graph traversal, binary search inflection points |
 
 <details>
 <summary><b>📂 Expand Complete Directory Tree View</b></summary>
@@ -135,8 +180,8 @@ DSA/
 │   └── 📂 BinaryTree/              → 11 files: Traversals, LCA, subtree verification, diameter, top view, sum tree
 ├── 📂 BinarySearch_Tree/           → 9 files: BST insertion, search, deletion, range query, balancing, largest BST subtree
 ├── 📂 Greedy_Algorithm/            → 9 files: Activity selection, fractional knapsack, interval scheduling, job sequencing
-├── 📂 Dyanmic_Programming/         → 6 files: Fibonacci, Climbing Stairs, 0-1 Knapsack, Target Sum, Unbounded Knapsack, Coin Change
-└── 📂 LeetCode_Problems/           → 86 problems: 33 Easy · 38 Medium · 15 Hard
+├── 📂 Dyanmic_Programming/         → 12 files: Fibonacci, Climbing Stairs, 0-1 Knapsack, Target Sum, Unbounded Knapsack, Coin Change, Rod Cutting, LCS, LCSubstring, LIS, Edit Distance, String Conversion
+└── 📂 LeetCode_Problems/           → 89 problems: 33 Easy · 41 Medium · 15 Hard
 ```
 
 </details>
@@ -458,16 +503,22 @@ DSA/
 
 ### 15 · Dynamic Programming
 
-*Directory: [`Dyanmic_Programming/`](./Dyanmic_Programming)* — 6 files
+*Directory: [`Dyanmic_Programming/`](./Dyanmic_Programming)* — 12 files
 
-| File | Problem Statement | DP Technique | Time | Space | Notes |
+| File | Problem Statement | DP Technique | Time | Space | Recurrence / Core Logic |
 | :--- | :--- | :--- | :---: | :---: | :--- |
-| [`DP.java`](./Dyanmic_Programming/DP.java) | Fibonacci Numbers | Top-Down Memoization & Bottom-Up Tabulation | $O(N)$ | $O(N)$ | State caching preventing exponential subproblem recalculation |
-| [`Climbing.java`](./Dyanmic_Programming/Climbing.java) | Climbing Stairs | Recursion, Memoization & Tabulation | $O(N)$ | $O(N)$ | Counting ways with step sizes 1 and 2: $DP[i] = DP[i-1] + DP[i-2]$ |
-| [`Knapsack.java`](./Dyanmic_Programming/Knapsack.java) | 0-1 Knapsack Problem | Recursion, Top-Down Memo & Bottom-Up Tabulation | $O(N \times W)$ | $O(N \times W)$ | Optimal subset value maximization with 2D DP matrix visualization |
-| [`TargetSumSubset.java`](./Dyanmic_Programming/TargetSumSubset.java) | Target Sum Subset | Boolean DP Tabulation Matrix | $O(N \times \text{sum})$ | $O(N \times \text{sum})$ | Boolean table: $DP[i][j] = DP[i-1][j - w] \lor DP[i-1][j]$ |
-| [`UnboundesKnapsack.java`](./Dyanmic_Programming/UnboundesKnapsack.java) | Unbounded Knapsack | Bottom-Up Tabulation with Item Reuse | $O(N \times W)$ | $O(N \times W)$ | State transition allowing repeat inclusion: $val[i-1] + DP[i][j - wt[i-1]]$ |
-| [`CoinChange.java`](./Dyanmic_Programming/CoinChange.java) | Coin Change (Ways) | Unbounded Knapsack Combinations | $O(N \times \text{sum})$ | $O(N \times \text{sum})$ | Total combinations to form sum: $DP[i][j] = DP[i][j - coin] + DP[i-1][j]$ |
+| [`DP.java`](./Dyanmic_Programming/DP.java) | Fibonacci Numbers | Top-Down Memoization & Bottom-Up Tabulation | $O(N)$ | $O(N)$ | $DP[i] = DP[i-1] + DP[i-2]$ with state array reuse |
+| [`Climbing.java`](./Dyanmic_Programming/Climbing.java) | Climbing Stairs | Recursion, Memoization & Tabulation | $O(N)$ | $O(N)$ | $DP[i] = DP[i-1] + DP[i-2]$ for 1 & 2 step progressions |
+| [`Knapsack.java`](./Dyanmic_Programming/Knapsack.java) | 0-1 Knapsack Problem | Recursion, Memoization & Tabulation Matrix | $O(N \cdot W)$ | $O(N \cdot W)$ | $\max(val[i-1] + DP[i-1][j - wt[i-1]], DP[i-1][j])$ |
+| [`TargetSumSubset.java`](./Dyanmic_Programming/TargetSumSubset.java) | Target Sum Subset | Boolean DP Tabulation Matrix | $O(N \cdot \text{sum})$ | $O(N \cdot \text{sum})$ | $DP[i][j] = DP[i-1][j - arr[i-1]] \lor DP[i-1][j]$ |
+| [`UnboundesKnapsack.java`](./Dyanmic_Programming/UnboundesKnapsack.java) | Unbounded Knapsack | Bottom-Up Tabulation with Item Reuse | $O(N \cdot W)$ | $O(N \cdot W)$ | State transition allowing repeat inclusion: $val[i-1] + DP[i][j - wt[i-1]]$ |
+| [`CoinChange.java`](./Dyanmic_Programming/CoinChange.java) | Coin Change (Ways) | Unbounded Knapsack Combinations | $O(N \cdot \text{sum})$ | $O(N \cdot \text{sum})$ | $DP[i][j] = DP[i][j - coin[i-1]] + DP[i-1][j]$ |
+| [`RodCutting.java`](./Dyanmic_Programming/RodCutting.java) | Rod Cutting Problem | Unbounded Knapsack Profit Maximization | $O(N \cdot L)$ | $O(N \cdot L)$ | $\max(price[i-1] + DP[i][j - length[i-1]], DP[i-1][j])$ |
+| [`LCS.java`](./Dyanmic_Programming/LCS.java) | Longest Common Subsequence | Recursion, 2D Memoization & Tabulation | $O(N \cdot M)$ | $O(N \cdot M)$ | $s_1[i-1] == s_2[j-1] \implies 1 + DP[i-1][j-1]$ else $\max(DP[i-1][j], DP[i][j-1])$ |
+| [`LCSubtring.java`](./Dyanmic_Programming/LCSubtring.java) | Longest Common Substring | Continuous Matching Tabular DP | $O(N \cdot M)$ | $O(N \cdot M)$ | $s_1[i-1] == s_2[j-1] \implies 1 + DP[i-1][j-1]$ else reset to 0; track global max |
+| [`LIS.java`](./Dyanmic_Programming/LIS.java) | Longest Increasing Subsequence | Unique Sorting Reduction to LCS | $O(N \log N + N \cdot M)$ | $O(N \cdot M)$ | Deduplicate elements, sort array, and run LCS between original and sorted array |
+| [`EditDistance.java`](./Dyanmic_Programming/EditDistance.java) | Edit Distance (Levenshtein) | 2D Operations Tabulation Matrix | $O(N \cdot M)$ | $O(N \cdot M)$ | If chars match: $DP[i-1][j-1]$; else $1 + \min(\text{add}, \text{delete}, \text{replace})$ |
+| [`StringConversion.java`](./Dyanmic_Programming/StringConversion.java) | String Conversion Min Cost | LCS-Guided Deletions and Insertions | $O(N \cdot M)$ | $O(N \cdot M)$ | Compute LCS; total operations $= (N - LCS) + (M - LCS)$ |
 
 ---
 
@@ -478,9 +529,9 @@ DSA/
 | Difficulty | Solved | Primary Paradigms |
 | :---: | :---: | :--- |
 | 🟢 **Easy** | **33** | Hash Maps, Two Pointers, String Simulation, Binary Trees, Bitwise Operations |
-| 🟡 **Medium** | **38** | Monotonic Stacks, 2D Grid Search, Unbounded & 0-1 Knapsack DP, Prefix Sums |
+| 🟡 **Medium** | **41** | Monotonic Stacks, 2D Grid Search, Unbounded & 0-1 Knapsack DP, Subsequence DP, Edit Distance |
 | 🔴 **Hard** | **15** | Minimax Game Theory, Monotonic Boundary Bounds, Dynamic Bitmasking, Backtracking |
-| **Total** | **86** | Validated, standalone solutions with README explanations |
+| **Total** | **89** | Validated, standalone solutions with README explanations |
 
 </div>
 
@@ -527,7 +578,7 @@ DSA/
 </details>
 
 <details>
-<summary><b>🟡 Medium Solutions (38 Problems) — Expand to view</b></summary>
+<summary><b>🟡 Medium Solutions (41 Problems) — Expand to view</b></summary>
 <br/>
 
 | # | Problem | Category | Primary Technique | Solution |
@@ -540,6 +591,7 @@ DSA/
 | 0019 | [Remove Nth Node From End of List](./LeetCode_Problems/0019-remove-nth-node-from-end-of-list) | Linked List | Fast/Slow Gap Pointer Offset Unlinking | [Java](./LeetCode_Problems/0019-remove-nth-node-from-end-of-list/0019-remove-nth-node-from-end-of-list.java) |
 | 0054 | [Spiral Matrix](./LeetCode_Problems/0054-spiral-matrix) | Matrix Simulation | 4-Boundary Layer Contraction ($O(N \cdot M)$) | [Java](./LeetCode_Problems/0054-spiral-matrix/0054-spiral-matrix.java) |
 | 0059 | [Spiral Matrix II](./LeetCode_Problems/0059-spiral-matrix-ii) | Matrix Simulation | Clockwise Matrix Filling ($O(N^2)$) | [Java](./LeetCode_Problems/0059-spiral-matrix-ii/0059-spiral-matrix-ii.java) |
+| 0072 | [Edit Distance](./LeetCode_Problems/0072-edit-distance) | Dynamic Programming | 2D Operations Tabulation Matrix ($O(N \cdot M)$) | [Java](./LeetCode_Problems/0072-edit-distance/0072-edit-distance.java) |
 | 0074 | [Search a 2D Matrix](./LeetCode_Problems/0074-search-a-2d-matrix) | Binary Search | Virtual 1D Array Mapping ($O(\log(N \cdot M))$) | [Java](./LeetCode_Problems/0074-search-a-2d-matrix/0074-search-a-2d-matrix.java) |
 | 0078 | [Subsets](./LeetCode_Problems/0078-subsets) | Backtracking | Binary Decision Tree Inclusion/Exclusion | [Java](./LeetCode_Problems/0078-subsets/0078-subsets.java) |
 | 0090 | [Subsets II](./LeetCode_Problems/0090-subsets-ii) | Backtracking | Sorted Backtracking Skipping Duplicate Siblings | [Java](./LeetCode_Problems/0090-subsets-ii/0090-subsets-ii.java) |
@@ -548,6 +600,7 @@ DSA/
 | 0153 | [Find Min in Rotated Sorted Array](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array) | Binary Search | Modified Binary Search on Inflection Point | [Java](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.java) · [C++](./LeetCode_Problems/0153-find-minimum-in-rotated-sorted-array/0153-find-minimum-in-rotated-sorted-array.cpp) |
 | 0201 | [Bitwise AND of Numbers Range](./LeetCode_Problems/0201-bitwise-and-of-numbers-range) | Bit Manipulation | Common Bit Prefix Extraction via Right Shifts | [Java](./LeetCode_Problems/0201-bitwise-and-of-numbers-range/0201-bitwise-and-of-numbers-range.java) |
 | 0238 | [Product of Array Except Self](./LeetCode_Problems/0238-product-of-array-except-self) | Prefix / Suffix | Dual Prefix & Suffix Products ($O(N)$ time, $O(1)$ aux) | [Java](./LeetCode_Problems/0238-product-of-array-except-self/0238-product-of-array-except-self.java) |
+| 0300 | [Longest Increasing Subsequence](./LeetCode_Problems/0300-longest-increasing-subsequence) | Dynamic Programming | 1D Tabulation Maximum Chain Evaluation ($O(N^2)$) | [Java](./LeetCode_Problems/0300-longest-increasing-subsequence/0300-longest-increasing-subsequence.java) |
 | 0322 | [Coin Change](./LeetCode_Problems/0322-coin-change) | Dynamic Programming | Unbounded Knapsack Tabulation (Min Coins) | [Java](./LeetCode_Problems/0322-coin-change/0322-coin-change.java) |
 | 0371 | [Sum of Two Integers](./LeetCode_Problems/0371-sum-of-two-integers) | Bit Manipulation | Half Adder Logic via XOR and Shifted Carry (`&`) | [Java](./LeetCode_Problems/0371-sum-of-two-integers/0371-sum-of-two-integers.java) |
 | 0435 | [Non-overlapping Intervals](./LeetCode_Problems/0435-non-overlapping-intervals) | Greedy / Sorting | Interval Scheduling Sorting by Earliest End Time | [Java](./LeetCode_Problems/0435-non-overlapping-intervals/0435-non-overlapping-intervals.java) |
@@ -562,6 +615,7 @@ DSA/
 | 0735 | [Asteroid Collision](./LeetCode_Problems/0735-asteroid-collision) | Stack | LIFO Stack Simulating Right-to-Left Collisions | [Java](./LeetCode_Problems/0735-asteroid-collision/0735-asteroid-collision.java) |
 | 0813 | [Largest Sum of Averages](./LeetCode_Problems/0813-largest-sum-of-averages) | Dynamic Programming | 2D Partition DP with Prefix Sums ($O(K \cdot N^2)$) | [Java](./LeetCode_Problems/0813-largest-sum-of-averages/0813-largest-sum-of-averages.java) |
 | 0877 | [Stone Game](./LeetCode_Problems/0877-stone-game) | Game Theory / DP | Minimax Choice Evaluation ($O(1)$ Math / $O(N^2)$ DP) | [Java](./LeetCode_Problems/0877-stone-game/0877-stone-game.java) |
+| 1143 | [Longest Common Subsequence](./LeetCode_Problems/1143-longest-common-subsequence) | Dynamic Programming | 2D Tabulation Character Match / Skip State ($O(N \cdot M)$) | [Java](./LeetCode_Problems/1143-longest-common-subsequence/1143-longest-common-subsequence.java) |
 | 1222 | [Queens That Can Attack the King](./LeetCode_Problems/1222-queens-that-can-attack-the-king) | Matrix / Simulation | 8-Direction Raycast Collision from King ($O(1)$) | [Java](./LeetCode_Problems/1222-queens-that-can-attack-the-king/1222-queens-that-can-attack-the-king.java) |
 | 2812 | [Find Safest Path in a Grid](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid) | BFS / Binary Search | Multi-Source BFS Distance Field + Binary Search | [Java](./LeetCode_Problems/2812-find-the-safest-path-in-a-grid/2812-find-the-safest-path-in-a-grid.java) |
 | 3016 | [Min Pushes to Type Word II](./LeetCode_Problems/3016-minimum-number-of-pushes-to-type-word-ii) | Greedy / Sorting | Frequency-Sorted Keypad Slot Assignment | [Java](./LeetCode_Problems/3016-minimum-number-of-pushes-to-type-word-ii/3016-minimum-number-of-pushes-to-type-word-ii.java) |
@@ -655,6 +709,12 @@ DSA/
 | **Unbounded Knapsack** | $O(N \cdot W)$ | $O(N \cdot W)$ | $\max(val[i-1] + DP[i][j - wt[i-1]], DP[i-1][j])$ |
 | **Coin Change — Total Ways** | $O(N \cdot S)$ | $O(N \cdot S)$ | $DP[i][j] = DP[i][j - coin[i-1]] + DP[i-1][j]$ |
 | **Coin Change — Min Coins** | $O(N \cdot S)$ | $O(N \cdot S)$ | $\min(DP[i-1][j], 1 + DP[i][j - coin[i-1]])$ |
+| **Rod Cutting** | $O(N \cdot L)$ | $O(N \cdot L)$ | $\max(price[i-1] + DP[i][j - length[i-1]], DP[i-1][j])$ |
+| **Longest Common Subsequence (LCS)** | $O(N \cdot M)$ | $O(N \cdot M)$ | $s_1[i-1] == s_2[j-1] \implies 1 + DP[i-1][j-1]$ else $\max(DP[i-1][j], DP[i][j-1])$ |
+| **Longest Common Substring** | $O(N \cdot M)$ | $O(N \cdot M)$ | $s_1[i-1] == s_2[j-1] \implies 1 + DP[i-1][j-1]$ else $0$ |
+| **Longest Increasing Subsequence (LIS)** | $O(N \log N)$ / $O(N^2)$ | $O(N)$ | $DP[i] = 1 + \max(\{DP[j] : j < i \land A[j] < A[i]\} \cup \{0\})$ |
+| **Edit Distance (Levenshtein)** | $O(N \cdot M)$ | $O(N \cdot M)$ | $s_1[i-1] == s_2[j-1] \implies DP[i-1][j-1]$ else $1 + \min(add, del, rep)$ |
+| **String Conversion** | $O(N \cdot M)$ | $O(N \cdot M)$ | Minimum Cost $= (N - LCS) + (M - LCS)$ operations |
 | **Activity Selection** | $O(N \log N)$ | $O(1)$ | Earliest end-time greedy interval selection |
 | **Job Sequencing** | $O(N \log N)$ | $O(N)$ | Profit-sorted greedy latest deadline slotting |
 | **Chocola Board Cutting** | $O(N \log N + M \log M)$ | $O(1)$ | Largest cut-cost priority choice across dimensions |
@@ -671,6 +731,25 @@ DSA/
 ```bash
 # Navigate to the repository root
 cd "DSA"
+
+# Dynamic Programming: LCS, Edit Distance & String Conversion
+javac Dyanmic_Programming/LCS.java
+java Dyanmic_Programming.LCS
+
+javac Dyanmic_Programming/LCSubtring.java
+java Dyanmic_Programming.LCSubtring
+
+javac Dyanmic_Programming/LIS.java
+java Dyanmic_Programming.LIS
+
+javac Dyanmic_Programming/EditDistance.java
+java Dyanmic_Programming.EditDistance
+
+javac Dyanmic_Programming/StringConversion.java
+java Dyanmic_Programming.StringConversion
+
+javac Dyanmic_Programming/RodCutting.java
+java Dyanmic_Programming.RodCutting
 
 # Dynamic Programming: 0-1 Knapsack, Coin Change & Subset Sum
 javac Dyanmic_Programming/Knapsack.java
